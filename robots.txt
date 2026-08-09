@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://solankihetal-coder.github.io/hetofolio/sitemap.xml

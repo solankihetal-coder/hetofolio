@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Table Generator — Multiplication table engine with infinite range, multi-layout output, CSV export and quiz mode."><title>Table Generator · Hetal Solanki</title>
+<meta property="og:title" content="Table Generator · Hetal Solanki">
+<meta property="og:description" content="Table Generator — Multiplication table engine with infinite range, multi-layout output, CSV export and quiz mode.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://solankihetal-coder.github.io/hetofolio/pages/projects/table-generator.html">
+<link rel="canonical" href="https://solankihetal-coder.github.io/hetofolio/pages/projects/table-generator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="../../css/components/page-loader.css"><link rel="stylesheet" href="../../css/components/content-skeleton.css"><link rel="stylesheet" href="../../css/main.css"><link rel="stylesheet" href="../../css/project.css">
+</head>
+<body class="case-study-page case-rich" style="--project-accent:#5674b8;--project-accent-soft:#e8edf8;">
+
+<div class="page-loader signature-loader is-active" id="page-loader" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <div class="signature-loader__stage" aria-hidden="true">
+      <svg class="signature-loader__mark" viewBox="0 0 93 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g class="signature-loader__logo">
+          <path d="M82.5936 19.6654C85.2559 16.7748 83.6964 12.084 79.8333 11.3629L52.8469 6.32565C51.7041 6.11233 50.5227 6.31658 49.5178 6.9012C44.9758 9.5437 47.3576 16.5058 52.5779 15.9045C52.8725 15.8705 53.1709 15.8634 53.4667 15.8836L70.8216 17.0669C72.2057 17.0561 72.8559 18.7733 71.8118 19.6819L60.8166 29.2509C57.2143 32.9327 61.3074 38.8912 66.0366 36.8498L66.3185 36.728C66.9309 36.4638 67.4809 36.0736 67.9328 35.583L82.5936 19.6654Z"/>
+          <path d="M10.2533 33.0163C7.57515 35.8922 9.10896 40.5915 12.9681 41.3337L39.9264 46.5187C41.0681 46.7383 42.2506 46.5405 43.2586 45.9614C47.815 43.3439 45.4714 36.3688 40.2479 36.9416C39.9531 36.9739 39.6547 36.9793 39.3589 36.9575L22.0108 35.6792C20.6267 35.6824 19.9859 33.9617 21.035 33.0588L32.0824 23.5502C35.7049 19.8882 31.6445 13.9073 26.9041 15.9228L26.6216 16.0429C26.007 16.3039 25.4556 16.691 25.001 17.1792L10.2533 33.0163Z"/>
+          <path d="M54.3468 43.1868C55.0668 43.7931 56.1494 43.1595 55.9733 42.2348L54.5 34.5L54.1766 33.3534C54.0069 32.7517 53.3329 32.4515 52.7721 32.7278L47.2889 35.43C46.7353 35.7029 46.5637 36.4104 46.9309 36.9066C46.9768 36.9686 47.0298 37.0251 47.0889 37.0749L54.3468 43.1868Z"/>
+          <path d="M36.3343 16.8522C35.6039 15.365 36.2174 13.5673 37.7046 12.8369L40.6367 11.3969C42.1239 10.6665 43.9216 11.28 44.6519 12.7671L44.6753 12.8147L36.3577 16.8997L36.3343 16.8522Z"/>
+          <path d="M36.3474 16.9021L44.6551 12.7766L53.9413 32.6622C54.8221 34.5484 54.109 36.7949 52.3016 37.8277L52.096 37.9451C50.1306 39.0682 47.6256 38.338 46.5715 36.3346L36.3474 16.9021Z"/>
+        </g>
+        <path class="signature-loader__swash" d="M7 60C18 53 29 54 38 58C47 62 55 66 67 62C77 59 83 53 90 50"/>
+      </svg>
+    </div>
+  </div>
+  <noscript><style>#page-loader{display:none!important}</style></noscript>
+
+
+<header class="site-header" id="site-header">
+  <div class="container nav-container">
+    <a class="brand" href="../../index.html#home" aria-label="Hetal Solanki home">
+      <img src="../../assets/images/logo/hetal-logo-all-black.svg" alt="Hetal Solanki logo">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="../../index.html#work">Work</a>
+      <a href="../../index.html#visuals">Visuals</a>
+      <a href="../../index.html#services">Services</a>
+      <a href="../../index.html#about">About</a>
+      <a href="../../index.html#contact">Contact</a>
+      <a href="../../index.html#contact" class="nav-cta">Start a Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="content-skeleton" data-content-skeleton aria-hidden="true">
+  <div class="content-skeleton__inner">
+    <div class="content-skeleton__hero">
+      <span class="content-skeleton__eyebrow"></span>
+      <span class="content-skeleton__title"></span>
+      <span class="content-skeleton__line"></span>
+      <span class="content-skeleton__line short"></span>
+      <div class="content-skeleton__actions"><span class="content-skeleton__button"></span><span class="content-skeleton__button"></span></div>
+    </div>
+    <div class="content-skeleton__image"></div>
+    <div class="content-skeleton__grid">
+      <div class="content-skeleton__side"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="content-skeleton__body">
+        <span class="content-skeleton__line"></span><span class="content-skeleton__line"></span><span class="content-skeleton__line"></span>
+        <div class="content-skeleton__cards"><span class="content-skeleton__card"></span><span class="content-skeleton__card"></span><span class="content-skeleton__card"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="case-hero case-hero-rich"><div class="container">
+  <a class="back-link" href="../../index.html#work"><i class="fa-solid fa-arrow-left"></i> Back to work</a>
+  <div class="case-meta-row"><div class="case-meta">Logic & Algorithm Practice Project</div><span class="case-status"><i class="fa-solid fa-circle"></i> Case study</span></div>
+  <h1>Table Generator</h1><p class="case-intro case-intro-wide">Multiplication table engine with infinite range, multi-layout output, CSV export & quiz mode</p>
+  <div class="case-tags case-tags-large"><span>Vanilla JS</span><span>HTML / CSS</span><span>∞ Input Range</span><span>CSV Export</span><span>Quiz Mode</span></div>
+  <div class="case-facts case-facts-four"><div><span>Project Type</span><strong>Practice Project</strong></div><div><span>Tech Stack</span><strong>HTML · CSS · JS</strong></div><div><span>Input Range</span><strong>−∞ to +∞</strong></div><div><span>Layouts</span><strong>3 Modes</strong></div><div><span>Export Formats</span><strong>CSV + HTML</strong></div></div>
+  <div class="case-hero-actions"><a class="project-action project-action-primary" href="https://solankihetal-coder.github.io/Table-Generator/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a><a class="project-action" href="#overview"><i class="fa-solid fa-arrow-down"></i> Explore</a></div>
+  <div class="case-art"><div class="case-art-card case-art-image case-art-table"><img src="../../assets/images/projects/table-generator/table-generator-mockup.png" alt="Table Generator project presentation" loading="eager" data-loader-critical><div class="art-overlay"><span>TABLE ENGINE</span><span>∞ RANGE</span></div><div class="art-caption"><strong>LIVE PREVIEW · CSV · QUIZ</strong><small>3 LAYOUT MODES · THEME SWITCHING</small></div></div></div>
+</div></section>
+<section class="case-content case-rich-content"><div class="container case-grid-wide">
+<div class="case-main-wide"><section class="case-summary case-summary-rich reveal" id="overview"><p class="case-kicker">LOGIC &amp; ALGORITHM PRACTICE PROJECT</p><h2>Multiplication table engine with infinite range, multi-layout output, CSV export &amp; quiz mode.</h2><div class="summary-grid"><div><span>Project Type</span><strong>Practice Project</strong></div><div><span>Tech Stack</span><strong>HTML · CSS · JS</strong></div><div><span>Input Range</span><strong>−∞ to +∞</strong></div><div><span>Layouts</span><strong>3 Modes</strong></div><div><span>Export Formats</span><strong>CSV + HTML</strong></div></div></section>
+<section class="case-section case-section-rich reveal " id="s1"><div class="section-number">01</div><div><p class="case-kicker">PROJECT OVERVIEW</p><h2>Project Overview</h2><p class="">The <strong>Table Generator</strong> is a lightweight, front-end-only web application that computes and renders multiplication tables for any integer input. Unlike typical textbook tools that are capped at 1–10 or 1–20, this project deliberately accepts an <strong>infinite From–To range</strong> — negative, zero, or arbitrarily large integers are all valid inputs.</p><p class="">The project was conceived as a focused <strong>logic and algorithm practice exercise</strong>, with a clean UI built to challenge the developer's understanding of DOM manipulation, dynamic table generation, loop optimization, and edge-case handling across unbounded numeric ranges.</p></div></section><section class="case-section case-section-rich reveal " id="s2"><div class="section-number">02</div><div><p class="case-kicker">PROJECT OBJECTIVES</p><h2>Project Objectives</h2><div class="objective-list"><article><span>01</span><div><strong>Understand loop-based table generation</strong><p>with arbitrary start and end bounds</p></div></article><article><span>02</span><div><strong>Handle edge cases</strong><p>zero, negative numbers, inverted ranges, extremely large ranges</p></div></article><article><span>03</span><div><strong>Practice DOM manipulation</strong><p>dynamically building table rows and cells from scratch</p></div></article><article><span>04</span><div><strong>Implement multiple layout modes</strong><p>single-column classic, grid, and expanded views</p></div></article><article><span>05</span><div><strong>Build a quiz engine</strong><p>hide results and validate user answers against computed values</p></div></article><article><span>06</span><div><strong>Export data</strong><p>serialize the generated table into CSV and copyable HTML string</p></div></article><article><span>07</span><div><strong>Apply theme switching</strong><p>toggle between dark and light modes without page reload</p></div></article></div></div></section><section class="case-section case-section-rich reveal " id="s3"><div class="section-number">03</div><div><p class="case-kicker">FEATURES</p><h2>Features</h2><div class="feature-list"><article class="feature-row"><span class="feature-icon">∞</span><div><h3>Infinite Range Input</h3><p>From and To fields accept any integer — negative millions, zero, or positive billions. No artificial cap is enforced.</p></div></article><article class="feature-row"><span class="feature-icon">⚡</span><div><h3>Live Preview</h3><p>The table updates in real time as the user types. Every keystroke triggers a debounced re-render of the result panel.</p></div></article><article class="feature-row"><span class="feature-icon">🗂️</span><div><h3>3 Layout Modes</h3><p>Single-column classic (Expression → Result), compact grid, and a full expanded matrix view with all multiplier pairs.</p></div></article><article class="feature-row"><span class="feature-icon">🎯</span><div><h3>Quiz Mode</h3><p>Results are hidden and replaced with input fields. Users type answers and receive instant pass/fail feedback per row.</p></div></article><article class="feature-row"><span class="feature-icon">📥</span><div><h3>CSV Export</h3><p>Downloads the generated table as a .csv file using the current From–To range and the entered number.</p></div></article><article class="feature-row"><span class="feature-icon">📋</span><div><h3>Copy HTML</h3><p>Copies a formatted HTML &lt;table&gt; string to the clipboard, ready to paste into any editor or document.</p></div></article><article class="feature-row"><span class="feature-icon">🌙</span><div><h3>Theme Toggle</h3><p>Switches between dark and light color schemes using CSS custom properties, with smooth transitions applied.</p></div></article><article class="feature-row"><span class="feature-icon">🛡️</span><div><h3>Input Validation</h3><p>Gracefully handles non-numeric input, empty fields, and inverted From/To ranges with clear user messaging.</p></div></article></div></div></section><section class="case-section case-section-rich reveal " id="s4"><div class="section-number">04</div><div><p class="case-kicker">ALGORITHM DESIGN</p><h2>Algorithm Design</h2><div class="flow-diagram"><div class="flow-step"><span>01</span><strong>Parse Inputs</strong><small>Read number, from and to from the DOM. Convert all three to integers using parseInt(). Check for NaN.</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>02</span><strong>Normalize Range</strong><small>If from > to, swap the values so iteration always goes low → high.</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>03</span><strong>Iterate and Compute</strong><small>Loop from from to to inclusive. For each multiplier i, compute result = number × i. Push { expr, result } into an array.</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>04</span><strong>Render to DOM</strong><small>Clear the preview container, then build &lt;tr&gt; rows from the data array using a document fragment for performance.</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>05</span><strong>Apply Layout Mode</strong><small>Based on the selected layout dropdown, apply a CSS class or restructure column count: 2-col classic, grid, or matrix.</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>06</span><strong>Quiz Mode (Optional)</strong><small>Replace result cells with &lt;input type="number"&gt; elements. On blur/enter, compare entered value against stored result and apply pass/fail styling.</small></div></div><h3 class="subheading">Range Complexity</h3><div class="table-wrap"><table><thead><tr><th>From</th><th>To</th><th>Rows Generated</th><th>Edge Case</th></tr></thead><tbody><tr><td><strong>1</strong></td><td>10</td><td>10</td><td>—</td></tr><tr><td><strong>−10</strong></td><td>10</td><td>21</td><td>Crosses zero; result sign flips at 0</td></tr><tr><td><strong>0</strong></td><td>0</td><td>1</td><td>All results = 0 regardless of number</td></tr><tr><td><strong>10</strong></td><td>1</td><td>10 (swapped)</td><td>Inverted range — normalize before loop</td></tr><tr><td><strong>1</strong></td><td>1000000</td><td>1,000,000</td><td>DOM performance / browser tab memory</td></tr><tr><td><strong>−999</strong></td><td>−1</td><td>999</td><td>All multipliers negative; result sign depends on number</td></tr></tbody></table></div></div></section><section class="case-section case-section-rich reveal " id="s5"><div class="section-number">05</div><div><p class="case-kicker">CORE LOGIC (PSEUDOCODE)</p><h2>Core Logic (Pseudocode)</h2><div class="code-card"><div class="code-card-head"><span>Table generation engine</span><span>Vanilla JS</span></div><pre><code>// ── Table Generation Engine ──────────────────────────
+
+function generateTable(number, from, to) {
+  const rows = []
+
+  // Normalize inverted range
+  if (from &gt; to) [from, to] = [to, from]
+
+  for (let i = from; i &lt;= to; i++) {
+    rows.push({
+      expr:   `${number} × ${i}`,
+      result: number * i
+    })
+  }
+
+  return rows
+}
+
+// ── DOM Renderer (Document Fragment) ─────────────────
+
+function renderTable(rows, quizMode) {
+  const frag = document.createDocumentFragment()
+
+  rows.forEach(({ expr, result }) =&gt; {
+    const tr = document.createElement('tr')
+    tr.innerHTML = `
+      &lt;td&gt;${expr}&lt;/td&gt;
+      &lt;td&gt;${quizMode
+        ? '&lt;input type="number" /&gt;'
+        : result}
+      &lt;/td&gt;`
+    if (quizMode) attachValidator(tr, result)
+    frag.appendChild(tr)
+  })
+
+  tableBody.replaceChildren(frag)
+}
+
+// ── CSV Serializer ────────────────────────────────────
+
+function toCSV(rows) {
+  const header = "Expression,Result\n"
+  const body = rows.map(r =&gt; `"${r.expr}",${r.result}`)
+  return header + body.join("\n")
+}</code></pre></div><p class="code-note"><i class="fa-solid fa-gauge-high"></i> Performance Note — All rows are built into a DocumentFragment before a single DOM insertion. This avoids repeated reflows and keeps rendering snappy even for ranges of several thousand rows. For extreme ranges (e.g. 1 to 1,000,000), a virtual scroll or paginated render would be the next optimization step.</p></div></section><section class="case-section case-section-rich reveal " id="s6"><div class="section-number">06</div><div><p class="case-kicker">CHALLENGES & SOLUTIONS</p><h2>Challenges & Solutions</h2><div class="edge-grid"><article class="edge-card"><div class="edge-label">01</div><h3>Infinite Range Handling</h3><p>No upper or lower cap means ranges like −10,000 to 10,000 generate 20,001 rows. The solution was DocumentFragment batching and a soft warning prompt for ranges above a threshold (e.g. 5,000 rows).</p></article><article class="edge-card"><div class="edge-label">02</div><h3>Inverted From/To</h3><p>Users sometimes type From: 10, To: 1 accidentally. A normalization swap before the loop makes this produce correct output silently, without throwing errors.</p></article><article class="edge-card"><div class="edge-label">03</div><h3>Zero as Number Input</h3><p>When the entered number is 0, every row should show 0. This is mathematically correct but visually ambiguous. The renderer correctly computes 0 × n = 0 for all n.</p></article><article class="edge-card"><div class="edge-label">04</div><h3>JavaScript Precision</h3><p>Large integer multiplication like 9999999 × 9999999 can exceed Number.MAX_SAFE_INTEGER. A future improvement is to use BigInt arithmetic for ranges beyond safe limits.</p></article><article class="edge-card"><div class="edge-label">05</div><h3>Quiz Mode Validation</h3><p>Each quiz input must know its expected answer at render time. This was solved by closing over the result value per row inside the event listener via a closure.</p></article><article class="edge-card"><div class="edge-label">06</div><h3>CSV Download in Browser</h3><p>Browsers don't have a native save-file API. The solution was to create a temporary &lt;a&gt; element with a Blob object URL, trigger a click programmatically, then revoke the URL.</p></article></div></div></section><section class="case-section case-section-rich reveal " id="s7"><div class="section-number">07</div><div><p class="case-kicker">INPUTS & OUTPUTS</p><h2>Inputs & Outputs</h2><h3 class="subheading">Input Parameters</h3><div class="table-wrap"><table><thead><tr><th>Field</th><th>Type</th><th>Constraint</th><th>Default</th></tr></thead><tbody><tr><td><strong>Number</strong></td><td>Integer</td><td>Any value; −∞ to +∞</td><td><em>empty</em></td></tr><tr><td><strong>From</strong></td><td>Integer</td><td>Any value; −∞ to +∞</td><td>1</td></tr><tr><td><strong>To</strong></td><td>Integer</td><td>Any value; −∞ to +∞</td><td>10</td></tr><tr><td><strong>Layout</strong></td><td>Enum</td><td>Single-column / Grid / Matrix</td><td>Single-column</td></tr></tbody></table></div><h3 class="subheading">Output Formats</h3><div class="table-wrap"><table><thead><tr><th>Output</th><th>Format</th><th>Action</th><th>Status</th></tr></thead><tbody><tr><td><strong>Live Preview</strong></td><td>HTML table in DOM</td><td>Auto-render on input</td><td>Live</td></tr><tr><td><strong>CSV File</strong></td><td>.csv download</td><td>Download CSV button</td><td>Implemented</td></tr><tr><td><strong>HTML String</strong></td><td>Clipboard text</td><td>Copy HTML button</td><td>Implemented</td></tr><tr><td><strong>Quiz Mode</strong></td><td>Input fields in table</td><td>Quiz Mode toggle</td><td>Interactive</td></tr><tr><td><strong>BigInt Support</strong></td><td>Extended precision</td><td>Auto-detect overflow</td><td>Planned</td></tr></tbody></table></div><h3 class="subheading">Sample Output — Number: 7, From: −3, To: 3</h3><div class="table-wrap"><table><thead><tr><th>Expression</th><th>Result</th></tr></thead><tbody><tr><td><strong>7 × −3</strong></td><td>−21</td></tr><tr><td><strong>7 × −2</strong></td><td>−14</td></tr><tr><td><strong>7 × −1</strong></td><td>−7</td></tr><tr><td><strong>7 × 0</strong></td><td>0</td></tr><tr><td><strong>7 × 1</strong></td><td>7</td></tr><tr><td><strong>7 × 2</strong></td><td>14</td></tr><tr><td><strong>7 × 3</strong></td><td>21</td></tr></tbody></table></div></div></section><section class="case-section case-section-rich reveal " id="s8"><div class="section-number">08</div><div><p class="case-kicker">KEY OUTCOMES</p><h2>Key Outcomes</h2><div class="decision-grid"><article class="decision-card"><span>01</span><h3>Unbounded Input Works</h3><p>The engine handles negative, zero, and arbitrarily large integers correctly. The only practical limit is the browser's rendering performance, not the logic itself.</p></article><article class="decision-card"><span>02</span><h3>Edge Cases Covered</h3><p>Zero as a multiplier, inverted ranges, non-numeric input, and single-row ranges (From = To) are all handled gracefully with correct output or informative messages.</p></article><article class="decision-card"><span>03</span><h3>Quiz Mode Validates Correctly</h3><p>Closure-based answer binding ensures each quiz row independently validates against its own pre-computed result, regardless of how many rows are on screen.</p></article><article class="decision-card"><span>04</span><h3>Export Formats Functional</h3><p>Both CSV download (via Blob URL) and HTML clipboard copy work across modern browsers without any backend or server dependency.</p></article></div></div></section><section class="case-section case-section-rich reveal " id="s9"><div class="section-number">09</div><div><p class="case-kicker">SKILLS PRACTICED & LEARNINGS</p><h2>Skills Practiced & Learnings</h2><div class="decision-grid"><article class="decision-card"><span>ALGORITHM CONCEPTS</span><h3>Bounded iteration</h3><p>designing loops that work for any start/end pair, including edge cases; range normalization; closure-based state; modular function design.</p></article><article class="decision-card"><span>DOM & JAVASCRIPT</span><h3>Browser APIs</h3><p>DocumentFragment, debounced event listeners, Blob API + URL.createObjectURL, Clipboard API, and CSS custom properties.</p></article><article class="decision-card"><span>UX & DESIGN</span><h3>Interaction clarity</h3><p>Displaying 0 × n correctly as 0; showing negative results with proper sign; providing a live preview so users see output change as they type, reducing cognitive load.</p></article></div></div></section><section class="case-section case-section-rich reveal case-final-section" id="s10"><div class="section-number">10</div><div><p class="case-kicker">CONCLUSION</p><h2>Conclusion</h2><p class="">The Table Generator is a small but deliberately open-ended project. By removing the artificial ceiling on input ranges — accepting any integer from negative infinity to positive infinity — it transforms what could have been a trivial 10-line script into a genuine exercise in edge-case reasoning, DOM performance awareness, and modular JavaScript architecture.</p><p class="">Every feature added — quiz mode, CSV export, layout switching, theme toggling — layered on a new dimension of problem-solving: closures, Blob APIs, CSS variables, and debouncing. As a logic and algorithm practice project, it succeeds precisely because of this scope: simple enough to build alone, complex enough to teach real lessons about how programs behave at their boundaries.</p><div class="case-next-actions"><a class="project-action project-action-primary" href="https://solankihetal-coder.github.io/Table-Generator/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a><a class="project-action" href="../../index.html#work">More work <i class="fa-solid fa-arrow-right"></i></a></div></div></section><section class="case-next reveal" id="live"><div><p class="case-kicker">LIVE PROJECT</p><h2>Table Generator</h2><p>Logic &amp; Algorithm Practice · Case Study</p></div><div class="case-next-actions"><a class="project-action project-action-primary" href="https://solankihetal-coder.github.io/Table-Generator/" target="_blank" rel="noopener noreferrer">Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="project-action" href="../../index.html#work">Back to work</a></div></section></div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Hetal Solanki. Built with intent.</p><a href="../../index.html">Back home <i class="fa-solid fa-arrow-up"></i></a></div></footer>
+<script src="../../js/components/page-loader.js" defer></script><script src="../../js/components/content-skeleton.js" defer></script><script src="../../js/main.js" defer></script>
+
+</body></html>

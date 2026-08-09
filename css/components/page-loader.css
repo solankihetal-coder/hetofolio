@@ -1,0 +1,126 @@
+/* =========================================================
+   SIGNATURE PAGE LOADER
+   Minimal, brand-led, readiness-aware.
+   ========================================================= */
+
+:root {
+  --loader-bg: #f6f5f1;
+  --loader-ink: #1e1e1e;
+  --loader-accent: #4fae62;
+}
+
+.page-loader.signature-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: var(--loader-bg);
+  color: var(--loader-ink);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.signature-loader__stage {
+  width: min(180px, 42vw);
+  display: grid;
+  place-items: center;
+  transform: translateY(0);
+}
+
+.signature-loader__mark {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.signature-loader__logo path {
+  fill: transparent;
+  stroke: var(--loader-ink);
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: var(--path-length, 900);
+  stroke-dashoffset: var(--path-length, 900);
+  animation: signatureDraw .58s cubic-bezier(.65,0,.35,1) forwards;
+}
+
+.signature-loader__logo path:nth-child(1) { animation-delay: .02s; }
+.signature-loader__logo path:nth-child(2) { animation-delay: .07s; }
+.signature-loader__logo path:nth-child(3) { animation-delay: .12s; }
+.signature-loader__logo path:nth-child(4) { animation-delay: .17s; }
+.signature-loader__logo path:nth-child(5) { animation-delay: .21s; }
+
+.signature-loader__logo {
+  animation: signatureInkIn .01s linear .52s forwards;
+}
+
+.signature-loader__swash {
+  fill: none;
+  stroke: var(--loader-accent);
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+  animation: swashDraw .48s cubic-bezier(.65,0,.35,1) .54s forwards;
+}
+
+/* The handoff is a slide, not a fade. It leaves the hero underneath intact. */
+.page-loader.signature-loader.is-done {
+  visibility: hidden;
+  pointer-events: none;
+  animation: signatureSlideAway .62s cubic-bezier(.76,0,.24,1) forwards;
+}
+
+@keyframes signatureDraw {
+  0% {
+    stroke-dashoffset: var(--path-length, 900);
+    fill: transparent;
+    stroke: var(--loader-ink);
+  }
+  84% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+    stroke: var(--loader-ink);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--loader-ink);
+    stroke: transparent;
+  }
+}
+
+@keyframes signatureInkIn {
+  to { opacity: 1; }
+}
+
+@keyframes swashDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes signatureSlideAway {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-loader.signature-loader {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .signature-loader__logo path {
+    animation: none !important;
+    fill: var(--loader-ink);
+    stroke: none;
+  }
+
+  .signature-loader__swash {
+    animation: none !important;
+    stroke-dashoffset: 0;
+  }
+}
