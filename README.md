@@ -150,3 +150,4 @@ This portfolio is prepared for direct deployment on GitHub Pages.
 - Test the site on desktop and mobile after Pages finishes deploying.
 - Test a hard refresh on a case-study URL and the custom 404 page.
 - Submit the final sitemap to Google Search Console after the site is publicly reachable.
+"# heto" 
