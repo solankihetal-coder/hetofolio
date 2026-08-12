@@ -1,20 +1,639 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="SavvyShopper — Herbal & Ayurvedic E-Commerce — Design + Systems Architecture."><title>SavvyShopper · Hetal Solanki</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SavvyShopper — Herbal & Ayurvedic E-Commerce — Design + Systems Architecture.">
+<title>SavvyShopper — Project Case Study</title>
+
 <meta property="og:title" content="SavvyShopper · Hetal Solanki">
-<meta property="og:description" content="SavvyShopper — Herbal & Ayurvedic E-Commerce — Design + Systems Architecture.">
+<meta
+    property="og:description"
+    content="SavvyShopper — Herbal & Ayurvedic E-Commerce — Design + Systems Architecture."
+>
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://solankihetal-coder.github.io/hetofolio/pages/projects/smart-e-commerce.html">
-<link rel="canonical" href="https://solankihetal-coder.github.io/hetofolio/pages/projects/smart-e-commerce.html">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<meta
+    property="og:url"
+    content="https://solankihetal-coder.github.io/hetofolio/pages/projects/smart-e-commerce.html"
+>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../css/main.css">
+<link rel="stylesheet" href="../../css/project.css">
+<link rel="stylesheet" href="../../css/components/page-loader.css">
+<link rel="stylesheet" href="../../css/components/content-skeleton.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="../../css/components/page-loader.css"><link rel="stylesheet" href="../../css/components/content-skeleton.css"><link rel="stylesheet" href="../../css/main.css"><link rel="stylesheet" href="../../css/project.css">
+
+<style>
+  :root {
+    --green-dark:   #1a3a2a;
+    --green-mid:    #2d6a4f;
+    --green-soft:   #52b788;
+    --green-pale:   #b7e4c7;
+    --green-mist:   #f0faf4;
+    --cream:        #faf8f3;
+    --ink:          #1c1c1c;
+    --ink-muted:    #4a4a4a;
+    --ink-light:    #7a7a7a;
+    --rule:         #d8e8df;
+    --accent-amber: #e07b39;
+    --accent-teal:  #2a8fa0;
+    --white:        #ffffff;
+    --shadow-sm:    0 2px 8px rgba(26,58,42,0.08);
+    --shadow-md:    0 8px 32px rgba(26,58,42,0.12);
+    --radius:       10px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 80px 60px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    border: 60px solid rgba(82,183,136,0.12);
+    pointer-events: none;
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 40px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    border: 40px solid rgba(82,183,136,0.07);
+    pointer-events: none;
+  }
+  .cover-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+    margin-bottom: 20px;
+  }
+  .cover h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    position: relative;
+  }
+  .cover-subtitle {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(18px, 3vw, 26px);
+    color: var(--green-pale);
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .cover-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    position: relative;
+  }
+  .meta-pill {
+    font-size: 12px;
+    font-weight: 500;
+    background: rgba(82,183,136,0.15);
+    border: 1px solid rgba(82,183,136,0.3);
+    color: var(--green-pale);
+    padding: 5px 14px;
+    border-radius: 100px;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── TOC ── */
+  .toc-wrapper {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 40px 60px;
+  }
+  .toc-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 16px;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 4px 32px;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--rule);
+    text-decoration: none;
+    color: var(--ink-muted);
+    font-size: 13.5px;
+    transition: color 0.2s;
+  }
+  .toc-item:hover { color: var(--green-mid); }
+  .toc-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--green-soft);
+    flex-shrink: 0;
+  }
+
+  /* ── LAYOUT ── */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    padding: 56px 0 0;
+    border-top: 1px solid var(--rule);
+    margin-top: 56px;
+    animation: fadeUp 0.5s ease both;
+  }
+  .section:first-of-type { margin-top: 56px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--green-soft);
+    background: var(--green-mist);
+    border: 1px solid var(--green-pale);
+    border-radius: 6px;
+    padding: 4px 10px;
+    flex-shrink: 0;
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 400;
+    color: var(--green-dark);
+    line-height: 1.2;
+  }
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--green-mid);
+    margin: 32px 0 12px;
+  }
+
+  p {
+    color: var(--ink-muted);
+    margin-bottom: 16px;
+    max-width: 72ch;
+  }
+
+  strong { color: var(--ink); font-weight: 600; }
+
+  /* ── OVERVIEW CARD ── */
+  .overview-card {
+    background: var(--green-dark);
+    color: var(--white);
+    border-radius: var(--radius);
+    padding: 32px 36px;
+    margin-bottom: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+  }
+  .ov-item label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .ov-item span {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  /* ── LISTS ── */
+  ul, ol {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  ul li, ol li {
+    position: relative;
+    padding: 6px 0 6px 22px;
+    color: var(--ink-muted);
+    font-size: 15px;
+    border-bottom: 1px solid var(--rule);
+  }
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 15px;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green-soft);
+  }
+  ol { counter-reset: ol-cnt; }
+  ol li { counter-increment: ol-cnt; }
+  ol li::before {
+    content: counter(ol-cnt);
+    position: absolute;
+    left: 0; top: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--green-soft);
+    font-weight: 500;
+  }
+  li:last-child { border-bottom: none; }
+  li strong { color: var(--green-dark); }
+
+  /* ── PROBLEM CARDS ── */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .problem-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent-amber);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .problem-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-amber);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .problem-card p { font-size: 13.5px; margin: 0; }
+
+  /* ── MODULE GRID ── */
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .module-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .module-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .module-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: var(--green-mist);
+    border: 1px solid var(--green-pale);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+  .module-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-dark);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .module-card ul { margin: 0; }
+  .module-card ul li {
+    font-size: 13px;
+    padding: 3px 0 3px 16px;
+    border-bottom: none;
+  }
+  .module-card ul li::before { top: 10px; width: 5px; height: 5px; }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 20px 0 28px;
+    border-radius: var(--radius);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow-sm);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  thead tr {
+    background: var(--green-dark);
+    color: var(--white);
+  }
+  thead th {
+    padding: 13px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  tbody tr { transition: background 0.15s; }
+  tbody tr:nth-child(even) { background: var(--green-mist); }
+  tbody tr:hover { background: var(--green-pale); }
+  tbody td {
+    padding: 11px 18px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink-muted);
+    vertical-align: top;
+  }
+  tbody td:first-child { color: var(--ink); font-weight: 500; }
+  tbody tr:last-child td { border-bottom: none; }
+  .tag-feasible {
+    display: inline-block;
+    background: #d1f2e1;
+    color: #1a6b3a;
+    border-radius: 100px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── WATERFALL STEPS ── */
+  .waterfall {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 20px 0 28px;
+    position: relative;
+  }
+  .waterfall::before {
+    content: '';
+    position: absolute;
+    left: 22px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--green-soft), var(--green-pale));
+  }
+  .wf-step {
+    display: flex;
+    gap: 20px;
+    padding: 16px 0 16px 54px;
+    position: relative;
+  }
+  .wf-num {
+    position: absolute;
+    left: 10px; top: 18px;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--green-mid);
+    color: var(--white);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .wf-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--green-dark);
+    margin-bottom: 3px;
+  }
+  .wf-content p { font-size: 13.5px; margin: 0; }
+
+  /* ── THEORY GRID ── */
+  .theory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .theory-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--accent-teal);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    box-shadow: var(--shadow-sm);
+  }
+  .theory-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-teal);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .theory-card ul { margin: 0; }
+  .theory-card ul li {
+    font-size: 13px;
+    border-bottom: none;
+    padding: 3px 0 3px 16px;
+  }
+  .theory-card ul li::before { top: 10px; width: 5px; height: 5px; background: var(--accent-teal); }
+
+  /* ── DATA DICT ── */
+  .dict-section {
+    margin-bottom: 28px;
+  }
+  .dict-label {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    background: var(--green-dark);
+    color: var(--green-pale);
+    padding: 5px 14px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+  td code {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    background: #eef7f2;
+    color: var(--green-mid);
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+
+  /* ── OUTCOMES ── */
+  .outcome-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .outcome-item {
+    display: flex;
+    gap: 16px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    box-shadow: var(--shadow-sm);
+    align-items: flex-start;
+  }
+  .outcome-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--green-soft);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .outcome-item strong {
+    display: block;
+    font-size: 14px;
+    color: var(--green-dark);
+    margin-bottom: 3px;
+  }
+  .outcome-item p { font-size: 13.5px; margin: 0; }
+
+  /* ── CONCLUSION ── */
+  .conclusion-box {
+    background: var(--green-dark);
+    color: var(--white);
+    border-radius: var(--radius);
+    padding: 40px 44px;
+    margin-top: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .conclusion-box::before {
+    content: '\201C';
+    position: absolute;
+    top: -10px; left: 28px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 120px;
+    color: rgba(82,183,136,0.15);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .conclusion-box p {
+    color: rgba(255,255,255,0.82);
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 68ch;
+    position: relative;
+  }
+  .conclusion-box p + p { margin-top: 14px; }
+
+  /* ── DESIGN SHOWCASE (new) ── */
+  .design-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .design-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .design-card img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid var(--rule);
+  }
+  .design-card-caption {
+    padding: 16px 20px;
+  }
+  .design-card-caption h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-dark);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .design-card-caption p {
+    font-size: 13.5px;
+    margin: 0;
+  }
+
+  /* ── REFLECTION (new) ── */
+  .reflection-box {
+    background: var(--green-mist);
+    border: 1px solid var(--green-pale);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin-bottom: 28px;
+  }
+  .reflection-box ul li {
+    border-bottom: none;
+    padding-bottom: 10px;
+  }
+  .reflection-box ul li::before {
+    background: var(--green-mid);
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 640px) {
+    .cover { padding: 50px 28px 44px; }
+    .toc-wrapper { padding: 28px 24px; }
+    .page { padding: 0 20px 60px; }
+    .overview-card { grid-template-columns: 1fr; }
+    .design-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body class="case-study-page case-rich" style="--project-accent:#71977b;--project-accent-soft:#eaf1eb;">
 
-<div class="page-loader signature-loader is-active" id="page-loader" role="status" aria-live="polite" aria-label="Loading portfolio">
+       <!-- =========================================
+      5. PAGE LOADER
+    ========================================= -->
+  <div class="page-loader signature-loader is-active" id="page-loader" role="status" aria-live="polite" aria-label="Loading portfolio">
     <div class="signature-loader__stage" aria-hidden="true">
       <svg class="signature-loader__mark" viewBox="0 0 93 72" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g class="signature-loader__logo">
@@ -28,8 +647,8 @@
       </svg>
     </div>
   </div>
-  <noscript><style>#page-loader{display:none!important}</style></noscript>
 
+  <noscript><style>#page-loader{display:none!important}</style></noscript>
 
 <header class="site-header" id="site-header">
   <div class="container nav-container">
@@ -50,42 +669,674 @@
   </div>
 </header>
 
+
 <main>
-<div class="content-skeleton" data-content-skeleton aria-hidden="true">
-  <div class="content-skeleton__inner">
-    <div class="content-skeleton__hero">
-      <span class="content-skeleton__eyebrow"></span>
-      <span class="content-skeleton__title"></span>
-      <span class="content-skeleton__line"></span>
-      <span class="content-skeleton__line short"></span>
-      <div class="content-skeleton__actions"><span class="content-skeleton__button"></span><span class="content-skeleton__button"></span></div>
-    </div>
-    <div class="content-skeleton__image"></div>
-    <div class="content-skeleton__grid">
-      <div class="content-skeleton__side"><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="content-skeleton__body">
-        <span class="content-skeleton__line"></span><span class="content-skeleton__line"></span><span class="content-skeleton__line"></span>
-        <div class="content-skeleton__cards"><span class="content-skeleton__card"></span><span class="content-skeleton__card"></span><span class="content-skeleton__card"></span></div>
+
+    <div class="content-skeleton" data-content-skeleton aria-hidden="true">
+        <div class="content-skeleton__inner">
+          <div class="content-skeleton__hero">
+            <span class="content-skeleton__eyebrow"></span>
+            <span class="content-skeleton__title"></span>
+            <span class="content-skeleton__line"></span>
+            <span class="content-skeleton__line short"></span>
+            <div class="content-skeleton__actions"><span class="content-skeleton__button"></span><span class="content-skeleton__button"></span></div>
+          </div>
+          <div class="content-skeleton__image"></div>
+          <div class="content-skeleton__grid">
+            <div class="content-skeleton__side"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="content-skeleton__body">
+              <span class="content-skeleton__line"></span><span class="content-skeleton__line"></span><span class="content-skeleton__line"></span>
+              <div class="content-skeleton__cards"><span class="content-skeleton__card"></span><span class="content-skeleton__card"></span><span class="content-skeleton__card"></span></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+<!-- COVER -->
+<div class="cover">
+  <p class="cover-eyebrow">Solo Project · UI/UX Design + Systems Analysis</p>
+  <h1>SavvyShopper</h1>
+  <p class="cover-subtitle">Herbal &amp; Ayurvedic E-Commerce — Design + Systems Architecture</p>
+  <div class="cover-meta">
+    <span class="meta-pill">E-commerce / Smart Shopping</span>
+    <span class="meta-pill">UI/UX Design</span>
+    <span class="meta-pill">Waterfall SDLC</span>
+    <span class="meta-pill">Herbal &amp; Ayurvedic Products</span>
+  </div>
+  <div class="cover-actions" style="margin-top:28px; position:relative;">
+    <a class="project-action" href="YOUR-LIVE-PROJECT-URL" target="_blank" rel="noopener noreferrer">
+      View Live Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
   </div>
 </div>
-<section class="case-hero case-hero-rich"><div class="container">
-  <a class="back-link" href="../../index.html#work"><i class="fa-solid fa-arrow-left"></i> Back to work</a>
-  <div class="case-meta-row"><div class="case-meta">Solo Project · UI/UX Design + Systems Analysis</div><span class="case-status"><i class="fa-solid fa-circle"></i> Case study</span></div>
-  <h1>SavvyShopper</h1><p class="case-intro case-intro-wide">Herbal & Ayurvedic E-Commerce — Design + Systems Architecture</p>
-  <div class="case-tags case-tags-large"><span>E-commerce / Smart Shopping</span><span>UI/UX Design</span><span>Waterfall SDLC</span><span>Herbal & Ayurvedic Products</span></div>
-  <div class="case-facts case-facts-four"><div><span>Project Name</span><strong>SavvyShopper</strong></div><div><span>Domain</span><strong>E-commerce / Smart Shopping Platform</strong></div><div><span>Document Type</span><strong>UI/UX Design + Full System Analysis</strong></div><div><span>Development Methodology</span><strong>Waterfall Model</strong></div></div>
-  <div class="case-hero-actions"><a class="project-action" href="#overview"><i class="fa-solid fa-arrow-down"></i> Explore</a></div>
-  <div class="case-art"><div class="case-art-card case-art-image case-art-savvy"><img src="../../assets/images/projects/smart-e-commerce/savvy-shopper-device.png" alt="SavvyShopper e-commerce design presentation" loading="eager" data-loader-critical><div class="art-overlay"><span>SAVVYSHOPPER</span><span>SMART SHOPPING</span></div><div class="art-caption"><strong>UI/UX · SYSTEMS · E-COMMERCE</strong><small>HERBAL · AYURVEDIC · WATERFALL SDLC</small></div></div></div>
-</div></section>
-<section class="case-content case-rich-content"><div class="container case-grid-wide">
-<div class="case-main-wide"><section class="case-summary case-summary-rich reveal" id="overview"><p class="case-kicker">SOLO PROJECT · UI/UX DESIGN + SYSTEMS ANALYSIS</p><h2>Herbal &amp; Ayurvedic E-Commerce — Design + Systems Architecture</h2><div class="summary-grid"><div><span>Project Name</span><strong>SavvyShopper</strong></div><div><span>Domain</span><strong>E-commerce / Smart Shopping Platform</strong></div><div><span>Document Type</span><strong>UI/UX Design + Full System Analysis</strong></div><div><span>Development Methodology</span><strong>Waterfall Model</strong></div></div></section>
-<section class="case-section case-section-rich reveal " id="s0"><div class="section-number">00</div><div><p class="case-kicker">THE DESIGN</p><h2>The Design</h2><p class="">Before any systems architecture, this project started as a UI/UX design exercise — building a herbal wellness brand from scratch: identity, layout, and user flow.</p><h3 class="subheading">Brand Identity</h3><p class="">A calming sage-green palette paired with a hand-illustrated meditating mascot, used consistently across every screen to reinforce the "wellness and nature" positioning.</p><div class="design-notes"><article><span>01</span><h4>Homepage</h4><p>Follows a clear hierarchy: hero message → value proposition → browsable categories → best-selling products — designed to build trust before asking the user to browse deeper.</p></article><article><span>02</span><h4>Category Page — Home Care</h4><p>Each product is listed with name, price, a short description, and quick actions (Buy Now / Add to Cart / Wishlist) — built to support fast browsing decisions.</p></article><article><span>03</span><h4>Login</h4><p>A simple, distraction-free entry point — minimal fields and a clear call to action, with the brand mascot keeping things feeling warm even on a functional screen.</p></article><article><span>04</span><h4>Signup / Register</h4><p>Mirrors the login screen's structure for consistency, keeping the form short to reduce friction for new users.</p></article></div><div class="case-callout"><i class="fa-solid fa-pen-to-square"></i><div><strong>What I'd Do Differently Now</strong><p class="">This was my first full UI/UX project, and revisiting it taught me a lot about the details that actually matter:</p><ul class="rich-list"><li><strong>Product descriptions</strong> — early drafts reused one generic description across all products. I went back and wrote accurate, product-specific copy for each item — a good reminder that small content details affect how trustworthy a product feels.</li><li><strong>Color contrast</strong> — some category card text sits too close in tone to its background. I now know to check contrast ratios against accessibility standards before finalizing a palette.</li></ul><p class="">Sharing this honestly because it's part of how I got better — not despite the early mistakes, but because of catching and fixing them.</p></div></div></div></section><section class="case-section case-section-rich reveal " id="s1"><div class="section-number">01</div><div><p class="case-kicker">PROJECT OVERVIEW</p><h2>Project Overview</h2><p class="">SavvyShopper is a comprehensive herbal and Ayurvedic e-commerce platform designed to provide eco-friendly, indigenous products to a broad consumer base. It began with a range of 18 products and has expanded into categories including health & nutrition, skincare, personal care, home care, baby care, agriculture, veterinary, and food products.</p><p class="">The proposed system elevates SavvyShopper from a simple marketing website into a fully intelligent, data-driven shopping platform that integrates price comparison, personalization, and deal intelligence.</p><div class="case-callout"><i class="fa-solid fa-diagram-project"></i><div><strong>The Systems Thinking Behind the Design</strong><p class="">Beyond the UI, this project also required me to think like a systems analyst — defining the backend logic, data structure, and business case that would make this design actually work as a product. The sections below cover that analysis in full.</p></div></div></div></section><section class="case-section case-section-rich reveal " id="s2"><div class="section-number">02</div><div><p class="case-kicker">BACKGROUND & PROBLEM DEFINITION</p><h2>Background & Problem Definition</h2><h3 class="subheading">2.1 Background</h3><p class="">SavvyShopper was founded with a mission to make herbal and Ayurvedic products accessible at scale while preserving the country's natural resources. The platform's product lineup includes:</p><ul class="rich-list"><li><strong>Immunity boosters</strong> — Haldi drops, Tulsi drops</li><li><strong>Women's wellbeing</strong> — herbal medicines, cotton sanitary napkins</li><li><strong>Diabetes management</strong> — aloe vera juice, sugar-regulating syrups</li><li><strong>Skincare</strong> — organic face washes, aloe vera products</li></ul><h3 class="subheading">2.2 Problems with the Existing System</h3><div class="decision-grid"><article class="decision-card"><span>01</span><h3>Lack of Clarity</h3><p>Conflicting messaging across channels led to brand confusion. Teams operated without coordinated communication strategies.</p></article><article class="decision-card"><span>02</span><h3>Limited Reach</h3><p>Narrow marketing channels and campaigns failing to generate meaningful interactions with target users.</p></article><article class="decision-card"><span>03</span><h3>Poor Resource Allocation</h3><p>Budgets allocated without data-driven insights, leading to poor ROI and missed market opportunities.</p></article><article class="decision-card"><span>04</span><h3>No Analytics</h3><p>No robust infrastructure to measure campaign performance or track user behavior effectively.</p></article><article class="decision-card"><span>05</span><h3>Outdated Strategies</h3><p>Platform relied on traditional approaches misaligned with modern digital commerce expectations.</p></article></div></div></section><section class="case-section case-section-rich reveal " id="s3"><div class="section-number">03</div><div><p class="case-kicker">PROPOSED SYSTEM</p><h2>Proposed System</h2><div class="module-grid"><article><span class="module-icon">🖥️</span><h3>User Interface</h3><p>Personalized homepage dashboard; Advanced search & filters; Price comparison view; Shopping cart & wishlist; User reviews & ratings; Coupons & promo codes</p></article><article><span class="module-icon">⚡</span><h3>Core Features</h3><p>Price tracker with history; Real-time deal alerts; Aggregated product reviews</p></article><article><span class="module-icon">🗄️</span><h3>Backend System</h3><p>Centralized product database; Data aggregation engine; User accounts & profiles</p></article><article><span class="module-icon">🔗</span><h3>E-commerce Integrations</h3><p>Retailer APIs (Amazon, eBay, Walmart); Payment gateway integration</p></article><article><span class="module-icon">🚀</span><h3>Advanced Features</h3><p>Browser extension; Social sharing & credits; Premium subscription tier</p></article><article><span class="module-icon">🔒</span><h3>Security & Privacy</h3><p>SSL encryption; User data control settings; Secure payment gateways</p></article><article><span class="module-icon">💰</span><h3>Monetization</h3><p>Affiliate marketing commissions; Premium subscriptions; Sponsored listings</p></article><article><span class="module-icon">📣</span><h3>Marketing & Acquisition</h3><p>Referral program with incentives; Instagram, Twitter, TikTok presence</p></article></div></div></section><section class="case-section case-section-rich reveal " id="s4"><div class="section-number">04</div><div><p class="case-kicker">ADVANTAGES OF THE PROPOSED SYSTEM</p><h2>Advantages of the Proposed System</h2><div class="table-wrap"><table><thead><tr><th>Advantage</th><th>Description</th></tr></thead><tbody><tr><td><strong>Personalized Experience</strong></td><td>Tailored recommendations and custom price alerts based on user history</td></tr><tr><td><strong>Cost Savings</strong></td><td>Real-time price comparison and aggregated coupon access across retailers</td></tr><tr><td><strong>Convenience</strong></td><td>Centralized shopping hub with advanced search filters</td></tr><tr><td><strong>Data-Driven Decisions</strong></td><td>Historical price trends and aggregated user reviews from multiple platforms</td></tr><tr><td><strong>Seamless Integration</strong></td><td>Live API data from multiple retailers updated in real time</td></tr><tr><td><strong>Enhanced Engagement</strong></td><td>Loyalty programs and social sharing incentives for repeat use</td></tr><tr><td><strong>Revenue Generation</strong></td><td>Affiliate commissions, subscriptions, and sponsored listings</td></tr><tr><td><strong>Competitive Advantage</strong></td><td>First-mover as a comprehensive herbal + smart-shopping platform</td></tr></tbody></table></div></div></section><section class="case-section case-section-rich reveal " id="s5"><div class="section-number">05</div><div><p class="case-kicker">SCOPE OF THE PROJECT</p><h2>Scope of the Project</h2><h3 class="subheading">Core Features</h3><ul class="rich-list"><li>Brand identity showcase and consistent messaging</li><li>Comprehensive product and service information</li><li>Content marketing — blogs, industry insights</li><li>Customer support and contact channels</li></ul><h3 class="subheading">Extended Features (Phased Rollout)</h3><ul class="rich-list"><li>E-commerce engine with integrated checkout</li><li>CRM integration for customer relationship management</li><li>Marketing automation — email nurturing, lead generation</li><li>Customizable page templates for campaign branding</li></ul><h3 class="subheading">Platform-Specific Features</h3><ul class="rich-list"><li>Case studies from successful SavvyShopper campaigns</li><li>Client testimonials section</li><li>Services overview — advertising, PR, social media</li><li>Industry trend insights and editorial content</li></ul></div></section><section class="case-section case-section-rich reveal " id="s6"><div class="section-number">06</div><div><p class="case-kicker">THEORETICAL BACKGROUND</p><h2>Theoretical Background</h2><div class="decision-grid"><article class="decision-card"><span>CONSUMER BEHAVIOR THEORY</span><h3>Consumer Behavior Theory</h3><p>Theory of Planned Behavior for friction reduction; Technology Acceptance Model (TAM) for adoption.</p></article><article class="decision-card"><span>E-COMMERCE & DIGITAL MARKETING</span><h3>E-commerce & Digital Marketing</h3><p>Conversion rate optimization; SEO and retention marketing; Trust & personalization principles.</p></article><article class="decision-card"><span>MACHINE LEARNING & AI</span><h3>Machine Learning & AI</h3><p>Collaborative filtering; Content-based filtering; Price prediction models; NLP sentiment analysis on reviews.</p></article><article class="decision-card"><span>BEHAVIORAL ECONOMICS</span><h3>Behavioral Economics</h3><p>Nudge theory (countdown timers, stock alerts); Price anchoring (original vs. sale price); Scarcity & social proof signals.</p></article><article class="decision-card"><span>PRICE OPTIMIZATION</span><h3>Price Optimization</h3><p>Price elasticity demand models; Dynamic pricing based on demand & competition.</p></article><article class="decision-card"><span>SOCIAL INFLUENCE & NETWORK EFFECTS</span><h3>Social Influence & Network Effects</h3><p>Social shopping and trusted recommendations; Network effects from growing review base.</p></article></div></div></section><section class="case-section case-section-rich reveal " id="s7"><div class="section-number">07</div><div><p class="case-kicker">SYSTEM ANALYSIS</p><h2>System Analysis</h2><h3 class="subheading">7.1 Waterfall Methodology</h3><div class="objective-list"><article><span>1</span><div><strong>Requirement Analysis</strong><p>Interviews, document review, data/process modeling and DFD creation.</p></div></article><article><span>2</span><div><strong>Design Phase</strong><p>Solution planning based on SRS; ER diagrams, structure charts, and flow diagrams.</p></div></article><article><span>3</span><div><strong>Coding Phase</strong><p>Implementation using Visual Studio as IDE and MySQL as the database engine.</p></div></article><article><span>4</span><div><strong>Testing Phase</strong><p>Quality assurance via test case development; bug detection across all phases.</p></div></article><article><span>5</span><div><strong>Maintenance Phase</strong><p>Post-delivery defect resolution and feature enhancements as required.</p></div></article></div><h3 class="subheading">7.2 Feasibility Study</h3><div class="table-wrap"><table><thead><tr><th>Feasibility Type</th><th>Assessment</th><th>Outcome</th></tr></thead><tbody><tr><td><strong>Technical</strong></td><td>Visual Studio + MySQL environment already available at organization</td><td><strong>Feasible</strong></td></tr><tr><td><strong>Operational</strong></td><td>System is intuitive; no deep technical knowledge required to operate</td><td><strong>Feasible</strong></td></tr><tr><td><strong>Economical</strong></td><td>Software and hardware already at client side; minimal additional cost</td><td><strong>Feasible</strong></td></tr><tr><td><strong>Behavioral</strong></td><td>Minimal training required; minor resistance expected but manageable</td><td><strong>Feasible</strong></td></tr></tbody></table></div><h3 class="subheading">7.3 Fact-Finding Techniques</h3><ul class="rich-list"><li><strong>Observation</strong> — Direct monitoring of existing workflows and processes</li><li><strong>Interviewing</strong> — Structured discussions with managers and employees</li><li><strong>Record Review</strong> — Examination of data stored in physical registers</li><li><strong>Document Inspection</strong> — Study of usage formats such as cash memos and registers</li></ul></div></section><section class="case-section case-section-rich reveal " id="s8"><div class="section-number">08</div><div><p class="case-kicker">USER REQUIREMENTS</p><h2>User Requirements</h2><div class="table-wrap"><table><thead><tr><th>Category</th><th>Requirements</th></tr></thead><tbody><tr><td><strong>User Account</strong></td><td>Registration via email/social/phone; MFA; profile customization; wishlists</td></tr><tr><td><strong>Product Search</strong></td><td>Keyword/category/brand search; advanced filters; real-time price comparison</td></tr><tr><td><strong>Price Tracking</strong></td><td>Price fluctuation monitoring; desired price point setting per product</td></tr><tr><td><strong>Deal Alerts</strong></td><td>Push, email, or in-app notifications for sales and price drops</td></tr><tr><td><strong>Discounts</strong></td><td>Aggregated promo codes; exclusive flash-sale alerts for loyal users</td></tr><tr><td><strong>Recommendations</strong></td><td>Cross-sell and upsell suggestions based on user selections</td></tr><tr><td><strong>Product Reviews</strong></td><td>Read and aggregate reviews from multiple e-commerce platforms</td></tr><tr><td><strong>Retailer Info</strong></td><td>Trusted retailer details, delivery info, and return policies</td></tr><tr><td><strong>Mobile/Responsive</strong></td><td>iOS and Android app; responsive web design for all devices</td></tr><tr><td><strong>Payments</strong></td><td>Multiple secure payment options; SSL encryption; auto-fill checkout</td></tr><tr><td><strong>Communication</strong></td><td>Personalized email updates; referral program with incentives</td></tr><tr><td><strong>Analytics</strong></td><td>User behavior tracking; real-time platform performance monitoring</td></tr></tbody></table></div></div></section><section class="case-section case-section-rich reveal " id="s9"><div class="section-number">09</div><div><p class="case-kicker">SYSTEM DESIGN</p><h2>System Design</h2><h3 class="subheading">9.1 Entity Relationship Diagram — Core Entities</h3><ul class="rich-list"><li><strong>Customer</strong> — stores customer identity, contact, and shipping information</li><li><strong>Product</strong> — stores product metadata, pricing, stock, and imagery</li><li><strong>Order</strong> — captures order transactions, timestamps, and billing/shipping addresses</li><li><strong>Order Item</strong> — line-item detail linking orders to specific products and quantities</li><li><strong>Membership Tier</strong> — defines loyalty tiers and associated discount percentages</li></ul><h3 class="subheading">9.2 Data Dictionary</h3><h4 class="table-title">Customer</h4><div class="table-wrap"><table><thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>`customer_id`</strong></td><td>INT</td><td>Primary key</td></tr><tr><td><strong>`first_name`</strong></td><td>VARCHAR</td><td>Customer's first name</td></tr><tr><td><strong>`last_name`</strong></td><td>VARCHAR</td><td>Customer's last name</td></tr><tr><td><strong>`email`</strong></td><td>VARCHAR</td><td>Contact email address</td></tr><tr><td><strong>`phone`</strong></td><td>VARCHAR</td><td>Phone number</td></tr><tr><td><strong>`address`</strong></td><td>TEXT</td><td>Shipping address</td></tr></tbody></table></div><h4 class="table-title">Product</h4><div class="table-wrap"><table><thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>`product_id`</strong></td><td>INT</td><td>Primary key</td></tr><tr><td><strong>`name`</strong></td><td>VARCHAR</td><td>Product name</td></tr><tr><td><strong>`description`</strong></td><td>TEXT</td><td>Full product description</td></tr><tr><td><strong>`price`</strong></td><td>DECIMAL</td><td>Unit price</td></tr><tr><td><strong>`image`</strong></td><td>VARCHAR</td><td>Image URL or file path</td></tr><tr><td><strong>`quantity_in_stock`</strong></td><td>INT</td><td>Available inventory</td></tr></tbody></table></div><h4 class="table-title">Order</h4><div class="table-wrap"><table><thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>`order_id`</strong></td><td>INT</td><td>Primary key</td></tr><tr><td><strong>`customer_id`</strong></td><td>INT</td><td>FK → Customer table</td></tr><tr><td><strong>`order_date`</strong></td><td>TIMESTAMP</td><td>Date and time of order</td></tr><tr><td><strong>`total_amount`</strong></td><td>DECIMAL</td><td>Total order value</td></tr><tr><td><strong>`shipping_address`</strong></td><td>TEXT</td><td>Delivery address</td></tr><tr><td><strong>`billing_address`</strong></td><td>TEXT</td><td>Billing address</td></tr></tbody></table></div><h4 class="table-title">Order Item</h4><div class="table-wrap"><table><thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>`order_item_id`</strong></td><td>INT</td><td>Primary key</td></tr><tr><td><strong>`order_id`</strong></td><td>INT</td><td>FK → Order table</td></tr><tr><td><strong>`product_id`</strong></td><td>INT</td><td>FK → Product table</td></tr><tr><td><strong>`quantity`</strong></td><td>INT</td><td>Units ordered</td></tr><tr><td><strong>`unit_price`</strong></td><td>DECIMAL</td><td>Price per unit at time of order</td></tr></tbody></table></div><h4 class="table-title">Membership Tier</h4><div class="table-wrap"><table><thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>`tier_id`</strong></td><td>INT</td><td>Primary key</td></tr><tr><td><strong>`tier_name`</strong></td><td>VARCHAR</td><td>Tier name (e.g., Silver, Gold)</td></tr><tr><td><strong>`discount_percentage`</strong></td><td>DECIMAL</td><td>Applicable discount for tier</td></tr></tbody></table></div><h3 class="subheading">9.3 Event Table</h3><div class="table-wrap"><table><thead><tr><th>Event</th><th>Trigger</th><th>Activity</th><th>Response</th></tr></thead><tbody><tr><td><strong>Event ID</strong></td><td>Unique identifier per event</td><td>Event classification</td><td>Event number assigned</td></tr><tr><td><strong>Event Type</strong></td><td>Order placed, discount applied</td><td>Filtering and analysis</td><td>Changes and placements</td></tr><tr><td><strong>Customer ID</strong></td><td>—</td><td>Links event to customer</td><td>Customer table update</td></tr><tr><td><strong>Order ID</strong></td><td>Links to order record</td><td>Order placement</td><td>Order table update</td></tr><tr><td><strong>Member Discount</strong></td><td>Member login</td><td>Percentage/discounts applied</td><td>Product view</td></tr><tr><td><strong>Discount Unavailable</strong></td><td>Member login</td><td>Product view</td><td>Cart page redirect</td></tr><tr><td><strong>Discount Updated</strong></td><td>Promotion update</td><td>Different level check</td><td>Membership level change</td></tr><tr><td><strong>Discount Claimed</strong></td><td>Checkout</td><td>—</td><td>Cart page</td></tr></tbody></table></div><h3 class="subheading">9.4 Technology Stack</h3><div class="table-wrap"><table><thead><tr><th>Layer</th><th>Technology</th></tr></thead><tbody><tr><td><strong>Frontend IDE</strong></td><td>Visual Studio</td></tr><tr><td><strong>Database</strong></td><td>MySQL</td></tr><tr><td><strong>Architecture</strong></td><td>Client-Server</td></tr><tr><td><strong>Methodology</strong></td><td>Waterfall SDLC</td></tr></tbody></table></div></div></section><section class="case-section case-section-rich reveal " id="s10"><div class="section-number">10</div><div><p class="case-kicker">KEY OUTCOMES & INSIGHTS</p><h2>Key Outcomes & Insights</h2><div class="decision-grid"><article class="decision-card"><span>PRODUCT SCOPE</span><h3>Product Scope</h3><p>SavvyShopper successfully maps its herbal product ecosystem to a scalable e-commerce architecture capable of handling multi-category inventory, tiered memberships, and third-party retail integrations.</p></article><article class="decision-card"><span>INTELLIGENCE LAYER</span><h3>Intelligence Layer</h3><p>By embedding machine learning — price prediction, collaborative filtering, NLP sentiment analysis — the platform moves beyond passive product listing into proactive consumer guidance.</p></article><article class="decision-card"><span>BEHAVIORAL DESIGN</span><h3>Behavioral Design</h3><p>The use of nudge theory, price anchoring, scarcity cues, and social proof transforms the platform into a psychologically-aware shopping tool that drives measurable conversion improvements.</p></article><article class="decision-card"><span>REVENUE DIVERSIFICATION</span><h3>Revenue Diversification</h3><p>The combination of affiliate marketing, premium subscriptions, and sponsored listings creates multiple revenue streams, reducing dependency on any single monetization channel.</p></article><article class="decision-card"><span>SCALABILITY</span><h3>Scalability</h3><p>The modular architecture — separate UI, backend, API integration, and analytics layers — ensures that each component can be scaled or upgraded independently as the user base grows.</p></article></div></div></section><section class="case-section case-section-rich reveal case-final-section" id="s11"><div class="section-number">11</div><div><p class="case-kicker">CONCLUSION</p><h2>Conclusion</h2><p class="">The SavvyShopper project presents a well-rounded case study in transforming a basic product marketing website into a comprehensive, intelligent shopping platform. Grounded in consumer behavior theory, machine learning, and behavioral economics, the proposed system addresses real gaps in the existing infrastructure while delivering clear value to end users — through personalization, cost savings, and transparency — and to the business — through diversified revenue, data-driven marketing, and scalable architecture.</p><p class="">The use of the Waterfall model provides structure and traceability across all phases, making it an appropriate choice for a project with well-defined requirements. The completeness of the design artifacts — ER diagrams, data flow diagrams, structure charts, event tables, and a data dictionary — demonstrates thorough analytical rigor and readiness for implementation.</p><p class="">This project taught me that good design isn't just visual — it's connected to a system that has to actually function. That dual lens — how something looks and feels, and how it's built and structured — is exactly the kind of thinking I now bring to every project, design or development.</p><div class="case-next-actions"><a class="project-action" href="../../index.html#work">More work <i class="fa-solid fa-arrow-right"></i></a></div></div></section><section class="case-next reveal"><div><p class="case-kicker">CASE STUDY</p><h2>SavvyShopper</h2><p>SavvyShopper · UI/UX Design + Systems Case Study</p></div><div class="case-next-actions"><a class="project-action" href="../../index.html#work">Back to work <i class="fa-solid fa-arrow-right"></i></a></div></section></div>
-</div></section>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc-wrapper">
+  <p class="toc-title">Contents</p>
+  <div class="toc-grid">
+    <a class="toc-item" href="#s0"><span class="toc-num">00</span> The Design</a>
+    <a class="toc-item" href="#s1"><span class="toc-num">01</span> Project Overview</a>
+    <a class="toc-item" href="#s2"><span class="toc-num">02</span> Background & Problem Definition</a>
+    <a class="toc-item" href="#s3"><span class="toc-num">03</span> Proposed System</a>
+    <a class="toc-item" href="#s4"><span class="toc-num">04</span> Advantages</a>
+    <a class="toc-item" href="#s5"><span class="toc-num">05</span> Scope of Project</a>
+    <a class="toc-item" href="#s6"><span class="toc-num">06</span> Theoretical Background</a>
+    <a class="toc-item" href="#s7"><span class="toc-num">07</span> System Analysis</a>
+    <a class="toc-item" href="#s8"><span class="toc-num">08</span> User Requirements</a>
+    <a class="toc-item" href="#s9"><span class="toc-num">09</span> System Design</a>
+    <a class="toc-item" href="#s10"><span class="toc-num">10</span> Key Outcomes</a>
+    <a class="toc-item" href="#s11"><span class="toc-num">11</span> Conclusion</a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="page">
+
+  <!-- 0. The Design (new) -->
+  <section class="section" id="s0" style="margin-top: 56px; border-top: none; padding-top: 0;">
+    <div class="section-header">
+      <span class="section-num">00</span>
+      <h2>The Design</h2>
+    </div>
+    <p>Before any systems architecture, this project started as a UI/UX design exercise — building a herbal wellness brand from scratch: identity, layout, and user flow.</p>
+
+    <h3>Brand Identity</h3>
+    <p>A calming sage-green palette paired with a hand-illustrated meditating mascot, used consistently across every screen to reinforce the "wellness and nature" positioning.</p>
+
+    <div class="design-grid">
+      <div class="design-card">
+        <img src="Home_page.png" alt="SavvyShopper homepage design">
+        <div class="design-card-caption">
+          <h4>Homepage</h4>
+          <p>Follows a clear hierarchy: hero message → value proposition → browsable categories → best-selling products — designed to build trust before asking the user to browse deeper.</p>
+        </div>
+      </div>
+      <div class="design-card">
+        <img src="Home_care.png" alt="Home Care category page design">
+        <div class="design-card-caption">
+          <h4>Category Page — Home Care</h4>
+          <p>Each product is listed with name, price, a short description, and quick actions (Buy Now / Add to Cart / Wishlist) — built to support fast browsing decisions.</p>
+        </div>
+      </div>
+      <div class="design-card">
+        <img src="Login.png" alt="Login screen design">
+        <div class="design-card-caption">
+          <h4>Login</h4>
+          <p>A simple, distraction-free entry point — minimal fields and a clear call to action, with the brand mascot keeping things feeling warm even on a functional screen.</p>
+        </div>
+      </div>
+      <div class="design-card">
+        <img src="register.png" alt="Signup screen design">
+        <div class="design-card-caption">
+          <h4>Signup / Register</h4>
+          <p>Mirrors the login screen's structure for consistency, keeping the form short to reduce friction for new users.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>What I'd Do Differently Now</h3>
+    <div class="reflection-box">
+      <p>This was my first full UI/UX project, and revisiting it taught me a lot about the details that actually matter:</p>
+      <ul>
+        <li><strong>Product descriptions</strong> — early drafts reused one generic description across all products. I went back and wrote accurate, product-specific copy for each item — a good reminder that small content details affect how trustworthy a product feels.</li>
+        <li><strong>Color contrast</strong> — some category card text sits too close in tone to its background. I now know to check contrast ratios against accessibility standards before finalizing a palette.</li>
+      </ul>
+      <p style="margin-bottom: 0;">Sharing this honestly because it's part of how I got better — not despite the early mistakes, but because of catching and fixing them.</p>
+    </div>
+  </section>
+
+  <!-- 1. Project Overview -->
+  <section class="section" id="s1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Project Overview</h2>
+    </div>
+    <div class="overview-card">
+      <div class="ov-item"><label>Project Name</label><span>SavvyShopper</span></div>
+      <div class="ov-item"><label>Domain</label><span>E-commerce / Smart Shopping Platform</span></div>
+      <div class="ov-item"><label>Document Type</label><span>UI/UX Design + Full System Analysis</span></div>
+      <div class="ov-item"><label>Development Methodology</label><span>Waterfall Model</span></div>
+    </div>
+    <p>SavvyShopper is a comprehensive herbal and Ayurvedic e-commerce platform designed to provide eco-friendly, indigenous products to a broad consumer base. It began with a range of 18 products and has expanded into categories including health &amp; nutrition, skincare, personal care, home care, baby care, agriculture, veterinary, and food products.</p>
+    <p>The proposed system elevates SavvyShopper from a simple marketing website into a fully intelligent, data-driven shopping platform that integrates price comparison, personalization, and deal intelligence.</p>
+
+    <h3>The Systems Thinking Behind the Design</h3>
+    <p>Beyond the UI, this project also required me to think like a systems analyst — defining the backend logic, data structure, and business case that would make this design actually work as a product. The sections below cover that analysis in full.</p>
+  </section>
+
+  <!-- 2. Background & Problem Definition -->
+  <section class="section" id="s2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Background &amp; Problem Definition</h2>
+    </div>
+
+    <h3>2.1 Background</h3>
+    <p>SavvyShopper was founded with a mission to make herbal and Ayurvedic products accessible at scale while preserving the country's natural resources. The platform's product lineup includes:</p>
+    <ul>
+      <li><strong>Immunity boosters</strong> — Haldi drops, Tulsi drops</li>
+      <li><strong>Women's wellbeing</strong> — herbal medicines, cotton sanitary napkins</li>
+      <li><strong>Diabetes management</strong> — aloe vera juice, sugar-regulating syrups</li>
+      <li><strong>Skincare</strong> — organic face washes, aloe vera products</li>
+    </ul>
+
+    <h3>2.2 Problems with the Existing System</h3>
+    <p>The existing SavvyShopper website functioned primarily as a static marketing hub. It faced several systemic challenges:</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h4>Lack of Clarity</h4>
+        <p>Conflicting messaging across channels led to brand confusion. Teams operated without coordinated communication strategies.</p>
+      </div>
+      <div class="problem-card">
+        <h4>Limited Reach</h4>
+        <p>Narrow marketing channels and campaigns failing to generate meaningful interactions with target users.</p>
+      </div>
+      <div class="problem-card">
+        <h4>Poor Resource Allocation</h4>
+        <p>Budgets allocated without data-driven insights, leading to poor ROI and missed market opportunities.</p>
+      </div>
+      <div class="problem-card">
+        <h4>No Analytics</h4>
+        <p>No robust infrastructure to measure campaign performance or track user behavior effectively.</p>
+      </div>
+      <div class="problem-card">
+        <h4>Outdated Strategies</h4>
+        <p>Platform relied on traditional approaches misaligned with modern digital commerce expectations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Proposed System -->
+  <section class="section" id="s3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Proposed System</h2>
+    </div>
+    <p>The proposed SavvyShopper system transforms the platform into a smart, personalized shopping ecosystem structured across eight core modules:</p>
+
+    <div class="module-grid">
+      <div class="module-card">
+        <div class="module-icon">🖥️</div>
+        <h4>User Interface</h4>
+        <ul>
+          <li>Personalized homepage dashboard</li>
+          <li>Advanced search &amp; filters</li>
+          <li>Price comparison view</li>
+          <li>Shopping cart &amp; wishlist</li>
+          <li>User reviews &amp; ratings</li>
+          <li>Coupons &amp; promo codes</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">⚡</div>
+        <h4>Core Features</h4>
+        <ul>
+          <li>Price tracker with history</li>
+          <li>Real-time deal alerts</li>
+          <li>Aggregated product reviews</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🗄️</div>
+        <h4>Backend System</h4>
+        <ul>
+          <li>Centralized product database</li>
+          <li>Data aggregation engine</li>
+          <li>User accounts &amp; profiles</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🔗</div>
+        <h4>E-commerce Integrations</h4>
+        <ul>
+          <li>Retailer APIs (Amazon, eBay, Walmart)</li>
+          <li>Payment gateway integration</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🚀</div>
+        <h4>Advanced Features</h4>
+        <ul>
+          <li>Browser extension</li>
+          <li>Social sharing &amp; credits</li>
+          <li>Premium subscription tier</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">🔒</div>
+        <h4>Security &amp; Privacy</h4>
+        <ul>
+          <li>SSL encryption</li>
+          <li>User data control settings</li>
+          <li>Secure payment gateways</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">💰</div>
+        <h4>Monetization</h4>
+        <ul>
+          <li>Affiliate marketing commissions</li>
+          <li>Premium subscriptions</li>
+          <li>Sponsored listings</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <div class="module-icon">📣</div>
+        <h4>Marketing &amp; Acquisition</h4>
+        <ul>
+          <li>Referral program with incentives</li>
+          <li>Instagram, Twitter, TikTok presence</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Advantages -->
+  <section class="section" id="s4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Advantages of the Proposed System</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Advantage</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Personalized Experience</td><td>Tailored recommendations and custom price alerts based on user history</td></tr>
+          <tr><td>Cost Savings</td><td>Real-time price comparison and aggregated coupon access across retailers</td></tr>
+          <tr><td>Convenience</td><td>Centralized shopping hub with advanced search filters</td></tr>
+          <tr><td>Data-Driven Decisions</td><td>Historical price trends and aggregated user reviews from multiple platforms</td></tr>
+          <tr><td>Seamless Integration</td><td>Live API data from multiple retailers updated in real time</td></tr>
+          <tr><td>Enhanced Engagement</td><td>Loyalty programs and social sharing incentives for repeat use</td></tr>
+          <tr><td>Revenue Generation</td><td>Affiliate commissions, subscriptions, and sponsored listings</td></tr>
+          <tr><td>Competitive Advantage</td><td>First-mover as a comprehensive herbal + smart-shopping platform</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 5. Scope -->
+  <section class="section" id="s5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Scope of the Project</h2>
+    </div>
+
+    <h3>Core Features</h3>
+    <ul>
+      <li>Brand identity showcase and consistent messaging</li>
+      <li>Comprehensive product and service information</li>
+      <li>Content marketing — blogs, industry insights</li>
+      <li>Customer support and contact channels</li>
+    </ul>
+
+    <h3>Extended Features (Phased Rollout)</h3>
+    <ul>
+      <li>E-commerce engine with integrated checkout</li>
+      <li>CRM integration for customer relationship management</li>
+      <li>Marketing automation — email nurturing, lead generation</li>
+      <li>Customizable page templates for campaign branding</li>
+    </ul>
+
+    <h3>Platform-Specific Features</h3>
+    <ul>
+      <li>Case studies from successful SavvyShopper campaigns</li>
+      <li>Client testimonials section</li>
+      <li>Services overview — advertising, PR, social media</li>
+      <li>Industry trend insights and editorial content</li>
+    </ul>
+  </section>
+
+  <!-- 6. Theoretical Background -->
+  <section class="section" id="s6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Theoretical Background</h2>
+    </div>
+    <p>SavvyShopper is grounded in multiple academic and technical disciplines, combining insights from consumer behavior, machine learning, behavioral economics, and network theory.</p>
+
+    <div class="theory-grid">
+      <div class="theory-card">
+        <h4>Consumer Behavior Theory</h4>
+        <ul>
+          <li>Theory of Planned Behavior for friction reduction</li>
+          <li>Technology Acceptance Model (TAM) for adoption</li>
+        </ul>
+      </div>
+      <div class="theory-card">
+        <h4>E-commerce &amp; Digital Marketing</h4>
+        <ul>
+          <li>Conversion rate optimization</li>
+          <li>SEO and retention marketing</li>
+          <li>Trust &amp; personalization principles</li>
+        </ul>
+      </div>
+      <div class="theory-card">
+        <h4>Machine Learning &amp; AI</h4>
+        <ul>
+          <li>Collaborative filtering</li>
+          <li>Content-based filtering</li>
+          <li>Price prediction models</li>
+          <li>NLP sentiment analysis on reviews</li>
+        </ul>
+      </div>
+      <div class="theory-card">
+        <h4>Behavioral Economics</h4>
+        <ul>
+          <li>Nudge theory (countdown timers, stock alerts)</li>
+          <li>Price anchoring (original vs. sale price)</li>
+          <li>Scarcity &amp; social proof signals</li>
+        </ul>
+      </div>
+      <div class="theory-card">
+        <h4>Price Optimization</h4>
+        <ul>
+          <li>Price elasticity demand models</li>
+          <li>Dynamic pricing based on demand &amp; competition</li>
+        </ul>
+      </div>
+      <div class="theory-card">
+        <h4>Social Influence &amp; Network Effects</h4>
+        <ul>
+          <li>Social shopping and trusted recommendations</li>
+          <li>Network effects from growing review base</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. System Analysis -->
+  <section class="section" id="s7">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>System Analysis</h2>
+    </div>
+
+    <h3>7.1 Waterfall Methodology</h3>
+    <div class="waterfall">
+      <div class="wf-step"><span class="wf-num">1</span><div class="wf-content"><h4>Requirement Analysis</h4><p>Interviews, document review, data/process modeling and DFD creation.</p></div></div>
+      <div class="wf-step"><span class="wf-num">2</span><div class="wf-content"><h4>Design Phase</h4><p>Solution planning based on SRS; ER diagrams, structure charts, and flow diagrams.</p></div></div>
+      <div class="wf-step"><span class="wf-num">3</span><div class="wf-content"><h4>Coding Phase</h4><p>Implementation using Visual Studio as IDE and MySQL as the database engine.</p></div></div>
+      <div class="wf-step"><span class="wf-num">4</span><div class="wf-content"><h4>Testing Phase</h4><p>Quality assurance via test case development; bug detection across all phases.</p></div></div>
+      <div class="wf-step"><span class="wf-num">5</span><div class="wf-content"><h4>Maintenance Phase</h4><p>Post-delivery defect resolution and feature enhancements as required.</p></div></div>
+    </div>
+
+    <h3>7.2 Feasibility Study</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Feasibility Type</th><th>Assessment</th><th>Outcome</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Technical</td><td>Visual Studio + MySQL environment already available at organization</td><td><span class="tag-feasible">Feasible</span></td></tr>
+          <tr><td>Operational</td><td>System is intuitive; no deep technical knowledge required to operate</td><td><span class="tag-feasible">Feasible</span></td></tr>
+          <tr><td>Economical</td><td>Software and hardware already at client side; minimal additional cost</td><td><span class="tag-feasible">Feasible</span></td></tr>
+          <tr><td>Behavioral</td><td>Minimal training required; minor resistance expected but manageable</td><td><span class="tag-feasible">Feasible</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>7.3 Fact-Finding Techniques</h3>
+    <ul>
+      <li><strong>Observation</strong> — Direct monitoring of existing workflows and processes</li>
+      <li><strong>Interviewing</strong> — Structured discussions with managers and employees</li>
+      <li><strong>Record Review</strong> — Examination of data stored in physical registers</li>
+      <li><strong>Document Inspection</strong> — Study of usage formats such as cash memos and registers</li>
+    </ul>
+  </section>
+
+  <!-- 8. User Requirements -->
+  <section class="section" id="s8">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>User Requirements</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Requirements</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>User Account</td><td>Registration via email/social/phone; MFA; profile customization; wishlists</td></tr>
+          <tr><td>Product Search</td><td>Keyword/category/brand search; advanced filters; real-time price comparison</td></tr>
+          <tr><td>Price Tracking</td><td>Price fluctuation monitoring; desired price point setting per product</td></tr>
+          <tr><td>Deal Alerts</td><td>Push, email, or in-app notifications for sales and price drops</td></tr>
+          <tr><td>Discounts</td><td>Aggregated promo codes; exclusive flash-sale alerts for loyal users</td></tr>
+          <tr><td>Recommendations</td><td>Cross-sell and upsell suggestions based on user selections</td></tr>
+          <tr><td>Product Reviews</td><td>Read and aggregate reviews from multiple e-commerce platforms</td></tr>
+          <tr><td>Retailer Info</td><td>Trusted retailer details, delivery info, and return policies</td></tr>
+          <tr><td>Mobile/Responsive</td><td>iOS and Android app; responsive web design for all devices</td></tr>
+          <tr><td>Payments</td><td>Multiple secure payment options; SSL encryption; auto-fill checkout</td></tr>
+          <tr><td>Communication</td><td>Personalized email updates; referral program with incentives</td></tr>
+          <tr><td>Analytics</td><td>User behavior tracking; real-time platform performance monitoring</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 9. System Design -->
+  <section class="section" id="s9">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>System Design</h2>
+    </div>
+
+    <h3>9.1 Entity Relationship Diagram — Core Entities</h3>
+    <ul>
+      <li><strong>Customer</strong> — stores customer identity, contact, and shipping information</li>
+      <li><strong>Product</strong> — stores product metadata, pricing, stock, and imagery</li>
+      <li><strong>Order</strong> — captures order transactions, timestamps, and billing/shipping addresses</li>
+      <li><strong>Order Item</strong> — line-item detail linking orders to specific products and quantities</li>
+      <li><strong>Membership Tier</strong> — defines loyalty tiers and associated discount percentages</li>
+    </ul>
+
+    <h3>9.2 Data Dictionary</h3>
+
+    <div class="dict-section">
+      <span class="dict-label">Customer</span>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>customer_id</code></td><td>INT</td><td>Primary key</td></tr>
+            <tr><td><code>first_name</code></td><td>VARCHAR</td><td>Customer's first name</td></tr>
+            <tr><td><code>last_name</code></td><td>VARCHAR</td><td>Customer's last name</td></tr>
+            <tr><td><code>email</code></td><td>VARCHAR</td><td>Contact email address</td></tr>
+            <tr><td><code>phone</code></td><td>VARCHAR</td><td>Phone number</td></tr>
+            <tr><td><code>address</code></td><td>TEXT</td><td>Shipping address</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dict-section">
+      <span class="dict-label">Product</span>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>product_id</code></td><td>INT</td><td>Primary key</td></tr>
+            <tr><td><code>name</code></td><td>VARCHAR</td><td>Product name</td></tr>
+            <tr><td><code>description</code></td><td>TEXT</td><td>Full product description</td></tr>
+            <tr><td><code>price</code></td><td>DECIMAL</td><td>Unit price</td></tr>
+            <tr><td><code>image</code></td><td>VARCHAR</td><td>Image URL or file path</td></tr>
+            <tr><td><code>quantity_in_stock</code></td><td>INT</td><td>Available inventory</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dict-section">
+      <span class="dict-label">Order</span>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>order_id</code></td><td>INT</td><td>Primary key</td></tr>
+            <tr><td><code>customer_id</code></td><td>INT</td><td>FK → Customer table</td></tr>
+            <tr><td><code>order_date</code></td><td>TIMESTAMP</td><td>Date and time of order</td></tr>
+            <tr><td><code>total_amount</code></td><td>DECIMAL</td><td>Total order value</td></tr>
+            <tr><td><code>shipping_address</code></td><td>TEXT</td><td>Delivery address</td></tr>
+            <tr><td><code>billing_address</code></td><td>TEXT</td><td>Billing address</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dict-section">
+      <span class="dict-label">Order Item</span>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>order_item_id</code></td><td>INT</td><td>Primary key</td></tr>
+            <tr><td><code>order_id</code></td><td>INT</td><td>FK → Order table</td></tr>
+            <tr><td><code>product_id</code></td><td>INT</td><td>FK → Product table</td></tr>
+            <tr><td><code>quantity</code></td><td>INT</td><td>Units ordered</td></tr>
+            <tr><td><code>unit_price</code></td><td>DECIMAL</td><td>Price per unit at time of order</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dict-section">
+      <span class="dict-label">Membership Tier</span>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Column</th><th>Data Type</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>tier_id</code></td><td>INT</td><td>Primary key</td></tr>
+            <tr><td><code>tier_name</code></td><td>VARCHAR</td><td>Tier name (e.g., Silver, Gold)</td></tr>
+            <tr><td><code>discount_percentage</code></td><td>DECIMAL</td><td>Applicable discount for tier</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>9.3 Event Table</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Event</th><th>Trigger</th><th>Activity</th><th>Response</th></tr></thead>
+        <tbody>
+          <tr><td>Event ID</td><td>Unique identifier per event</td><td>Event classification</td><td>Event number assigned</td></tr>
+          <tr><td>Event Type</td><td>Order placed, discount applied</td><td>Filtering and analysis</td><td>Changes and placements</td></tr>
+          <tr><td>Customer ID</td><td>—</td><td>Links event to customer</td><td>Customer table update</td></tr>
+          <tr><td>Order ID</td><td>Links to order record</td><td>Order placement</td><td>Order table update</td></tr>
+          <tr><td>Member Discount</td><td>Member login</td><td>Percentage/discounts applied</td><td>Product view</td></tr>
+          <tr><td>Discount Unavailable</td><td>Member login</td><td>Product view</td><td>Cart page redirect</td></tr>
+          <tr><td>Discount Updated</td><td>Promotion update</td><td>Different level check</td><td>Membership level change</td></tr>
+          <tr><td>Discount Claimed</td><td>Checkout</td><td>—</td><td>Cart page</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>9.4 Technology Stack</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Layer</th><th>Technology</th></tr></thead>
+        <tbody>
+          <tr><td>Frontend IDE</td><td>Visual Studio</td></tr>
+          <tr><td>Database</td><td>MySQL</td></tr>
+          <tr><td>Architecture</td><td>Client-Server</td></tr>
+          <tr><td>Methodology</td><td>Waterfall SDLC</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 10. Key Outcomes -->
+  <section class="section" id="s10">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <h2>Key Outcomes &amp; Insights</h2>
+    </div>
+    <div class="outcome-list">
+      <div class="outcome-item">
+        <div class="outcome-dot"></div>
+        <div><strong>Product Scope</strong><p>SavvyShopper successfully maps its herbal product ecosystem to a scalable e-commerce architecture capable of handling multi-category inventory, tiered memberships, and third-party retail integrations.</p></div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-dot"></div>
+        <div><strong>Intelligence Layer</strong><p>By embedding machine learning — price prediction, collaborative filtering, NLP sentiment analysis — the platform moves beyond passive product listing into proactive consumer guidance.</p></div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-dot"></div>
+        <div><strong>Behavioral Design</strong><p>The use of nudge theory, price anchoring, scarcity cues, and social proof transforms the platform into a psychologically-aware shopping tool that drives measurable conversion improvements.</p></div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-dot"></div>
+        <div><strong>Revenue Diversification</strong><p>The combination of affiliate marketing, premium subscriptions, and sponsored listings creates multiple revenue streams, reducing dependency on any single monetization channel.</p></div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-dot"></div>
+        <div><strong>Scalability</strong><p>The modular architecture — separate UI, backend, API integration, and analytics layers — ensures that each component can be scaled or upgraded independently as the user base grows.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Conclusion -->
+  <section class="section" id="s11">
+    <div class="section-header">
+      <span class="section-num">11</span>
+      <h2>Conclusion</h2>
+    </div>
+    <div class="conclusion-box">
+      <p>The SavvyShopper project presents a well-rounded case study in transforming a basic product marketing website into a comprehensive, intelligent shopping platform. Grounded in consumer behavior theory, machine learning, and behavioral economics, the proposed system addresses real gaps in the existing infrastructure while delivering clear value to end users — through personalization, cost savings, and transparency — and to the business — through diversified revenue, data-driven marketing, and scalable architecture.</p>
+      <p>The use of the Waterfall model provides structure and traceability across all phases, making it an appropriate choice for a project with well-defined requirements. The completeness of the design artifacts — ER diagrams, data flow diagrams, structure charts, event tables, and a data dictionary — demonstrates thorough analytical rigor and readiness for implementation.</p>
+      <p>This project taught me that good design isn't just visual — it's connected to a system that has to actually function. That dual lens — how something looks and feels, and how it's built and structured — is exactly the kind of thinking I now bring to every project, design or development.</p>
+    </div>
+  </section>
+
+</div>
 </main>
+<!-- <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Hetal Solanki. Built with intent.</p><a href="../../index.html">Back home <i class="fa-solid fa-arrow-up"></i></a></div></footer> -->
 
-<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Hetal Solanki. Built with intent.</p><a href="../../index.html">Back home <i class="fa-solid fa-arrow-up"></i></a></div></footer>
-<script src="../../js/components/page-loader.js" defer></script><script src="../../js/components/content-skeleton.js" defer></script><script src="../../js/main.js" defer></script>
+<footer class="site-footer">
+    <div class="footer-inner">
+  
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>Hetal Solanki:</h2>
+          <p>Product Designer · Digital Creative · Developer</p>
+        </div>
+  
+        <div class="footer-socials">
+          <a href="#" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+  
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+  
+          <a href="#" aria-label="Behance">
+            <i class="fa-brands fa-behance"></i>
+          </a>
+  
+          <a href="#" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+  
+          <a href="#" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <span>© 2026 Hetal Solanki</span>
+  
+        <span>Built with curiosity &amp; a little too much coffee.</span>
+  
+        <a href="#top">Back to top ↑</a>
+      </div>
+  
+    </div>
+  </footer>
 
-</body></html>
+<script src="../../js/components/page-loader.js" defer></script>
+<script src="../../js/components/content-skeleton.js" defer></script>
+<script src="../../js/components/micro-interactions.js" defer></script>
+<script src="../../js/main.js" defer></script>
+</body>
+</html>
