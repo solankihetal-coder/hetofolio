@@ -1,163 +1,4562 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kuromi's Chaos Calculator — Squares, cubes & roots, served with sarcasm. A personalized front-end gift project built with HTML, CSS and JavaScript."><title>Kuromi's Chaos Calculator · Hetal Solanki</title>
-<meta property="og:title" content="Kuromi's Chaos Calculator · Hetal Solanki">
-<meta property="og:description" content="Kuromi's Chaos Calculator — Squares, cubes & roots, served with sarcasm. A personalized front-end gift project built with HTML, CSS and JavaScript.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://solankihetal-coder.github.io/hetofolio/pages/projects/calculator.html">
-<link rel="canonical" href="https://solankihetal-coder.github.io/hetofolio/pages/projects/calculator.html">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="../../css/components/page-loader.css"><link rel="stylesheet" href="../../css/components/content-skeleton.css"><link rel="stylesheet" href="../../css/main.css"><link rel="stylesheet" href="../../css/project.css">
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- =========================================================
+       BASIC META
+       ========================================================= -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Kuromi's Chaos Calculator — a personalized front-end development project exploring mathematical logic, DOM manipulation, dual-theme design, interaction, and personality-driven UX."
+  >
+
+  <meta
+    name="keywords"
+    content="Hetal Solanki, UI UX Designer, Frontend Developer, Kuromi Calculator, JavaScript Project, HTML CSS JavaScript, Case Study, Frontend Development"
+  >
+
+  <meta name="author" content="Hetal Solanki">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#1a0a2e">
+
+
+  <!-- =========================================================
+       CANONICAL
+       ========================================================= -->
+  <link
+    rel="canonical"
+    href="https://solankihetal-coder.github.io/hetal-portfolio/"
+  >
+
+
+  <!-- =========================================================
+       OPEN GRAPH / SOCIAL SHARING
+       ========================================================= -->
+  <meta
+    property="og:type"
+    content="article"
+  >
+
+  <meta
+    property="og:title"
+    content="Kuromi's Chaos Calculator — Case Study"
+  >
+
+  <meta
+    property="og:description"
+    content="A personalized front-end development project combining mathematical logic, playful interaction, dual-theme design and personality-driven UX."
+  >
+
+  <meta
+    property="og:url"
+    content="https://solankihetal-coder.github.io/hetal-portfolio/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Hetal Solanki — Portfolio"
+  >
+
+  <!-- Replace with your final project preview image -->
+  <meta
+    property="og:image"
+    content="assets/images/projects/kuromi-calculator/kuromi-calculator-cover.webp"
+  >
+
+
+  <!-- =========================================================
+       TWITTER / X CARD
+       ========================================================= -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Kuromi's Chaos Calculator — Case Study"
+  >
+
+  <meta
+    name="twitter:description"
+    content="A personalized front-end calculator project built with HTML, CSS and JavaScript."
+  >
+
+  <meta
+    name="twitter:image"
+    content="assets/images/projects/kuromi-calculator/kuromi-calculator-cover.webp"
+  >
+
+
+  <!-- =========================================================
+       TITLE
+       ========================================================= -->
+  <title>
+    Kuromi's Chaos Calculator — Case Study | Hetal Solanki
+  </title>
+
+
+  <!-- =========================================================
+       FAVICON
+       ========================================================= -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/images/favicon.png"
+  >
+
+
+  <!-- =========================================================
+       GOOGLE FONTS
+       ========================================================= -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================================================
+       FONT AWESOME
+       ========================================================= -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+
+
+  <!-- =========================================================
+       HETOFOLIO MAIN CSS
+       Keep this path identical to your current portfolio.
+       ========================================================= -->
+  <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  >
+
+
+  <!-- =========================================================
+       CASE STUDY CSS
+       ========================================================= -->
+  <style>
+
+    /* =========================================================
+       CASE STUDY ROOT
+       ========================================================= */
+
+    .kuromi-case-study {
+      --ks-bg: #f3e8ff;
+      --ks-bg2: #ede0f7;
+      --ks-bg3: #e2d1f0;
+      --ks-card: #faf5ff;
+      --ks-border: rgba(120, 60, 160, 0.15);
+      --ks-border2: rgba(120, 60, 160, 0.28);
+      --ks-ink: #2d1a40;
+      --ks-muted: #7a5a9a;
+      --ks-dim: #b39cc8;
+      --ks-accent: #7c3aed;
+      --ks-accent2: #c084fc;
+      --ks-pink: #f472b6;
+      --ks-pink2: #fce7f3;
+      --ks-dark: #1a0a2e;
+      --ks-dark2: #2e1052;
+      --ks-white: #ffffff;
+
+      --ks-shadow:
+        0 4px 24px rgba(124, 58, 237, 0.10);
+
+      --ks-shadow-lg:
+        0 8px 40px rgba(124, 58, 237, 0.18);
+
+      position: relative;
+      isolation: isolate;
+
+      background: var(--ks-bg);
+      color: var(--ks-ink);
+
+      font-family: "Nunito", sans-serif;
+
+      font-size: 16px;
+      line-height: 1.75;
+
+      -webkit-font-smoothing: antialiased;
+
+      overflow: hidden;
+    }
+
+
+    /* =========================================================
+       DOTTED BACKGROUND
+       ========================================================= */
+
+    .kuromi-case-study::before {
+      content: "";
+
+      position: fixed;
+      inset: 0;
+
+      background-image:
+        radial-gradient(
+          circle,
+          rgba(167, 139, 250, 0.25) 1.5px,
+          transparent 1.5px
+        );
+
+      background-size: 28px 28px;
+
+      pointer-events: none;
+
+      z-index: -1;
+    }
+
+
+    /* =========================================================
+       CASE STUDY LOADING STATE
+       ========================================================= */
+
+    .case-study-content {
+      opacity: 0;
+
+      transform: translateY(12px);
+
+      transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+    }
+
+    .case-study-content.is-loaded {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =========================================================
+       CONTENT SKELETON
+       ========================================================= */
+
+    .case-study-skeleton {
+      min-height: 100vh;
+
+      padding:
+        80px
+        clamp(24px, 5vw, 64px)
+        100px;
+
+      background: var(--ks-bg);
+    }
+
+    .skeleton-inner {
+      max-width: 980px;
+
+      margin: 0 auto;
+    }
+
+    .skeleton-line,
+    .skeleton-box {
+      position: relative;
+
+      overflow: hidden;
+
+      background: rgba(124, 58, 237, 0.08);
+
+      border-radius: 10px;
+    }
+
+    .skeleton-line::after,
+    .skeleton-box::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      transform: translateX(-100%);
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,0.55),
+          transparent
+        );
+
+      animation:
+        skeleton-shimmer 1.3s infinite;
+    }
+
+    .skeleton-line {
+      height: 18px;
+
+      margin-bottom: 14px;
+    }
+
+    .skeleton-line.small {
+      width: 35%;
+    }
+
+    .skeleton-line.medium {
+      width: 65%;
+    }
+
+    .skeleton-line.large {
+      width: 90%;
+    }
+
+    .skeleton-box {
+      width: 100%;
+
+      height: 220px;
+
+      margin-top: 35px;
+    }
+
+    @keyframes skeleton-shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+
+    /* =========================================================
+       COVER
+       ========================================================= */
+
+    .ks-cover {
+      position: relative;
+
+      background:
+        linear-gradient(
+          135deg,
+          #2d1a40 0%,
+          #4c1d95 50%,
+          #6d28d9 100%
+        );
+
+      padding:
+        72px
+        clamp(24px, 6vw, 64px)
+        64px;
+
+      overflow: hidden;
+    }
+
+    .cover-hearts {
+      position: absolute;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+
+      border-radius:
+        50% 50% 0 0;
+
+      opacity: 0.06;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      background: inherit;
+
+      border-radius:
+        50% 50% 0 0;
+    }
+
+    .h1c {
+      width: 320px;
+      height: 320px;
+
+      background: #c084fc;
+
+      top: -80px;
+      right: -60px;
+
+      transform: rotate(-45deg);
+    }
+
+    .h2c {
+      width: 200px;
+      height: 200px;
+
+      background: #f472b6;
+
+      bottom: -40px;
+      left: 80px;
+
+      transform: rotate(-45deg);
+    }
+
+    .h3c {
+      width: 140px;
+      height: 140px;
+
+      background: #a78bfa;
+
+      top: 60px;
+      left: -30px;
+
+      transform: rotate(-45deg);
+    }
+
+
+    /* =========================================================
+       COVER CONTENT
+       ========================================================= */
+
+    .cover-eyebrow {
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 18px;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 11px;
+
+      letter-spacing: 0.22em;
+
+      text-transform: uppercase;
+
+      color: var(--ks-accent2);
+    }
+
+    .cover-eyebrow::before {
+      content: "";
+
+      width: 28px;
+      height: 1px;
+
+      background: var(--ks-accent2);
+    }
+
+    .ks-cover h1 {
+      position: relative;
+
+      margin-bottom: 6px;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size:
+        clamp(36px, 7vw, 68px);
+
+      font-weight: 600;
+
+      line-height: 1.1;
+
+      letter-spacing: 0.02em;
+
+      color: var(--ks-white);
+    }
+
+    .h1-pink {
+      color: var(--ks-pink);
+    }
+
+    .cover-tagline {
+      position: relative;
+
+      margin-bottom: 38px;
+
+      max-width: 850px;
+
+      font-size:
+        clamp(15px, 2.2vw, 20px);
+
+      color: rgba(255,255,255,0.6);
+
+      font-style: italic;
+
+      font-weight: 400;
+    }
+
+    .cover-chips {
+      position: relative;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .chip {
+      padding: 5px 14px;
+
+      border-radius: 100px;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 11px;
+
+      letter-spacing: 0.05em;
+
+      border: 1px solid;
+
+      font-weight: 400;
+    }
+
+    .chip-v {
+      color: #c4b5fd;
+      border-color: rgba(196,181,253,0.4);
+      background: rgba(196,181,253,0.1);
+    }
+
+    .chip-p {
+      color: #f9a8d4;
+      border-color: rgba(249,168,212,0.4);
+      background: rgba(249,168,212,0.1);
+    }
+
+    .chip-g {
+      color: #6ee7b7;
+      border-color: rgba(110,231,183,0.4);
+      background: rgba(110,231,183,0.1);
+    }
+
+    .chip-y {
+      color: #fde68a;
+      border-color: rgba(253,230,138,0.4);
+      background: rgba(253,230,138,0.1);
+    }
+
+    .chip-r {
+      color: #fca5a5;
+      border-color: rgba(252,165,165,0.4);
+      background: rgba(252,165,165,0.1);
+    }
+
+
+    /* =========================================================
+       LIVE PROJECT CTA
+       ========================================================= */
+
+    .case-study-live-cta {
+      position: relative;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: 28px;
+
+      padding: 12px 20px;
+
+      border: 1px solid rgba(255,255,255,0.25);
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,0.08);
+
+      color: #ffffff;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      text-decoration: none;
+
+      backdrop-filter: blur(12px);
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .case-study-live-cta:hover {
+      transform: translateY(-3px);
+
+      background: rgba(255,255,255,0.15);
+
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .case-study-live-cta i {
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       TABLE OF CONTENTS
+       ========================================================= */
+
+    .toc-bar {
+      position: relative;
+
+      background: var(--ks-dark2);
+
+      border-bottom:
+        1px solid rgba(196,181,253,0.15);
+
+      padding: 18px 40px;
+
+      z-index: 2;
+    }
+
+    .toc-inner {
+      max-width: 980px;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 6px 20px;
+
+      align-items: center;
+    }
+
+    .toc-label {
+      flex-shrink: 0;
+
+      margin-right: 8px;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 10px;
+
+      letter-spacing: 0.18em;
+
+      color:
+        rgba(196,181,253,0.5);
+
+      text-transform: uppercase;
+    }
+
+    .toc-link {
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 11px;
+
+      color:
+        rgba(196,181,253,0.55);
+
+      text-decoration: none;
+
+      transition: color 0.2s;
+
+      letter-spacing: 0.03em;
+    }
+
+    .toc-link:hover,
+    .toc-link.active {
+      color: var(--ks-accent2);
+    }
+
+
+    /* =========================================================
+       MAIN PAGE
+       ========================================================= */
+
+    .ks-page {
+      position: relative;
+
+      max-width: 980px;
+
+      margin: 0 auto;
+
+      padding:
+        0
+        40px
+        80px;
+    }
+
+
+    /* =========================================================
+       SECTIONS
+       ========================================================= */
+
+    .ks-section {
+      padding-top: 60px;
+
+      margin-top: 60px;
+
+      border-top:
+        2px dashed rgba(167,139,250,0.25);
+    }
+
+    .sec-head {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      margin-bottom: 28px;
+    }
+
+    .sec-num {
+      flex-shrink: 0;
+
+      padding: 4px 10px;
+
+      border-radius: 8px;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 10px;
+
+      letter-spacing: 0.1em;
+
+      color: var(--ks-accent);
+
+      background:
+        rgba(124,58,237,0.08);
+
+      border:
+        1px solid rgba(124,58,237,0.2);
+    }
+
+    .ks-section h2 {
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size:
+        clamp(22px, 3.5vw, 32px);
+
+      font-weight: 600;
+
+      color: var(--ks-dark);
+
+      letter-spacing: 0.02em;
+
+      line-height: 1.15;
+    }
+
+    .ks-section h3 {
+      margin: 34px 0 14px;
+
+      font-family:
+        "Nunito",
+        sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.14em;
+
+      color: var(--ks-accent);
+    }
+
+    .ks-section p {
+      max-width: 72ch;
+
+      margin-bottom: 16px;
+
+      color: var(--ks-muted);
+
+      font-weight: 400;
+    }
+
+    .ks-section strong {
+      color: var(--ks-ink);
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       STORY
+       ========================================================= */
+
+    .story-card {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 36px 40px;
+
+      margin-bottom: 28px;
+
+      border:
+        1px solid rgba(196,181,253,0.15);
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--ks-dark) 0%,
+          var(--ks-dark2) 100%
+        );
+
+      box-shadow: var(--ks-shadow-lg);
+    }
+
+    .story-card::before {
+      content: "♡";
+
+      position: absolute;
+
+      top: 16px;
+      right: 28px;
+
+      font-size: 80px;
+
+      color:
+        rgba(244,114,182,0.08);
+
+      line-height: 1;
+
+      pointer-events: none;
+    }
+
+    .story-card p {
+      max-width: 100%;
+
+      color:
+        rgba(255,255,255,0.65);
+    }
+
+    .story-card p + p {
+      margin-top: 6px;
+    }
+
+    .story-quote {
+      padding-left: 16px;
+
+      margin:
+        18px 0 !important;
+
+      border-left:
+        3px solid var(--ks-pink);
+
+      color:
+        var(--ks-accent2) !important;
+
+      font-size: 17px;
+
+      font-style: italic;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       STAT GRID
+       ========================================================= */
+
+    .stat-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fill,
+          minmax(160px, 1fr)
+        );
+
+      gap: 12px;
+
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      padding: 20px 20px 16px;
+
+      border:
+        1.5px solid var(--ks-border2);
+
+      border-radius: 16px;
+
+      background: var(--ks-card);
+
+      box-shadow: var(--ks-shadow);
+
+      text-align: center;
+    }
+
+    .stat-emoji {
+      margin-bottom: 6px;
+
+      font-size: 26px;
+    }
+
+    .stat-label {
+      margin-bottom: 5px;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 9.5px;
+
+      letter-spacing: 0.14em;
+
+      color: var(--ks-dim);
+
+      text-transform: uppercase;
+    }
+
+    .stat-val {
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 17px;
+
+      color: var(--ks-accent);
+
+      letter-spacing: 0.02em;
+    }
+
+    .stat-val.pink {
+      color: var(--ks-pink);
+    }
+
+    .stat-val.dark {
+      color: var(--ks-dark);
+    }
+
+
+    /* =========================================================
+       FEATURE CARDS
+       ========================================================= */
+
+    .feat-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fill,
+          minmax(260px, 1fr)
+        );
+
+      gap: 14px;
+
+      margin-bottom: 28px;
+    }
+
+    .feat-card {
+      padding: 24px 26px;
+
+      border:
+        1.5px solid var(--ks-border);
+
+      border-radius: 18px;
+
+      background: var(--ks-card);
+
+      box-shadow: var(--ks-shadow);
+
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+    }
+
+    .feat-card:hover {
+      transform: translateY(-3px);
+
+      box-shadow: var(--ks-shadow-lg);
+
+      border-color:
+        var(--ks-border2);
+    }
+
+    .feat-emoji {
+      display: block;
+
+      margin-bottom: 10px;
+
+      font-size: 28px;
+    }
+
+    .feat-card h4 {
+      margin-bottom: 7px;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 16px;
+
+      color: var(--ks-dark);
+
+      letter-spacing: 0.02em;
+    }
+
+    .feat-card p {
+      margin: 0;
+
+      font-size: 13.5px;
+    }
+
+
+    /* =========================================================
+       MATH CARDS
+       ========================================================= */
+
+    .math-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fill,
+          minmax(220px, 1fr)
+        );
+
+      gap: 14px;
+
+      margin-bottom: 28px;
+    }
+
+    .math-card {
+      padding: 24px 26px;
+
+      border:
+        1px solid rgba(196,181,253,0.12);
+
+      border-radius: 16px;
+
+      background: var(--ks-dark);
+
+      box-shadow: var(--ks-shadow-lg);
+
+      text-align: center;
+    }
+
+    .math-symbol {
+      margin-bottom: 8px;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 36px;
+
+      color: var(--ks-accent2);
+    }
+
+    .math-name {
+      margin-bottom: 6px;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 16px;
+
+      color: var(--ks-white);
+    }
+
+    .math-formula {
+      margin-bottom: 6px;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 12px;
+
+      color: var(--ks-pink);
+    }
+
+    .math-card p {
+      max-width: 100%;
+
+      margin: 0;
+
+      color:
+        rgba(255,255,255,0.5);
+
+      font-size: 12.5px;
+    }
+
+    .math-example {
+      display: inline-block;
+
+      margin-top: 8px;
+
+      padding: 3px 10px;
+
+      border:
+        1px solid rgba(244,114,182,0.2);
+
+      border-radius: 8px;
+
+      background:
+        rgba(244,114,182,0.1);
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 12px;
+
+      color: var(--ks-pink);
+    }
+
+
+    /* =========================================================
+       ALGORITHM
+       ========================================================= */
+
+    .algo-wrap {
+      position: relative;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 0;
+
+      margin:
+        20px 0
+        28px;
+    }
+
+    .algo-wrap::before {
+      content: "";
+
+      position: absolute;
+
+      left: 19px;
+
+      top: 8px;
+      bottom: 8px;
+
+      width: 2px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          var(--ks-accent),
+          var(--ks-pink),
+          rgba(196,181,253,0.2)
+        );
+    }
+
+    .algo-step {
+      position: relative;
+
+      display: flex;
+
+      gap: 20px;
+
+      padding:
+        14px
+        0
+        14px
+        52px;
+    }
+
+    .a-num {
+      position: absolute;
+
+      left: 7px;
+      top: 16px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 26px;
+      height: 26px;
+
+      border-radius: 50%;
+
+      background: var(--ks-accent);
+
+      color: var(--ks-white);
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 13px;
+
+      z-index: 1;
+
+      box-shadow:
+        0 0 10px
+        rgba(124,58,237,0.4);
+    }
+
+    .a-body h4 {
+      margin-bottom: 3px;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 16px;
+
+      color: var(--ks-dark);
+    }
+
+    .a-body p {
+      margin: 0;
+
+      font-size: 13.5px;
+    }
+
+
+    /* =========================================================
+       CODE
+       ========================================================= */
+
+    .code-block {
+      overflow-x: auto;
+
+      padding: 24px 28px;
+
+      margin:
+        18px 0
+        28px;
+
+      border:
+        1px solid rgba(196,181,253,0.15);
+
+      border-radius: 16px;
+
+      background: var(--ks-dark);
+    }
+
+    .code-top {
+      display: flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      padding-bottom: 12px;
+
+      margin-bottom: 16px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.06);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+    }
+
+    .dot-r {
+      background: #ff5f56;
+    }
+
+    .dot-y {
+      background: #ffbd2e;
+    }
+
+    .dot-g {
+      background: #27c93f;
+    }
+
+    .code-file {
+      margin-left: auto;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 11px;
+
+      color:
+        rgba(196,181,253,0.4);
+
+      letter-spacing: 0.05em;
+    }
+
+    .code-block pre {
+      margin: 0;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 12.5px;
+
+      line-height: 1.75;
+
+      color:
+        rgba(232,220,255,0.65);
+
+      white-space: pre;
+    }
+
+    .kw {
+      color: #c084fc;
+    }
+
+    .fn {
+      color: #f9a8d4;
+    }
+
+    .str {
+      color: #6ee7b7;
+    }
+
+    .cm {
+      color:
+        rgba(196,181,253,0.3);
+
+      font-style: italic;
+    }
+
+    .num {
+      color: #fde68a;
+    }
+
+    .op {
+      color: #f472b6;
+    }
+
+
+    /* =========================================================
+       TABLES
+       ========================================================= */
+
+    .tbl-wrap {
+      overflow-x: auto;
+
+      margin:
+        16px 0
+        28px;
+
+      border:
+        1.5px solid var(--ks-border2);
+
+      border-radius: 16px;
+
+      box-shadow: var(--ks-shadow);
+    }
+
+    .tbl-wrap table {
+      width: 100%;
+
+      border-collapse: collapse;
+
+      font-size: 13.5px;
+    }
+
+    .tbl-wrap thead tr {
+      background:
+        linear-gradient(
+          90deg,
+          var(--ks-accent),
+          #9333ea
+        );
+    }
+
+    .tbl-wrap thead th {
+      padding: 13px 18px;
+
+      text-align: left;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 500;
+
+      color: var(--ks-white);
+
+      white-space: nowrap;
+
+      letter-spacing: 0.04em;
+    }
+
+    .tbl-wrap tbody tr {
+      border-top:
+        1px solid var(--ks-border);
+
+      transition:
+        background 0.15s;
+    }
+
+    .tbl-wrap tbody tr:nth-child(even) {
+      background:
+        rgba(167,139,250,0.04);
+    }
+
+    .tbl-wrap tbody tr:hover {
+      background:
+        rgba(167,139,250,0.09);
+    }
+
+    .tbl-wrap tbody td {
+      padding: 12px 18px;
+
+      color: var(--ks-muted);
+
+      vertical-align: top;
+
+      font-weight: 400;
+    }
+
+    .tbl-wrap tbody td:first-child {
+      color: var(--ks-ink);
+
+      font-weight: 700;
+    }
+
+    .tag {
+      display: inline-block;
+
+      padding: 2px 10px;
+
+      border-radius: 100px;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 11px;
+    }
+
+    .tag-v {
+      color: var(--ks-accent);
+
+      background:
+        rgba(167,139,250,0.12);
+
+      border:
+        1px solid rgba(167,139,250,0.3);
+    }
+
+    .tag-p {
+      color: var(--ks-pink);
+
+      background:
+        rgba(244,114,182,0.12);
+
+      border:
+        1px solid rgba(244,114,182,0.3);
+    }
+
+    .tag-g {
+      color: #10b981;
+
+      background:
+        rgba(110,231,183,0.12);
+
+      border:
+        1px solid rgba(110,231,183,0.3);
+    }
+
+
+    /* =========================================================
+       LISTS
+       ========================================================= */
+
+    .ks-section ul,
+    .ks-section ol {
+      list-style: none;
+
+      padding: 0;
+
+      margin-bottom: 20px;
+    }
+
+    .ks-section ul li,
+    .ks-section ol li {
+      position: relative;
+
+      padding:
+        7px 0
+        7px 24px;
+
+      color: var(--ks-muted);
+
+      font-size: 15px;
+
+      border-bottom:
+        1px dashed
+        rgba(167,139,250,0.2);
+    }
+
+    .ks-section ul li:last-child,
+    .ks-section ol li:last-child {
+      border-bottom: none;
+    }
+
+    .ks-section ul li::before {
+      content: "♡";
+
+      position: absolute;
+
+      left: 0;
+      top: 7px;
+
+      color: var(--ks-pink);
+
+      font-size: 13px;
+    }
+
+    .ks-section ol {
+      counter-reset: c;
+    }
+
+    .ks-section ol li {
+      counter-increment: c;
+    }
+
+    .ks-section ol li::before {
+      content:
+        counter(c, decimal-leading-zero);
+
+      position: absolute;
+
+      left: 0;
+      top: 7px;
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 10px;
+
+      color: var(--ks-accent);
+    }
+
+
+    /* =========================================================
+       CHALLENGE CARDS
+       ========================================================= */
+
+    .ch-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          auto-fill,
+          minmax(260px, 1fr)
+        );
+
+      gap: 14px;
+
+      margin-bottom: 24px;
+    }
+
+    .ch-card {
+      padding: 22px 24px;
+
+      border:
+        1.5px solid var(--ks-border);
+
+      border-top: 4px solid;
+
+      border-radius: 16px;
+
+      background: var(--ks-card);
+
+      box-shadow: var(--ks-shadow);
+    }
+
+    .ch-v {
+      border-top-color: var(--ks-accent);
+    }
+
+    .ch-p {
+      border-top-color: var(--ks-pink);
+    }
+
+    .ch-y {
+      border-top-color: #f59e0b;
+    }
+
+    .ch-t {
+      border-top-color: #06b6d4;
+    }
+
+    .ch-card h4 {
+      margin-bottom: 7px;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 15px;
+    }
+
+    .ch-v h4 {
+      color: var(--ks-accent);
+    }
+
+    .ch-p h4 {
+      color: var(--ks-pink);
+    }
+
+    .ch-y h4 {
+      color: #f59e0b;
+    }
+
+    .ch-t h4 {
+      color: #06b6d4;
+    }
+
+    .ch-card p {
+      margin: 0;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================================================
+       THEME COMPARISON
+       ========================================================= */
+
+    .theme-compare {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 16px;
+
+      margin-bottom: 28px;
+    }
+
+    .theme-panel {
+      padding: 24px 26px;
+
+      border: 1.5px solid;
+
+      border-radius: 16px;
+    }
+
+    .theme-k {
+      background: #f5e6ff;
+
+      border-color:
+        rgba(124,58,237,0.3);
+    }
+
+    .theme-m {
+      background: #fff0f6;
+
+      border-color:
+        rgba(244,114,182,0.3);
+    }
+
+    .theme-panel h4 {
+      margin-bottom: 12px;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 16px;
+    }
+
+    .theme-k h4 {
+      color: var(--ks-accent);
+    }
+
+    .theme-m h4 {
+      color: var(--ks-pink);
+    }
+
+    .theme-panel ul {
+      margin: 0;
+    }
+
+    .theme-panel ul li {
+      padding:
+        4px 0
+        4px 20px;
+
+      font-size: 13px;
+
+      border-bottom: none;
+    }
+
+    .theme-panel ul li::before {
+      top: 4px;
+
+      font-size: 11px;
+    }
+
+    .swatch-row {
+      display: flex;
+
+      gap: 6px;
+
+      margin-top: 10px;
+    }
+
+    .swatch {
+      width: 24px;
+      height: 24px;
+
+      border:
+        2px solid
+        rgba(255,255,255,0.6);
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 2px 6px
+        rgba(0,0,0,0.12);
+    }
+
+
+    /* =========================================================
+       INSIGHTS
+       ========================================================= */
+
+    .insight-list {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+
+      margin-bottom: 28px;
+    }
+
+    .insight-item {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 16px;
+
+      padding: 20px 24px;
+
+      border:
+        1.5px solid var(--ks-border);
+
+      border-radius: 16px;
+
+      background: var(--ks-card);
+
+      box-shadow: var(--ks-shadow);
+    }
+
+    .ins-bar {
+      align-self: stretch;
+
+      width: 4px;
+
+      border-radius: 3px;
+
+      flex-shrink: 0;
+    }
+
+    .bar-v {
+      background: var(--ks-accent);
+    }
+
+    .bar-p {
+      background: var(--ks-pink);
+    }
+
+    .bar-g {
+      background: #10b981;
+    }
+
+    .bar-y {
+      background: #f59e0b;
+    }
+
+    .insight-item strong {
+      display: block;
+
+      margin-bottom: 4px;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 15px;
+
+      color: var(--ks-dark);
+
+      font-weight: 500;
+    }
+
+    .insight-item p {
+      margin: 0;
+
+      font-size: 13.5px;
+    }
+
+
+    /* =========================================================
+       CONCLUSION
+       ========================================================= */
+
+    .concl-box {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 44px 48px;
+
+      margin-top: 28px;
+
+      border:
+        1px solid
+        rgba(196,181,253,0.12);
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--ks-dark) 0%,
+          var(--ks-dark2) 100%
+        );
+
+      box-shadow: var(--ks-shadow-lg);
+    }
+
+    .concl-box::before {
+      content: "🖤";
+
+      position: absolute;
+
+      right: 36px;
+      top: 28px;
+
+      font-size: 64px;
+
+      opacity: 0.12;
+
+      pointer-events: none;
+    }
+
+    .concl-box p {
+      position: relative;
+
+      max-width: 70ch;
+
+      color:
+        rgba(255,255,255,0.6);
+
+      font-size: 15px;
+
+      line-height: 1.85;
+    }
+
+    .concl-box p + p {
+      margin-top: 14px;
+    }
+
+    .concl-box strong {
+      color: var(--ks-accent2);
+    }
+
+
+    /* =========================================================
+       INLINE CODE
+       ========================================================= */
+
+    .ks-section code {
+      padding: 2px 8px;
+
+      border:
+        1px solid
+        rgba(124,58,237,0.2);
+
+      border-radius: 6px;
+
+      background:
+        rgba(124,58,237,0.1);
+
+      font-family:
+        "JetBrains Mono",
+        monospace;
+
+      font-size: 12.5px;
+
+      color: var(--ks-accent);
+    }
+
+
+    /* =========================================================
+       BACK TO TOP
+       ========================================================= */
+
+    .ks-back-top {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 42px;
+      height: 42px;
+
+      border:
+        1px solid
+        rgba(124,58,237,0.2);
+
+      border-radius: 50%;
+
+      background:
+        rgba(250,245,255,0.9);
+
+      color: var(--ks-accent);
+
+      box-shadow: var(--ks-shadow);
+
+      cursor: pointer;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translateY(10px);
+
+      transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+      z-index: 50;
+
+      backdrop-filter: blur(12px);
+    }
+
+    .ks-back-top.visible {
+      opacity: 1;
+
+      visibility: visible;
+
+      transform: translateY(0);
+    }
+
+    .ks-back-top:hover {
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 768px) {
+
+      .ks-cover {
+        padding:
+          52px
+          24px
+          44px;
+      }
+
+      .toc-bar {
+        padding:
+          14px 20px;
+      }
+
+      .toc-inner {
+        gap: 7px 14px;
+      }
+
+      .ks-page {
+        padding:
+          0 20px
+          60px;
+      }
+
+      .ks-section {
+        padding-top: 44px;
+
+        margin-top: 44px;
+      }
+
+      .story-card {
+        padding:
+          28px 24px;
+      }
+
+      .theme-compare {
+        grid-template-columns: 1fr;
+      }
+
+      .concl-box {
+        padding:
+          30px 24px;
+      }
+
+      .code-block {
+        padding:
+          20px;
+      }
+
+      .case-study-live-cta {
+        width: 100%;
+
+        justify-content: center;
+      }
+    }
+
+
+    @media (max-width: 480px) {
+
+      .cover-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 0.15em;
+      }
+
+      .stat-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .feat-grid,
+      .math-grid,
+      .ch-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sec-head {
+        align-items: flex-start;
+      }
+
+      .sec-num {
+        margin-top: 3px;
+      }
+
+      .ks-section h2 {
+        font-size: 25px;
+      }
+
+      .algo-step {
+        padding-left: 48px;
+      }
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+       ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+  </style>
+
 </head>
-<body class="case-study-page case-rich" style="--project-accent:#7c3aed;--project-accent-soft:#f2e9ff;">
-
-<div class="page-loader signature-loader is-active" id="page-loader" role="status" aria-live="polite" aria-label="Loading portfolio">
-    <div class="signature-loader__stage" aria-hidden="true">
-      <svg class="signature-loader__mark" viewBox="0 0 93 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g class="signature-loader__logo">
-          <path d="M82.5936 19.6654C85.2559 16.7748 83.6964 12.084 79.8333 11.3629L52.8469 6.32565C51.7041 6.11233 50.5227 6.31658 49.5178 6.9012C44.9758 9.5437 47.3576 16.5058 52.5779 15.9045C52.8725 15.8705 53.1709 15.8634 53.4667 15.8836L70.8216 17.0669C72.2057 17.0561 72.8559 18.7733 71.8118 19.6819L60.8166 29.2509C57.2143 32.9327 61.3074 38.8912 66.0366 36.8498L66.3185 36.728C66.9309 36.4638 67.4809 36.0736 67.9328 35.583L82.5936 19.6654Z"/>
-          <path d="M10.2533 33.0163C7.57515 35.8922 9.10896 40.5915 12.9681 41.3337L39.9264 46.5187C41.0681 46.7383 42.2506 46.5405 43.2586 45.9614C47.815 43.3439 45.4714 36.3688 40.2479 36.9416C39.9531 36.9739 39.6547 36.9793 39.3589 36.9575L22.0108 35.6792C20.6267 35.6824 19.9859 33.9617 21.035 33.0588L32.0824 23.5502C35.7049 19.8882 31.6445 13.9073 26.9041 15.9228L26.6216 16.0429C26.007 16.3039 25.4556 16.691 25.001 17.1792L10.2533 33.0163Z"/>
-          <path d="M54.3468 43.1868C55.0668 43.7931 56.1494 43.1595 55.9733 42.2348L54.5 34.5L54.1766 33.3534C54.0069 32.7517 53.3329 32.4515 52.7721 32.7278L47.2889 35.43C46.7353 35.7029 46.5637 36.4104 46.9309 36.9066C46.9768 36.9686 47.0298 37.0251 47.0889 37.0749L54.3468 43.1868Z"/>
-          <path d="M36.3343 16.8522C35.6039 15.365 36.2174 13.5673 37.7046 12.8369L40.6367 11.3969C42.1239 10.6665 43.9216 11.28 44.6519 12.7671L44.6753 12.8147L36.3577 16.8997L36.3343 16.8522Z"/>
-          <path d="M36.3474 16.9021L44.6551 12.7766L53.9413 32.6622C54.8221 34.5484 54.109 36.7949 52.3016 37.8277L52.096 37.9451C50.1306 39.0682 47.6256 38.338 46.5715 36.3346L36.3474 16.9021Z"/>
-        </g>
-        <path class="signature-loader__swash" d="M7 60C18 53 29 54 38 58C47 62 55 66 67 62C77 59 83 53 90 50"/>
-      </svg>
-    </div>
-  </div>
-  <noscript><style>#page-loader{display:none!important}</style></noscript>
 
 
-<header class="site-header" id="site-header">
-  <div class="container nav-container">
-    <a class="brand" href="../../index.html#home" aria-label="Hetal Solanki home">
-      <img src="../../assets/images/logo/hetal-logo-all-black.svg" alt="Hetal Solanki logo">
-    </a>
-    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="../../index.html#work">Work</a>
-      <a href="../../index.html#visuals">Visuals</a>
-      <a href="../../index.html#services">Services</a>
-      <a href="../../index.html#about">About</a>
-      <a href="../../index.html#contact">Contact</a>
-      <a href="../../index.html#contact" class="nav-cta">Start a Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    </nav>
-  </div>
-</header>
+<body id="top">
 
-<main>
-<div class="content-skeleton" data-content-skeleton aria-hidden="true">
-  <div class="content-skeleton__inner">
-    <div class="content-skeleton__hero">
-      <span class="content-skeleton__eyebrow"></span>
-      <span class="content-skeleton__title"></span>
-      <span class="content-skeleton__line"></span>
-      <span class="content-skeleton__line short"></span>
-      <div class="content-skeleton__actions"><span class="content-skeleton__button"></span><span class="content-skeleton__button"></span></div>
-    </div>
-    <div class="content-skeleton__image"></div>
-    <div class="content-skeleton__grid">
-      <div class="content-skeleton__side"><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="content-skeleton__body">
-        <span class="content-skeleton__line"></span><span class="content-skeleton__line"></span><span class="content-skeleton__line"></span>
-        <div class="content-skeleton__cards"><span class="content-skeleton__card"></span><span class="content-skeleton__card"></span><span class="content-skeleton__card"></span></div>
+
+  <!-- =========================================================
+       PAGE LOADER
+       ========================================================= -->
+
+  <div
+    class="page-loader"
+    id="pageLoader"
+    aria-label="Loading page"
+    aria-live="polite"
+  >
+
+    <div class="loader-content">
+
+      <div class="loader-mark">
+        HS
       </div>
+
+      <div class="loader-line">
+        <span></span>
+      </div>
+
+      <p>
+        Loading case study...
+      </p>
+
     </div>
+
   </div>
-</div>
-<section class="case-hero case-hero-rich"><div class="container">
-  <a class="back-link" href="../../index.html#work"><i class="fa-solid fa-arrow-left"></i> Back to work</a>
-  <div class="case-meta-row"><div class="case-meta">Personalized Gift Project · Front-End Development</div><span class="case-status"><i class="fa-solid fa-circle"></i> Case study</span></div>
-  <h1>Kuromi's Chaos Calculator</h1><p class="case-intro case-intro-wide">Squares, cubes & roots — served with sarcasm. Built with love for a sister. 🖤🩷</p>
-  <div class="case-tags case-tags-large"><span>HTML / CSS</span><span>Kuromi Theme</span><span>My Melody Theme</span><span>History · Quiz</span></div>
-  <div class="case-facts case-facts-four"><div><span>Type</span><strong>Gift Project</strong></div><div><span>Stack</span><strong>HTML · CSS · JS</strong></div><div><span>Themes</span><strong>2 Modes</strong></div><div><span>Operations</span><strong>Square · Cube · Root</strong></div><div><span>History</span><strong>Mischief List</strong></div></div>
-  <div class="case-hero-actions"><a class="project-action project-action-primary" href="https://solankihetal-coder.github.io/Square-Cube-Square-Root/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a><a class="project-action" href="#overview"><i class="fa-solid fa-arrow-down"></i> Explore</a></div>
-  <div class="case-art"><div class="case-art-card case-art-image case-art-kuromi"><img src="../../assets/images/projects/calculator/kuromi-calculator.png" alt="Kuromi's Chaos Calculator project presentation" loading="eager" data-loader-critical><div class="art-overlay"><span>KUROMI MODE</span><span>MY MELODY MODE</span></div><div class="art-caption"><strong>x² · x³ · √</strong><small>HISTORY · QUIZ · DUAL THEME</small></div></div></div>
-</div></section>
-<section class="case-content case-rich-content"><div class="container case-grid-wide">
-<div class="case-main-wide">
-<section class="case-summary case-summary-rich reveal" id="overview"><p class="case-kicker">PERSONALIZED GIFT PROJECT</p><h2>Squares, cubes &amp; roots — served with sarcasm.</h2><p class="case-lead">Built with love for a sister. 🖤🩷</p><div class="summary-grid"><div><span>Type</span><strong>Gift Project</strong></div><div><span>Stack</span><strong>HTML · CSS · JS</strong></div><div><span>Themes</span><strong>2 Modes</strong></div><div><span>Operations</span><strong>Square · Cube · Root</strong></div><div><span>History</span><strong>Mischief List</strong></div></div></section>
-<section class="case-section case-section-rich reveal story-section" id="s1"><div class="section-number">01</div><div><p class="case-kicker">THE STORY BEHIND IT</p><h2>The Story Behind It 🖤</h2><p class=""><em>"She asked if I could make her a calculator that was actually cute — so I did."</em></p><p class="">Every great project starts with a real problem. This one started with a sister who loves <strong>Kuromi</strong> and <strong>My Melody</strong> and kept struggling whenever she needed to quickly find the square, cube, or square root of a number — tools buried deep inside scientific calculators or plain-looking web apps that felt nothing like her personality.</p><p class="">The ask was simple: build something that feels <em>hers</em>. A calculator designed around two of her favorite Sanrio characters, with a theme toggle so she can switch between Kuromi's dark mischief and My Melody's soft sweetness — and a personality, down to the sarcastic quotes in the result panel.</p><p class="">What started as a quick gift became a full <strong>design + development project</strong> — covering math logic, DOM manipulation, theme switching, and a history panel the developer calls the <em>"Mischief List."</em></p></div></section><section class="case-section case-section-rich reveal " id="s2"><div class="section-number">02</div><div><p class="case-kicker">PROJECT OVERVIEW</p><h2>Project Overview</h2><p class="">Kuromi's Chaos Calculator is a <strong>single-page, front-end web application</strong> built with zero dependencies — pure HTML, CSS, and Vanilla JavaScript. It was designed from scratch to feel like a Sanrio product page, not a math tool. The user types any number, presses one of three operation buttons, and gets an instant result with a sarcastic in-character Kuromi quote. A dedicated history panel stores every calculation performed in the session.</p></div></section><section class="case-section case-section-rich reveal " id="s3"><div class="section-number">03</div><div><p class="case-kicker">FEATURES</p><h2>Features</h2><div class="feature-list"><article class="feature-row"><span class="feature-icon">🖤</span><div><h3>x² Square</h3><p>Instantly computes the square of any entered number. Works for integers, decimals, and negative values.</p></div></article><article class="feature-row"><span class="feature-icon">🎲</span><div><h3>x³ Cube</h3><p>Calculates the cube of the input. Correctly handles negative numbers — a cubed negative stays negative.</p></div></article><article class="feature-row"><span class="feature-icon">√</span><div><h3>√ Square Root</h3><p>Returns the square root. Flags imaginary results for negative inputs with a Kuromi-flavored error message.</p></div></article><article class="feature-row"><span class="feature-icon">🎲</span><div><h3>Random Number</h3><p>Fills the input field with a random integer for quick fun calculations — great for quiz-style practice.</p></div></article><article class="feature-row"><span class="feature-icon">📜</span><div><h3>My Mischief List</h3><p>A scrollable history panel that logs every calculation with its expression and result. Clearable with one click.</p></div></article><article class="feature-row"><span class="feature-icon">🌸</span><div><h3>Theme Toggle</h3><p>Switch between Kuromi Mode (dark purple, edgy) and My Melody Mode (soft pink, sweet) with a single toggle.</p></div></article><article class="feature-row"><span class="feature-icon">💬</span><div><h3>Sarcastic Quotes</h3><p>The result panel displays a rotating pool of in-character Kuromi quotes after every calculation for personality.</p></div></article><article class="feature-row"><span class="feature-icon">📋</span><div><h3>Copy & Round</h3><p>Copy result to clipboard instantly. Round button trims irrational roots to a clean decimal for readability.</p></div></article></div></div></section><section class="case-section case-section-rich reveal " id="s4"><div class="section-number">04</div><div><p class="case-kicker">MATH ENGINE</p><h2>Math Engine</h2><p class="">The calculator covers three mathematical operations. Each is implemented as a pure function — no state, no side effects — so the logic is testable and reusable independently of the UI.</p><div class="decision-grid"><article class="decision-card"><span>x²</span><h3>Square</h3><p>f(n) = n × n = n² — Multiplies the number by itself. Works for all reals including negatives and zero. −7² = 49</p></article><article class="decision-card"><span>x³</span><h3>Cube</h3><p>f(n) = n × n × n = n³ — Raises to the third power. Negative input yields a negative result. −3³ = −27</p></article><article class="decision-card"><span>√</span><h3>Square Root</h3><p>f(n) = √n = n^(1/2) — Returns principal square root. Negative input triggers imaginary number warning. √144 = 12</p></article></div><h3 class="subheading">Edge Cases Handled</h3><div class="table-wrap"><table><thead><tr><th>Input</th><th>Operation</th><th>Expected</th><th>How Handled</th></tr></thead><tbody><tr><td><strong>0</strong></td><td>Square / Cube</td><td>0</td><td>Normal computation, displays 0 cleanly</td></tr><tr><td><strong>−5</strong></td><td>Square</td><td>25</td><td>Negative × negative = positive; correct</td></tr><tr><td><strong>−5</strong></td><td>Cube</td><td>−125</td><td>Odd power preserves sign; correct</td></tr><tr><td><strong>−9</strong></td><td>Square Root</td><td>Error</td><td>Displays "chaos detected 💀" Kuromi error</td></tr><tr><td><strong>Empty</strong></td><td>Any</td><td>Error</td><td>Prompt to enter a number first</td></tr><tr><td><strong>Text / NaN</strong></td><td>Any</td><td>Error</td><td>Input validated before computation</td></tr><tr><td><strong>0.25</strong></td><td>Square Root</td><td>0.5</td><td>Decimal input supported; precise result</td></tr></tbody></table></div></div></section><section class="case-section case-section-rich reveal " id="s5"><div class="section-number">05</div><div><p class="case-kicker">ALGORITHM DESIGN</p><h2>Algorithm Design</h2><div class="flow-diagram"><div class="flow-step"><span>01</span><strong>Read Input</strong><small>Grab the value from the number input field. Trim whitespace and parse as a float using parseFloat().</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>02</span><strong>Validate</strong><small>Check for NaN or empty string. For square root, additionally check if the value is negative. Show themed error if invalid.</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>03</span><strong>Compute</strong><small>Route to the corresponding pure function: square(n), cube(n), or root(n). Each returns a numeric result.</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>04</span><strong>Format Result</strong><small>If result is irrational (non-integer root), display full precision. Round button optionally trims to 4 decimal places via toFixed(4).</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>05</span><strong>Display Result</strong><small>Inject the result string into the result panel DOM node. Select a random Kuromi quote from the quote pool and inject it below.</small></div><i class="fa-solid fa-arrow-right flow-arrow"></i><div class="flow-step"><span>06</span><strong>Log to History</strong><small>Push an entry object { expression, result, timestamp } into the history array. Prepend a new list item to the Mischief List panel.</small></div></div></div></section><section class="case-section case-section-rich reveal " id="s6"><div class="section-number">06</div><div><p class="case-kicker">CORE LOGIC</p><h2>Core Logic</h2><div class="code-card"><div class="code-card-head"><span>chaos-calculator.js</span><span>Vanilla JavaScript</span></div><pre><code>// ── Math Engine (pure functions) ────────────────────────────
 
-const square = n =&gt; n ** 2
-const cube   = n =&gt; n ** 3
-const root   = n =&gt; {
-  if (n &lt; 0) throw new Error('chaos detected 💀')
-  return Math.sqrt(n)
+
+  <!-- =========================================================
+       CONTENT SKELETON
+       ========================================================= -->
+
+  <div
+    class="case-study-skeleton"
+    id="caseStudySkeleton"
+    aria-hidden="true"
+  >
+
+    <div class="skeleton-inner">
+
+      <div class="skeleton-line small"></div>
+
+      <div class="skeleton-line large"></div>
+
+      <div class="skeleton-line medium"></div>
+
+      <div class="skeleton-box"></div>
+
+      <div class="skeleton-line large"></div>
+
+      <div class="skeleton-line large"></div>
+
+      <div class="skeleton-box"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       HETOFOLIO NAVBAR
+       ========================================================= -->
+
+  <header class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+      <a
+        href="index.html"
+        class="nav-logo"
+        aria-label="Hetal Solanki home"
+      >
+        Hetal<span>.</span>
+      </a>
+
+
+      <nav
+        class="nav-menu"
+        id="navMenu"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="index.html#about"
+          class="nav-link"
+        >
+          About
+        </a>
+
+        <a
+          href="index.html#skills"
+          class="nav-link"
+        >
+          Skills
+        </a>
+
+        <a
+          href="index.html#projects"
+          class="nav-link"
+        >
+          Projects
+        </a>
+
+        <a
+          href="index.html#experience"
+          class="nav-link"
+        >
+          Experience
+        </a>
+
+        <a
+          href="index.html#certificates"
+          class="nav-link"
+        >
+          Certificates
+        </a>
+
+        <a
+          href="index.html#contact"
+          class="nav-link"
+        >
+          Contact
+        </a>
+
+      </nav>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="index.html#contact"
+          class="nav-cta"
+        >
+          Let's Talk
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Toggle theme"
+          title="Toggle theme"
+        >
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       CASE STUDY
+       ========================================================= -->
+
+  <main
+    class="kuromi-case-study case-study-content"
+    id="caseStudyContent"
+  >
+
+
+    <!-- =======================================================
+         COVER
+         ======================================================= -->
+
+    <section class="ks-cover">
+
+      <div class="cover-hearts">
+
+        <div class="heart h1c"></div>
+
+        <div class="heart h2c"></div>
+
+        <div class="heart h3c"></div>
+
+      </div>
+
+
+      <p class="cover-eyebrow">
+        Personalized Gift Project · Front-End Development
+      </p>
+
+
+      <h1>
+        Kuromi's
+        <span class="h1-pink">
+          Chaos
+        </span>
+        Calculator
+      </h1>
+
+
+      <p class="cover-tagline">
+        Squares, cubes &amp; roots — served with sarcasm.
+        Built with love for a sister. 🖤🩷
+      </p>
+
+
+      <div class="cover-chips">
+
+        <span class="chip chip-p">
+          HTML / CSS
+        </span>
+
+        <span class="chip chip-g">
+          Kuromi Theme
+        </span>
+
+        <span class="chip chip-y">
+          My Melody Theme
+        </span>
+
+        <span class="chip chip-r">
+          History · Quiz
+        </span>
+
+      </div>
+
+
+      <!-- =====================================================
+           LIVE PROJECT BUTTON
+           ===================================================== -->
+
+      <a
+        href="#"
+        class="case-study-live-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View Kuromi's Chaos Calculator live project"
+      >
+
+        <span>
+          View Live Project
+        </span>
+
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+      </a>
+
+    </section>
+
+
+    <!-- =======================================================
+         TOC
+         ======================================================= -->
+
+    <div class="toc-bar">
+
+      <div class="toc-inner">
+
+        <span class="toc-label">
+          Jump to
+        </span>
+
+        <a class="toc-link" href="#s1">
+          01 Story
+        </a>
+
+        <a class="toc-link" href="#s2">
+          02 Overview
+        </a>
+
+        <a class="toc-link" href="#s3">
+          03 Features
+        </a>
+
+        <a class="toc-link" href="#s4">
+          04 Math Engine
+        </a>
+
+        <a class="toc-link" href="#s5">
+          05 Algorithm
+        </a>
+
+        <a class="toc-link" href="#s6">
+          06 Core Logic
+        </a>
+
+        <a class="toc-link" href="#s7">
+          07 Themes
+        </a>
+
+        <a class="toc-link" href="#s8">
+          08 Challenges
+        </a>
+
+        <a class="toc-link" href="#s9">
+          09 I/O
+        </a>
+
+        <a class="toc-link" href="#s10">
+          10 Outcomes
+        </a>
+
+        <a class="toc-link" href="#s11">
+          11 Learnings
+        </a>
+
+        <a class="toc-link" href="#s12">
+          12 Conclusion
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- =======================================================
+         PAGE
+         ======================================================= -->
+
+    <div class="ks-page">
+
+
+      <!-- =====================================================
+           01 STORY
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s1"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            01
+          </span>
+
+          <h2>
+            The Story Behind It 🖤
+          </h2>
+
+        </div>
+
+
+        <div class="story-card">
+
+          <p class="story-quote">
+            "She asked if I could make her a calculator that was
+            actually cute — so I did."
+          </p>
+
+          <p>
+            Every great project starts with a real problem.
+            This one started with a sister who loves
+            <strong style="color:#c4b5fd">
+              Kuromi
+            </strong>
+            and
+            <strong style="color:#f9a8d4">
+              My Melody
+            </strong>
+            and kept struggling whenever she needed to quickly
+            find the square, cube, or square root of a number —
+            tools buried deep inside scientific calculators or
+            plain-looking web apps that felt nothing like her
+            personality.
+          </p>
+
+          <p>
+            The ask was simple: build something that feels
+            <em>hers</em>. A calculator designed around two of
+            her favorite Sanrio characters, with a theme toggle
+            so she can switch between Kuromi's dark mischief and
+            My Melody's soft sweetness — and a personality, down
+            to the sarcastic quotes in the result panel.
+          </p>
+
+          <p>
+            What started as a quick gift became a full
+            <strong style="color:#c4b5fd">
+              design + development project
+            </strong>
+            — covering math logic, DOM manipulation, theme
+            switching, and a history panel the developer calls
+            the <em>"Mischief List."</em>
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           02 OVERVIEW
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s2"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            02
+          </span>
+
+          <h2>
+            Project Overview
+          </h2>
+
+        </div>
+
+
+        <div class="stat-grid">
+
+          <div class="stat-card">
+            <div class="stat-emoji">🖤</div>
+            <div class="stat-label">Type</div>
+            <div class="stat-val dark">
+              Gift Project
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-emoji">🎨</div>
+            <div class="stat-label">Stack</div>
+            <div class="stat-val">
+              HTML · CSS · JS
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-emoji">✨</div>
+            <div class="stat-label">Themes</div>
+            <div class="stat-val pink">
+              2 Modes
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-emoji">🧮</div>
+            <div class="stat-label">Operations</div>
+            <div class="stat-val">
+              Square · Cube · Root
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-emoji">📜</div>
+            <div class="stat-label">History</div>
+            <div class="stat-val">
+              Mischief List
+            </div>
+          </div>
+
+        </div>
+
+
+        <p>
+          Kuromi's Chaos Calculator is a
+          <strong>
+            single-page, front-end web application
+          </strong>
+          built with zero dependencies — pure HTML, CSS, and
+          Vanilla JavaScript. It was designed from scratch to
+          feel like a Sanrio product page, not a math tool. The
+          user types any number, presses one of three operation
+          buttons, and gets an instant result with a sarcastic
+          in-character Kuromi quote. A dedicated history panel
+          stores every calculation performed in the session.
+        </p>
+
+      </section>
+
+
+      <!-- =====================================================
+           03 FEATURES
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s3"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            03
+          </span>
+
+          <h2>
+            Features
+          </h2>
+
+        </div>
+
+
+        <div class="feat-grid">
+
+          <div class="feat-card">
+            <span class="feat-emoji">🖤</span>
+            <h4>x² Square</h4>
+            <p>
+              Instantly computes the square of any entered
+              number. Works for integers, decimals, and negative
+              values.
+            </p>
+          </div>
+
+          <div class="feat-card">
+            <span class="feat-emoji">🎲</span>
+            <h4>x³ Cube</h4>
+            <p>
+              Calculates the cube of the input. Correctly handles
+              negative numbers — a cubed negative stays negative.
+            </p>
+          </div>
+
+          <div class="feat-card">
+            <span class="feat-emoji">√</span>
+            <h4>√ Square Root</h4>
+            <p>
+              Returns the square root. Flags imaginary results
+              for negative inputs with a Kuromi-flavored error
+              message.
+            </p>
+          </div>
+
+          <div class="feat-card">
+            <span class="feat-emoji">🎲</span>
+            <h4>Random Number</h4>
+            <p>
+              Fills the input field with a random integer for
+              quick fun calculations — great for quiz-style
+              practice.
+            </p>
+          </div>
+
+          <div class="feat-card">
+            <span class="feat-emoji">📜</span>
+            <h4>My Mischief List</h4>
+            <p>
+              A scrollable history panel that logs every
+              calculation with its expression and result.
+              Clearable with one click.
+            </p>
+          </div>
+
+          <div class="feat-card">
+            <span class="feat-emoji">🌸</span>
+            <h4>Theme Toggle</h4>
+            <p>
+              Switch between
+              <strong>Kuromi Mode</strong>
+              (dark purple, edgy) and
+              <strong>My Melody Mode</strong>
+              (soft pink, sweet) with a single toggle.
+            </p>
+          </div>
+
+          <div class="feat-card">
+            <span class="feat-emoji">💬</span>
+            <h4>Sarcastic Quotes</h4>
+            <p>
+              The result panel displays a rotating pool of
+              in-character Kuromi quotes after every calculation
+              for personality.
+            </p>
+          </div>
+
+          <div class="feat-card">
+            <span class="feat-emoji">📋</span>
+            <h4>Copy &amp; Round</h4>
+            <p>
+              Copy result to clipboard instantly. Round button
+              trims irrational roots to a clean decimal for
+              readability.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           04 MATH ENGINE
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s4"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            04
+          </span>
+
+          <h2>
+            Math Engine
+          </h2>
+
+        </div>
+
+
+        <p>
+          The calculator covers three mathematical operations.
+          Each is implemented as a pure function — no state, no
+          side effects — so the logic is testable and reusable
+          independently of the UI.
+        </p>
+
+
+        <div class="math-grid">
+
+          <div class="math-card">
+
+            <div class="math-symbol">
+              x²
+            </div>
+
+            <div class="math-name">
+              Square
+            </div>
+
+            <div class="math-formula">
+              f(n) = n × n = n²
+            </div>
+
+            <p>
+              Multiplies the number by itself. Works for all reals
+              including negatives and zero.
+            </p>
+
+            <span class="math-example">
+              −7² = 49
+            </span>
+
+          </div>
+
+
+          <div class="math-card">
+
+            <div class="math-symbol">
+              x³
+            </div>
+
+            <div class="math-name">
+              Cube
+            </div>
+
+            <div class="math-formula">
+              f(n) = n × n × n = n³
+            </div>
+
+            <p>
+              Raises to the third power. Negative input yields a
+              negative result.
+            </p>
+
+            <span class="math-example">
+              −3³ = −27
+            </span>
+
+          </div>
+
+
+          <div class="math-card">
+
+            <div class="math-symbol">
+              √
+            </div>
+
+            <div class="math-name">
+              Square Root
+            </div>
+
+            <div class="math-formula">
+              f(n) = √n = n^(1/2)
+            </div>
+
+            <p>
+              Returns principal square root. Negative input
+              triggers imaginary number warning.
+            </p>
+
+            <span class="math-example">
+              √144 = 12
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          Edge Cases Handled
+        </h3>
+
+
+        <div class="tbl-wrap">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Input</th>
+                <th>Operation</th>
+                <th>Expected</th>
+                <th>How Handled</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>0</td>
+                <td>Square / Cube</td>
+                <td>0</td>
+                <td>
+                  Normal computation, displays 0 cleanly
+                </td>
+              </tr>
+
+              <tr>
+                <td>−5</td>
+                <td>Square</td>
+                <td>25</td>
+                <td>
+                  Negative × negative = positive; correct
+                </td>
+              </tr>
+
+              <tr>
+                <td>−5</td>
+                <td>Cube</td>
+                <td>−125</td>
+                <td>
+                  Odd power preserves sign; correct
+                </td>
+              </tr>
+
+              <tr>
+                <td>−9</td>
+                <td>Square Root</td>
+                <td>Error</td>
+                <td>
+                  Displays "chaos detected 💀" Kuromi error
+                </td>
+              </tr>
+
+              <tr>
+                <td>Empty</td>
+                <td>Any</td>
+                <td>Error</td>
+                <td>
+                  Prompt to enter a number first
+                </td>
+              </tr>
+
+              <tr>
+                <td>Text / NaN</td>
+                <td>Any</td>
+                <td>Error</td>
+                <td>
+                  Input validated before computation
+                </td>
+              </tr>
+
+              <tr>
+                <td>0.25</td>
+                <td>Square Root</td>
+                <td>0.5</td>
+                <td>
+                  Decimal input supported; precise result
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           05 ALGORITHM
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s5"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            05
+          </span>
+
+          <h2>
+            Algorithm Design
+          </h2>
+
+        </div>
+
+
+        <div class="algo-wrap">
+
+          <div class="algo-step">
+
+            <span class="a-num">
+              1
+            </span>
+
+            <div class="a-body">
+
+              <h4>
+                Read Input
+              </h4>
+
+              <p>
+                Grab the value from the number input field. Trim
+                whitespace and parse as a float using
+                <code>parseFloat()</code>.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="algo-step">
+
+            <span class="a-num">
+              2
+            </span>
+
+            <div class="a-body">
+
+              <h4>
+                Validate
+              </h4>
+
+              <p>
+                Check for <code>NaN</code> or empty string. For
+                square root, additionally check if the value is
+                negative. Show themed error if invalid.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="algo-step">
+
+            <span class="a-num">
+              3
+            </span>
+
+            <div class="a-body">
+
+              <h4>
+                Compute
+              </h4>
+
+              <p>
+                Route to the corresponding pure function:
+                <code>square(n)</code>,
+                <code>cube(n)</code>, or
+                <code>root(n)</code>. Each returns a numeric
+                result.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="algo-step">
+
+            <span class="a-num">
+              4
+            </span>
+
+            <div class="a-body">
+
+              <h4>
+                Format Result
+              </h4>
+
+              <p>
+                If result is irrational (non-integer root),
+                display full precision. Round button optionally
+                trims to 4 decimal places via
+                <code>toFixed(4)</code>.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="algo-step">
+
+            <span class="a-num">
+              5
+            </span>
+
+            <div class="a-body">
+
+              <h4>
+                Display Result
+              </h4>
+
+              <p>
+                Inject the result string into the result panel
+                DOM node. Select a random Kuromi quote from the
+                quote pool and inject it below.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="algo-step">
+
+            <span class="a-num">
+              6
+            </span>
+
+            <div class="a-body">
+
+              <h4>
+                Log to History
+              </h4>
+
+              <p>
+                Push an entry object
+                <code>{ expression, result, timestamp }</code>
+                into the history array. Prepend a new list item
+                to the Mischief List panel.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           06 CORE LOGIC
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s6"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            06
+          </span>
+
+          <h2>
+            Core Logic
+          </h2>
+
+        </div>
+
+
+        <div class="code-block">
+
+          <div class="code-top">
+
+            <div class="dot dot-r"></div>
+            <div class="dot dot-y"></div>
+            <div class="dot dot-g"></div>
+
+            <span class="code-file">
+              chaos-calculator.js
+            </span>
+
+          </div>
+
+
+          <pre><span class="cm">// ── Math Engine (pure functions) ────────────────────────────</span>
+
+<span class="kw">const</span> <span class="fn">square</span> = n =&gt; n <span class="op">**</span> <span class="num">2</span>
+<span class="kw">const</span> <span class="fn">cube</span>   = n =&gt; n <span class="op">**</span> <span class="num">3</span>
+<span class="kw">const</span> <span class="fn">root</span>   = n =&gt; {
+  <span class="kw">if</span> (n <span class="op">&lt;</span> <span class="num">0</span>) <span class="kw">throw new</span> <span class="fn">Error</span>(<span class="str">'chaos detected 💀'</span>)
+  <span class="kw">return</span> Math.<span class="fn">sqrt</span>(n)
 }
 
-// ── Input Validation ─────────────────────────────────────────
+<span class="cm">// ── Input Validation ─────────────────────────────────────────</span>
 
-function validate(raw) {
-  const n = parseFloat(raw)
-  if (raw.trim() === '' || isNaN(n))
-    throw new Error('enter a number first 🖤')
-  return n
+<span class="kw">function</span> <span class="fn">validate</span>(raw) {
+  <span class="kw">const</span> n = <span class="fn">parseFloat</span>(raw)
+  <span class="kw">if</span> (raw.trim() <span class="op">===</span> <span class="str">''</span> <span class="op">||</span> <span class="fn">isNaN</span>(n))
+    <span class="kw">throw new</span> <span class="fn">Error</span>(<span class="str">'enter a number first 🖤'</span>)
+  <span class="kw">return</span> n
 }
 
-// ── Compute &amp; Render ─────────────────────────────────────────
+<span class="cm">// ── Compute &amp; Render ─────────────────────────────────────────</span>
 
-function calculate(operation) {
-  try {
-    const n      = validate(inputEl.value)
-    const ops    = { square, cube, root }
-    const result = ops[operation](n)
-    const expr   = formatExpr(n, operation)
+<span class="kw">function</span> <span class="fn">calculate</span>(operation) {
+  <span class="kw">try</span> {
+    <span class="kw">const</span> n      = <span class="fn">validate</span>(inputEl.value)
+    <span class="kw">const</span> ops    = { square, cube, root }
+    <span class="kw">const</span> result = ops[operation](n)
+    <span class="kw">const</span> expr   = <span class="fn">formatExpr</span>(n, operation)
 
-    showResult(result, expr)
-    addToHistory(expr, result)
-    playTone()
-  } catch (err) {
-    showError(err.message)
+    <span class="fn">showResult</span>(result, expr)
+    <span class="fn">addToHistory</span>(expr, result)
+    <span class="fn">playTone</span>()
+  } <span class="kw">catch</span> (err) {
+    <span class="fn">showError</span>(err.message)
   }
 }
 
-// ── History ──────────────────────────────────────────────────
+<span class="cm">// ── History ──────────────────────────────────────────────────</span>
 
-const history = []
+<span class="kw">const</span> history = []
 
-function addToHistory(expr, result) {
-  history.unshift({ expr, result, time: new Date() })
-  const li = document.createElement('li')
-  li.innerHTML = `&lt;span&gt;${expr}&lt;/span&gt; = &lt;strong&gt;${result}&lt;/strong&gt;`
-  historyList.prepend(li)
+<span class="kw">function</span> <span class="fn">addToHistory</span>(expr, result) {
+  history.<span class="fn">unshift</span>({
+    expr,
+    result,
+    time: <span class="kw">new</span> Date()
+  })
+
+  <span class="kw">const</span> li = document.<span class="fn">createElement</span>(<span class="str">'li'</span>)
+
+  li.innerHTML =
+    <span class="str">`&lt;span&gt;${expr}&lt;/span&gt; =
+    &lt;strong&gt;${result}&lt;/strong&gt;`</span>
+
+  historyList.<span class="fn">prepend</span>(li)
 }
 
-function playTone() {
-  const osc = ctx.createOscillator()
-  osc.frequency.value = 520          // Kuromi: slightly eerie pitch
-  osc.type = 'sine'
-  osc.connect(ctx.destination)
-  osc.start()
-  setTimeout(() =&gt; { osc.stop(); ctx.close() }, 150)
+<span class="kw">function</span> <span class="fn">playTone</span>() {
+  <span class="kw">const</span> osc =
+    ctx.<span class="fn">createOscillator</span>()
+
+  osc.frequency.value =
+    <span class="num">520</span>
+
+  osc.type =
+    <span class="str">'sine'</span>
+
+  osc.<span class="fn">connect</span>(ctx.destination)
+  osc.<span class="fn">start</span>()
+
+  <span class="fn">setTimeout</span>(() =&gt; {
+    osc.<span class="fn">stop</span>()
+    ctx.<span class="fn">close</span>()
+  }, <span class="num">150</span>)
 }
 
-// ── Theme Toggle ─────────────────────────────────────────────
+<span class="cm">// ── Theme Toggle ─────────────────────────────────────────────</span>
 
-function toggleTheme(isKuromi) {
-  document.body.dataset.theme = isKuromi ? 'kuromi' : 'melody'
-}</code></pre></div></div></section><section class="case-section case-section-rich reveal " id="s7"><div class="section-number">07</div><div><p class="case-kicker">DUAL THEME DESIGN</p><h2>Dual Theme Design</h2><p class="">The toggle button switches the entire visual identity of the app between two distinct Sanrio personalities, all driven by swapping a <code>data-theme</code> attribute on the <code>&lt;body&gt;</code> tag and CSS custom properties doing the rest.</p><div class="decision-grid"><article class="decision-card"><span>🖤</span><h3>Kuromi Mode</h3><p>Deep dark purple backgrounds; black operation buttons with white text; edgy rounded-rectangle layout; sarcastic, mischievous quote tone; lower-pitch eerie oscillator tone; skull & dark emoji decorations.</p></article><article class="decision-card"><span>🩷</span><h3>My Melody Mode</h3><p>Soft pastel pink backgrounds; bubblegum pink operation buttons; rounded, soft card edges; sweet, encouraging quote tone; higher-pitch cheerful oscillator tone; heart & flower emoji decorations.</p></article></div><div class="code-card"><div class="code-card-head"><span>theme.css</span><span>CSS custom property swap</span></div><pre><code>:root {
-  --bg-main:    #1a0a2e;
-  --accent:     #7c3aed;
-  --btn-bg:     #000000;
-  --quote-col:  #c084fc;
+<span class="kw">function</span> <span class="fn">toggleTheme</span>(isKuromi) {
+  document.body.dataset.theme =
+    isKuromi ? <span class="str">'kuromi'</span> : <span class="str">'melody'</span>
+}</pre>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           07 THEMES
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s7"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            07
+          </span>
+
+          <h2>
+            Dual Theme Design
+          </h2>
+
+        </div>
+
+
+        <p>
+          The toggle button switches the entire visual identity
+          of the app between two distinct Sanrio personalities,
+          all driven by swapping a
+          <code>data-theme</code>
+          attribute on the
+          <code>&lt;body&gt;</code>
+          tag and CSS custom properties doing the rest.
+        </p>
+
+
+        <div class="theme-compare">
+
+          <div class="theme-panel theme-k">
+
+            <h4>
+              🖤 Kuromi Mode
+            </h4>
+
+            <ul>
+
+              <li>
+                Deep dark purple backgrounds
+              </li>
+
+              <li>
+                Black operation buttons with white text
+              </li>
+
+              <li>
+                Edgy rounded-rectangle layout
+              </li>
+
+              <li>
+                Sarcastic, mischievous quote tone
+              </li>
+
+              <li>
+                Lower-pitch eerie oscillator tone
+              </li>
+
+              <li>
+                Skull &amp; dark emoji decorations
+              </li>
+
+            </ul>
+
+
+            <div class="swatch-row">
+
+              <div
+                class="swatch"
+                style="background:#1a0a2e"
+              ></div>
+
+              <div
+                class="swatch"
+                style="background:#4c1d95"
+              ></div>
+
+              <div
+                class="swatch"
+                style="background:#7c3aed"
+              ></div>
+
+              <div
+                class="swatch"
+                style="background:#c084fc"
+              ></div>
+
+              <div
+                class="swatch"
+                style="background:#f0e6ff"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div class="theme-panel theme-m">
+
+            <h4>
+              🩷 My Melody Mode
+            </h4>
+
+            <ul>
+
+              <li>
+                Soft pastel pink backgrounds
+              </li>
+
+              <li>
+                Bubblegum pink operation buttons
+              </li>
+
+              <li>
+                Rounded, soft card edges
+              </li>
+
+              <li>
+                Sweet, encouraging quote tone
+              </li>
+
+              <li>
+                Higher-pitch cheerful oscillator tone
+              </li>
+
+              <li>
+                Heart &amp; flower emoji decorations
+              </li>
+
+            </ul>
+
+
+            <div class="swatch-row">
+
+              <div
+                class="swatch"
+                style="background:#831843"
+              ></div>
+
+              <div
+                class="swatch"
+                style="background:#db2777"
+              ></div>
+
+              <div
+                class="swatch"
+                style="background:#f472b6"
+              ></div>
+
+              <div
+                class="swatch"
+                style="background:#fbcfe8"
+              ></div>
+
+              <div
+                class="swatch"
+                style="background:#fdf2f8"
+              ></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          Implementation: CSS Custom Property Swap
+        </h3>
+
+
+        <div class="code-block">
+
+          <div class="code-top">
+
+            <div class="dot dot-r"></div>
+            <div class="dot dot-y"></div>
+            <div class="dot dot-g"></div>
+
+            <span class="code-file">
+              theme.css
+            </span>
+
+          </div>
+
+
+          <pre><span class="cm">/* Default: Kuromi theme */</span>
+
+:root {
+  --bg-main:    <span class="str">#1a0a2e</span>;
+  --accent:     <span class="str">#7c3aed</span>;
+  --btn-bg:     <span class="str">#000000</span>;
+  --quote-col:  <span class="str">#c084fc</span>;
 }
 
-[data-theme="melody"] {
-  --bg-main:    #fdf2f8;
-  --accent:     #db2777;
-  --btn-bg:     #f472b6;
-  --quote-col:  #be185d;
-}</code></pre></div></div></section><section class="case-section case-section-rich reveal " id="s8"><div class="section-number">08</div><div><p class="case-kicker">CHALLENGES & SOLUTIONS</p><h2>Challenges & Solutions</h2><div class="edge-grid"><article class="edge-card"><div class="edge-label">01</div><h3>Square Root of Negatives</h3><p>Math.sqrt(−n) returns NaN, not an error. The solution was a pre-check inside the root function: if n < 0, throw a custom error and display a Kuromi-flavored "imaginary chaos" message before Math.sqrt is ever called.</p></article><article class="edge-card"><div class="edge-label">02</div><h3>Irrational Results Display</h3><p>√2 = 1.4142135623… — displaying all digits is ugly. The default shows full precision; the Round button calls toFixed(4) on demand. Users choose their level of detail.</p></article><article class="edge-card"><div class="edge-label">03</div><h3>Seamless Theme Switching</h3><p>Rebuilding theme logic with class toggles caused visual flashes. The solution was to use CSS transition on all color properties and switch via a single data-theme attribute, letting CSS handle the rest instantly.</p></article><article class="edge-card"><div class="edge-label">04</div><h3>History Panel Performance</h3><p>Appending many DOM nodes repeatedly degrades performance. Used prepend() instead of appendChild() so new entries appear at the top, and limited visible items via CSS overflow-y: auto with a max-height.</p></article><article class="edge-card"><div class="edge-label">05</div><h3>Keyboard Shortcut Conflicts</h3><p>S, C, R keyboard shortcuts could interfere with typing in the input field. Added a check: if (event.target === inputEl) return — shortcuts only fire when focus is outside the input field.</p></article></div></div></section><section class="case-section case-section-rich reveal " id="s9"><div class="section-number">09</div><div><p class="case-kicker">INPUTS & OUTPUTS</p><h2>Inputs & Outputs</h2><h3 class="subheading">Input Parameters</h3><div class="table-wrap"><table><thead><tr><th>Input</th><th>Type</th><th>Range</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Number field</strong></td><td>Float / Int</td><td>Any real number</td><td>Supports negatives, decimals, large integers</td></tr><tr><td><strong>Operation</strong></td><td>Button click / Keyboard</td><td>Square, Cube, Root</td><td>S / C / R keyboard shortcuts supported</td></tr><tr><td><strong>Random</strong></td><td>Button click</td><td>Auto-generated</td><td>Fills input with a random integer 1–999</td></tr><tr><td><strong>Theme Toggle</strong></td><td>Toggle switch</td><td>Kuromi / My Melody</td><td>Persists via data-theme on body</td></tr></tbody></table></div><h3 class="subheading">Output Formats</h3><div class="table-wrap"><table><thead><tr><th>Output</th><th>Format</th><th>Location</th><th>Status</th></tr></thead><tbody><tr><td><strong>Computed Result</strong></td><td>Number (full precision)</td><td>Result panel</td><td>Live</td></tr><tr><td><strong>Expression Label</strong></td><td>e.g. "7² = 49"</td><td>Result panel</td><td>Live</td></tr><tr><td><strong>Kuromi Quote</strong></td><td>Random string from pool</td><td>Below result</td><td>Personality</td></tr><tr><td><strong>History Entry</strong></td><td>Expression + result row</td><td>Mischief List panel</td><td>Session</td></tr><tr><td><strong>Clipboard Copy</strong></td><td>Plain text number</td><td>System clipboard</td><td>Implemented</td></tr><tr><td><strong>Rounded Result</strong></td><td>toFixed(4)</td><td>Result panel</td><td>On Demand</td></tr></tbody></table></div><h3 class="subheading">Sample Calculations</h3><div class="table-wrap"><table><thead><tr><th>Input</th><th>Operation</th><th>Result</th><th>Quote Shown</th></tr></thead><tbody><tr><td><strong>9</strong></td><td>x² Square</td><td>81</td><td>"Kuromi's not a bad girl… just a little mischievous." 😈</td></tr><tr><td><strong>−3</strong></td><td>x³ Cube</td><td>−27</td><td>"Even chaos has its patterns." 🖤</td></tr><tr><td><strong>144</strong></td><td>√ Root</td><td>12</td><td>"That was too easy for me." 💅</td></tr><tr><td><strong>2</strong></td><td>√ Root</td><td>1.4142135…</td><td>"Irrational. Just like me." 💀</td></tr><tr><td><strong>−4</strong></td><td>√ Root</td><td>Error</td><td>"chaos detected 💀 — that's imaginary!"</td></tr></tbody></table></div></div></section><section class="case-section case-section-rich reveal " id="s10"><div class="section-number">10</div><div><p class="case-kicker">KEY OUTCOMES</p><h2>Key Outcomes</h2><div class="decision-grid"><article class="decision-card"><span>01</span><h3>A Tool She Actually Uses</h3><p>The primary goal was to make math feel approachable and fun for someone who found standard calculators intimidating. The Sanrio theme, sarcastic quotes, and Mischief List history gave it personality — making it something she opens daily instead of a bookmark she forgets.</p></article><article class="decision-card"><span>02</span><h3>Correct Math Across All Edge Cases</h3><p>Every operation — including negative squares, negative cubes, zero inputs, irrational roots, and imaginary results — is computed correctly and displayed clearly without breaking the UI.</p></article><article class="decision-card"><span>03</span><h3>Seamless Dual-Theme Experience</h3><p>The CSS custom property architecture means switching themes is instant and flicker-free. Both Kuromi and My Melody modes feel like fully realized products, not just color swaps.</p></article></div></div></section><section class="case-section case-section-rich reveal " id="s11"><div class="section-number">11</div><div><p class="case-kicker">SKILLS PRACTICED & LEARNINGS</p><h2>Skills Practiced & Learnings</h2><div class="decision-grid"><article class="decision-card"><span>MATH & LOGIC</span><h3>Mathematical edge cases</h3><p>zero, negative inputs, irrational results, and imaginary numbers; pure function design; precision handling and using toFixed() for display.</p></article><article class="decision-card"><span>JAVASCRIPT</span><h3>Browser APIs & DOM</h3><p>Clipboard API, DOM manipulation, keyboard events, and error handling with try/catch flow.</p></article><article class="decision-card"><span>CSS & DESIGN</span><h3>Theme architecture</h3><p>CSS custom properties for theme switching; Sanrio-accurate color palette; personality-driven UX; responsive, accessible layout.</p></article></div></div></section><section class="case-section case-section-rich reveal case-final-section" id="s12"><div class="section-number">12</div><div><p class="case-kicker">CONCLUSION 🖤🩷</p><h2>Conclusion 🖤🩷</h2><p class="">Kuromi's Chaos Calculator is proof that the best projects come from <strong>real, personal motivation</strong>. It wasn't built to impress anyone or to check a skill off a list — it was built so one person's experience with math could be a little softer, a little more fun, and a lot more <em>her</em>.</p><p class="">Technically, it exercises a meaningful range of front-end skills: pure function math logic, DOM manipulation, clipboard integration, keyboard shortcuts, CSS theming, and error handling. But the real design challenge was the human one — building something that <strong>feels like a product someone loves</strong>, not just a tool that works.</p><p class="">The Mischief List, the sarcastic quotes, the oscillator tone, the toggle between dark mischief and soft sweetness — none of that was required by the math. All of it was required by the person it was made for. That balance between function and feeling is what makes this more than a practice project. <strong>It's a gift.</strong> 🖤</p><div class="case-next-actions"><a class="project-action project-action-primary" href="https://solankihetal-coder.github.io/Square-Cube-Square-Root/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a><a class="project-action" href="../../index.html#work">More work <i class="fa-solid fa-arrow-right"></i></a></div></div></section><section class="case-next reveal"><div><p class="case-kicker">LIVE PROJECT</p><h2>Kuromi's Chaos Calculator</h2><p>Kuromi's Chaos Calculator · Case Study · Built with ♡ for a sister</p></div><div class="case-next-actions"><a class="project-action project-action-primary" href="https://solankihetal-coder.github.io/Square-Cube-Square-Root/" target="_blank" rel="noopener noreferrer">Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="project-action" href="../../index.html#work">Back to work</a></div></section></div>
-</div></section>
-</main>
+<span class="cm">/* My Melody theme — toggled via data-theme attribute */</span>
 
-<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Hetal Solanki. Built with intent.</p><a href="../../index.html">Back home <i class="fa-solid fa-arrow-up"></i></a></div></footer>
-<script src="../../js/components/page-loader.js" defer></script><script src="../../js/components/content-skeleton.js" defer></script><script src="../../js/main.js" defer></script>
+[data-theme=<span class="str">"melody"</span>] {
+  --bg-main:    <span class="str">#fdf2f8</span>;
+  --accent:     <span class="str">#db2777</span>;
+  --btn-bg:     <span class="str">#f472b6</span>;
+  --quote-col:  <span class="str">#be185d</span>;
+}</pre>
 
-</body></html>
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           08 CHALLENGES
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s8"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            08
+          </span>
+
+          <h2>
+            Challenges &amp; Solutions
+          </h2>
+
+        </div>
+
+
+        <div class="ch-grid">
+
+          <div class="ch-card ch-v">
+
+            <h4>
+              Square Root of Negatives
+            </h4>
+
+            <p>
+              Math.sqrt(−n) returns
+              <code>NaN</code>,
+              not an error. The solution was a pre-check inside
+              the root function: if <code>n &lt; 0</code>, throw a
+              custom error and display a Kuromi-flavored
+              "imaginary chaos" message before Math.sqrt is ever
+              called.
+            </p>
+
+          </div>
+
+
+          <div class="ch-card ch-p">
+
+            <h4>
+              Irrational Results Display
+            </h4>
+
+            <p>
+              √2 = 1.4142135623… — displaying all digits is ugly.
+              The default shows full precision; the Round button
+              calls <code>toFixed(4)</code> on demand. Users
+              choose their level of detail.
+            </p>
+
+          </div>
+
+
+          <div class="ch-card ch-y">
+
+            <h4>
+              Seamless Theme Switching
+            </h4>
+
+            <p>
+              Rebuilding theme logic with class toggles caused
+              visual flashes. The solution was to use CSS
+              <code>transition</code> on all color properties and
+              switch via a single
+              <code>data-theme</code>
+              attribute, letting CSS handle the rest instantly.
+            </p>
+
+          </div>
+
+
+          <div class="ch-card ch-v">
+
+            <h4>
+              History Panel Performance
+            </h4>
+
+            <p>
+              Appending many DOM nodes repeatedly degrades
+              performance. Used
+              <code>prepend()</code>
+              instead of
+              <code>appendChild()</code>
+              so new entries appear at the top, and limited
+              visible items via CSS
+              <code>overflow-y: auto</code>
+              with a max-height.
+            </p>
+
+          </div>
+
+
+          <div class="ch-card ch-p">
+
+            <h4>
+              Keyboard Shortcut Conflicts
+            </h4>
+
+            <p>
+              S, C, R keyboard shortcuts could interfere with
+              typing in the input field. Added a check:
+              <code>if (event.target === inputEl) return</code>
+              — shortcuts only fire when focus is outside the
+              input.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           09 INPUTS / OUTPUTS
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s9"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            09
+          </span>
+
+          <h2>
+            Inputs &amp; Outputs
+          </h2>
+
+        </div>
+
+
+        <h3>
+          Input Parameters
+        </h3>
+
+
+        <div class="tbl-wrap">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Input</th>
+                <th>Type</th>
+                <th>Range</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Number field</td>
+                <td>Float / Int</td>
+                <td>Any real number</td>
+                <td>
+                  Supports negatives, decimals, large integers
+                </td>
+              </tr>
+
+              <tr>
+                <td>Operation</td>
+                <td>Button click / Keyboard</td>
+                <td>Square, Cube, Root</td>
+                <td>
+                  S / C / R keyboard shortcuts supported
+                </td>
+              </tr>
+
+              <tr>
+                <td>Random</td>
+                <td>Button click</td>
+                <td>Auto-generated</td>
+                <td>
+                  Fills input with a random integer 1–999
+                </td>
+              </tr>
+
+              <tr>
+                <td>Theme Toggle</td>
+                <td>Toggle switch</td>
+                <td>Kuromi / My Melody</td>
+                <td>
+                  Persists via <code>data-theme</code> on body
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <h3>
+          Output Formats
+        </h3>
+
+
+        <div class="tbl-wrap">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Output</th>
+                <th>Format</th>
+                <th>Location</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Computed Result</td>
+                <td>Number (full precision)</td>
+                <td>Result panel</td>
+                <td>
+                  <span class="tag tag-g">
+                    Live
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Expression Label</td>
+                <td>e.g. "7² = 49"</td>
+                <td>Result panel</td>
+                <td>
+                  <span class="tag tag-g">
+                    Live
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Kuromi Quote</td>
+                <td>Random string from pool</td>
+                <td>Below result</td>
+                <td>
+                  <span class="tag tag-v">
+                    Personality
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>History Entry</td>
+                <td>Expression + result row</td>
+                <td>Mischief List panel</td>
+                <td>
+                  <span class="tag tag-g">
+                    Session
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Clipboard Copy</td>
+                <td>Plain text number</td>
+                <td>System clipboard</td>
+                <td>
+                  <span class="tag tag-g">
+                    Implemented
+                  </span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Rounded Result</td>
+                <td><code>toFixed(4)</code></td>
+                <td>Result panel</td>
+                <td>
+                  <span class="tag tag-v">
+                    On Demand
+                  </span>
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <h3>
+          Sample Calculations
+        </h3>
+
+
+        <div class="tbl-wrap">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Input</th>
+                <th>Operation</th>
+                <th>Result</th>
+                <th>Quote Shown</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>9</td>
+                <td>x² Square</td>
+                <td>81</td>
+                <td>
+                  "Kuromi's not a bad girl… just a little
+                  mischievous." 😈
+                </td>
+              </tr>
+
+              <tr>
+                <td>−3</td>
+                <td>x³ Cube</td>
+                <td>−27</td>
+                <td>
+                  "Even chaos has its patterns." 🖤
+                </td>
+              </tr>
+
+              <tr>
+                <td>144</td>
+                <td>√ Root</td>
+                <td>12</td>
+                <td>
+                  "That was too easy for me." 💅
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>√ Root</td>
+                <td>1.4142135…</td>
+                <td>
+                  "Irrational. Just like me." 💀
+                </td>
+              </tr>
+
+              <tr>
+                <td>−4</td>
+                <td>√ Root</td>
+                <td>Error</td>
+                <td>
+                  "chaos detected 💀 — that's imaginary!"
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           10 OUTCOMES
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s10"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            10
+          </span>
+
+          <h2>
+            Key Outcomes
+          </h2>
+
+        </div>
+
+
+        <div class="insight-list">
+
+          <div class="insight-item">
+
+            <div class="ins-bar bar-v"></div>
+
+            <div>
+
+              <strong>
+                A Tool She Actually Uses
+              </strong>
+
+              <p>
+                The primary goal was to make math feel approachable
+                and fun for someone who found standard calculators
+                intimidating. The Sanrio theme, sarcastic quotes,
+                and Mischief List history gave it personality —
+                making it something she opens daily instead of a
+                bookmark she forgets.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="insight-item">
+
+            <div class="ins-bar bar-p"></div>
+
+            <div>
+
+              <strong>
+                Correct Math Across All Edge Cases
+              </strong>
+
+              <p>
+                Every operation — including negative squares,
+                negative cubes, zero inputs, irrational roots, and
+                imaginary results — is computed correctly and
+                displayed clearly without breaking the UI.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="insight-item">
+
+            <div class="ins-bar bar-g"></div>
+
+            <div>
+
+              <strong>
+                Seamless Dual-Theme Experience
+              </strong>
+
+              <p>
+                The CSS custom property architecture means
+                switching themes is instant and flicker-free.
+                Both Kuromi and My Melody modes feel like fully
+                realized products, not just color swaps.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           11 LEARNINGS
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s11"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            11
+          </span>
+
+          <h2>
+            Skills Practiced &amp; Learnings
+          </h2>
+
+        </div>
+
+
+        <h3>
+          Math &amp; Logic
+        </h3>
+
+        <ul>
+
+          <li>
+            <strong>
+              Mathematical edge cases
+            </strong>
+            — zero, negative inputs, irrational results, and
+            imaginary numbers
+          </li>
+
+          <li>
+            <strong>
+              Pure function design
+            </strong>
+            — separating math logic from DOM and UI side effects
+          </li>
+
+          <li>
+            <strong>
+              Precision handling
+            </strong>
+            — understanding floating-point limits and using
+            <code>toFixed()</code>
+            for display
+          </li>
+
+        </ul>
+
+
+        <h3>
+          JavaScript
+        </h3>
+
+        <ul>
+
+          <li>
+            <strong>
+              Clipboard API
+            </strong>
+            —
+            <code>
+              navigator.clipboard.writeText()
+            </code>
+            for modern copy-to-clipboard
+          </li>
+
+          <li>
+            <strong>
+              DOM manipulation
+            </strong>
+            — dynamic list building,
+            <code>prepend()</code>
+            for history, error injection
+          </li>
+
+          <li>
+            <strong>
+              Keyboard events
+            </strong>
+            — binding shortcut keys with focus guards to prevent
+            input interference
+          </li>
+
+          <li>
+            <strong>
+              Error handling
+            </strong>
+            — try/catch flow with themed, user-friendly messages
+            instead of console errors
+          </li>
+
+        </ul>
+
+
+        <h3>
+          CSS &amp; Design
+        </h3>
+
+        <ul>
+
+          <li>
+            <strong>
+              CSS custom properties
+            </strong>
+            for theme switching — one attribute change reskins
+            the entire app
+          </li>
+
+          <li>
+            <strong>
+              Sanrio-accurate color palette
+            </strong>
+            — researching official brand colors for authenticity
+          </li>
+
+          <li>
+            <strong>
+              Personality-driven UX
+            </strong>
+            — how quotes, sounds, and theming affect a user's
+            emotional experience
+          </li>
+
+          <li>
+            <strong>
+              Responsive, accessible layout
+            </strong>
+            — ensuring the two-panel layout works cleanly on all
+            screen sizes
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <!-- =====================================================
+           12 CONCLUSION
+           ===================================================== -->
+
+      <section
+        class="ks-section"
+        id="s12"
+      >
+
+        <div class="sec-head">
+
+          <span class="sec-num">
+            12
+          </span>
+
+          <h2>
+            Conclusion 🖤🩷
+          </h2>
+
+        </div>
+
+
+        <div class="concl-box">
+
+          <p>
+            Kuromi's Chaos Calculator is proof that the best
+            projects come from
+            <strong>
+              real, personal motivation
+            </strong>.
+            It wasn't built to impress anyone or to check a skill
+            off a list — it was built so one person's experience
+            with math could be a little softer, a little more fun,
+            and a lot more <em>her</em>.
+          </p>
+
+          <p>
+            Technically, it exercises a meaningful range of
+            front-end skills: pure function math logic, DOM
+            manipulation, clipboard integration, keyboard
+            shortcuts, CSS theming, and error handling. But the
+            real design challenge was the human one — building
+            something that
+            <strong>
+              feels like a product someone loves
+            </strong>,
+            not just a tool that works.
+          </p>
+
+          <p>
+            The Mischief List, the sarcastic quotes, the oscillator
+            tone, the toggle between dark mischief and soft
+            sweetness — none of that was required by the math.
+            All of it was required by the person it was made for.
+            That balance between function and feeling is what
+            makes this more than a practice project.
+            <strong>
+              It's a gift.
+            </strong>
+            🖤
+          </p>
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+
+    <!-- =======================================================
+         BACK TO TOP
+         ======================================================= -->
+
+    <button
+      class="ks-back-top"
+      id="ksBackTop"
+      type="button"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+
+      <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+  </main>
+
+
+  <!-- =========================================================
+       ORIGINAL HETOFOLIO FOOTER
+       ========================================================= -->
+
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+
+      <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+          <h2>
+            Hetal Solanki.
+          </h2>
+
+          <p>
+            Product Designer · Digital Creative · Developer
+          </p>
+
+        </div>
+
+
+        <div class="footer-socials">
+
+          <a
+            href="https://github.com/"
+            class="footer-social"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/"
+            class="footer-social"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+
+          <a
+            href="https://www.behance.net/"
+            class="footer-social"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Behance"
+          >
+            <i class="fa-brands fa-behance"></i>
+          </a>
+
+
+          <a
+            href="#"
+            class="footer-social"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+
+          <a
+            href="mailto:your-email@example.com"
+            class="footer-social"
+            aria-label="Email"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 Hetal Solanki
+        </p>
+
+        <p>
+          Built with curiosity &amp; a little too much coffee.
+        </p>
+
+        <a
+          href="#top"
+          class="back-to-top"
+        >
+          Back to top ↑
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       PORTFOLIO JS
+       Keep the same paths used by your current Hetofolio.
+       ========================================================= -->
+
+  <script
+    src="assets/js/main.js"
+    defer
+  ></script>
+
+
+  <!-- =========================================================
+       CASE STUDY JS
+       ========================================================= -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        const loader =
+          document.getElementById(
+            "pageLoader"
+          );
+
+        const skeleton =
+          document.getElementById(
+            "caseStudySkeleton"
+          );
+
+        const content =
+          document.getElementById(
+            "caseStudyContent"
+          );
+
+        const backTop =
+          document.getElementById(
+            "ksBackTop"
+          );
+
+        const tocLinks =
+          document.querySelectorAll(
+            ".toc-link"
+          );
+
+
+        /* =====================================================
+           PAGE LOADING
+           ===================================================== */
+
+        window.addEventListener(
+          "load",
+          () => {
+
+            setTimeout(
+              () => {
+
+                if (loader) {
+
+                  loader.classList.add(
+                    "loaded"
+                  );
+
+                }
+
+                if (skeleton) {
+
+                  skeleton.style.display =
+                    "none";
+
+                }
+
+                if (content) {
+
+                  content.classList.add(
+                    "is-loaded"
+                  );
+
+                }
+
+              },
+              450
+            );
+
+          }
+        );
+
+
+        /* =====================================================
+           BACK TO TOP
+           ===================================================== */
+
+        const updateBackTop =
+          () => {
+
+            if (!backTop) return;
+
+            if (window.scrollY > 600) {
+
+              backTop.classList.add(
+                "visible"
+              );
+
+            } else {
+
+              backTop.classList.remove(
+                "visible"
+              );
+
+            }
+
+          };
+
+
+        window.addEventListener(
+          "scroll",
+          updateBackTop,
+          { passive: true }
+        );
+
+
+        updateBackTop();
+
+
+        if (backTop) {
+
+          backTop.addEventListener(
+            "click",
+            () => {
+
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              });
+
+            }
+          );
+
+        }
+
+
+        /* =====================================================
+           TOC ACTIVE STATE
+           ===================================================== */
+
+        const sections =
+          document.querySelectorAll(
+            ".ks-section"
+          );
+
+
+        const observer =
+          new IntersectionObserver(
+            entries => {
+
+              entries.forEach(
+                entry => {
+
+                  if (!entry.isIntersecting)
+                    return;
+
+
+                  const id =
+                    entry.target.id;
+
+
+                  tocLinks.forEach(
+                    link => {
+
+                      link.classList.toggle(
+                        "active",
+                        link.getAttribute(
+                          "href"
+                        ) === `#${id}`
+                      );
+
+                    }
+                  );
+
+                }
+              );
+
+            },
+            {
+              rootMargin:
+                "-25% 0px -65% 0px",
+
+              threshold: 0
+            }
+          );
+
+
+        sections.forEach(
+          section => {
+
+            observer.observe(
+              section
+            );
+
+          }
+        );
+
+
+        /* =====================================================
+           SMOOTH TOC SCROLL
+           ===================================================== */
+
+        tocLinks.forEach(
+          link => {
+
+            link.addEventListener(
+              "click",
+              event => {
+
+                const targetId =
+                  link.getAttribute(
+                    "href"
+                  );
+
+
+                if (
+                  !targetId ||
+                  !targetId.startsWith("#")
+                ) {
+                  return;
+                }
+
+
+                const target =
+                  document.querySelector(
+                    targetId
+                  );
+
+
+                if (!target) return;
+
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start"
+                });
+
+              }
+            );
+
+          }
+        );
+
+
+        /* =====================================================
+           LIVE PROJECT CTA
+           ===================================================== */
+
+        const liveProject =
+          document.querySelector(
+            ".case-study-live-cta"
+          );
+
+
+        if (liveProject) {
+
+          liveProject.addEventListener(
+            "click",
+            event => {
+
+              const href =
+                liveProject.getAttribute(
+                  "href"
+                );
+
+
+              /*
+               * Prevent empty "#" from jumping
+               * to the top until the real URL
+               * is added.
+               */
+
+              if (
+                !href ||
+                href === "#"
+              ) {
+
+                event.preventDefault();
+
+              }
+
+            }
+          );
+
+        }
+
+
+        /* =====================================================
+           EXTERNAL LINK SAFETY
+           ===================================================== */
+
+        document
+          .querySelectorAll(
+            'a[target="_blank"]'
+          )
+          .forEach(
+            link => {
+
+              link.setAttribute(
+                "rel",
+                "noopener noreferrer"
+              );
+
+            }
+          );
+
+      }
+    );
+
+  </script>
+
+
+</body>
+</html>
+```
