@@ -158,7 +158,6 @@
   .about-copy h2 em,
   .contact-intro h2 em,
   .final-cta h2 em {
-    font-family: "Bricolage Grotesque", "DM Sans", sans-serif;
     font-family: "Instrument Serif", "Playfair Display", serif;
     font-style: italic;
     font-weight: 400;
@@ -168,7 +167,7 @@
     font-weight: 700;
   }
   
-  .section-heading>p:last-child {
+  .section-heading > p:last-child {
     margin-top: 24px;
     max-width: 650px;
     color: var(--muted);
@@ -253,14 +252,14 @@
     gap: 30px;
   }
   
-  .site-nav>a {
+  .site-nav > a {
     color: #555;
     font-size: .9rem;
     font-weight: 600;
     transition: color .25s ease;
   }
   
-  .site-nav>a:hover {
+  .site-nav > a:hover {
     color: var(--accent);
   }
   
@@ -348,7 +347,7 @@
     transition: left .5s var(--ease);
   }
   
-  .btn>* {
+  .btn > * {
     position: relative;
     z-index: 1;
   }
@@ -1383,7 +1382,7 @@
     border-bottom: 1px solid #d4d2ca;
   }
   
-  .why-item>span,
+  .why-item > span,
   .process-number {
     color: var(--accent);
     font-size: .75rem;
@@ -1426,7 +1425,7 @@
     border-color: rgba(79, 174, 98, .35);
   }
   
-  .process-step>i {
+  .process-step > i {
     display: block;
     margin-top: 60px;
     font-size: 1.5rem;
@@ -1634,20 +1633,40 @@
   
   .testimonial-avatar {
     position: relative;
-    display: grid;
-    place-items: center;
+    display: block;
     width: 50px;
     height: 50px;
     flex: 0 0 50px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     border-radius: 50%;
     background: var(--dark);
     color: var(--light);
-    font-size: .82rem;
-    font-weight: 800;
-    letter-spacing: .02em;
     box-shadow: 0 8px 22px rgba(17, 17, 17, .12);
     transform: scale(.75);
     transition: transform .75s var(--ease) .78s, background .35s ease, box-shadow .5s ease;
+  }
+  
+  .testimonial-avatar .testimonial-avatar-initials {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    display: block;
+    color: var(--light);
+    font-family: "DM Sans", sans-serif;
+    font-size: .82rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .02em;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
   
   .testimonial-card.is-visible .testimonial-avatar,
@@ -1712,21 +1731,6 @@
   .reveal.is-visible .testimonial-author span {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-  }
-  
-  .testimonial-author span::before {
-    content: "●";
-    display: inline-block;
-    margin-right: 6px;
-    color: var(--accent);
-    font-size: .55rem;
-    vertical-align: middle;
-    transform: scale(.5);
-    transition: transform .5s var(--ease) 1s;
-  }
-  
-  .testimonial-card.is-visible .testimonial-author span::before {
-    transform: scale(1);
   }
   
   /* =========================================================
@@ -1804,7 +1808,7 @@
     max-width: 100%;
   }
   
-  .about-copy>p:not(.eyebrow) {
+  .about-copy > p:not(.eyebrow) {
     max-width: 650px;
     margin-top: 20px;
     color: var(--muted);
@@ -1926,7 +1930,7 @@
     transform: translateX(8px);
   }
   
-  .journey-heading>p {
+  .journey-heading > p {
     max-width: 340px;
     margin-bottom: 8px;
     color: var(--muted);
@@ -2804,7 +2808,7 @@
     margin: 10px 0;
   }
   
-  .gallery-empty-card>p:not(.eyebrow) {
+  .gallery-empty-card > p:not(.eyebrow) {
     max-width: 600px;
     margin: 0 auto 25px;
     line-height: 1.7;
@@ -3715,7 +3719,7 @@
     min-width: 300px;
   }
   
-  .ending-content>span {
+  .ending-content > span {
     display: block;
     margin-bottom: 10px;
     color: var(--accent);
@@ -3753,7 +3757,7 @@
     max-width: 100%;
   }
   
-  .contact-intro>p:not(.eyebrow) {
+  .contact-intro > p:not(.eyebrow) {
     margin-top: 22px;
     max-width: 450px;
     color: var(--muted);
@@ -4220,7 +4224,7 @@
       pointer-events: auto;
     }
   
-    .site-nav>a {
+    .site-nav > a {
       padding: 11px 8px;
     }
   
@@ -4395,7 +4399,7 @@
       display: block;
     }
   
-    .journey-heading>p {
+    .journey-heading > p {
       margin-top: 18px;
       max-width: 500px;
     }
@@ -4894,8 +4898,3 @@
       transition: none !important;
     }
   }
-
-
-
-
-
