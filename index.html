@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Hetal Solanki — Product Designer & Digital Creative</title>
-  <meta name="description" content="Hetal Solanki is a product designer and digital creative turning ideas into websites, digital products, branding, graphics and print.">
+  <meta name="description" content="Hetal Solanki is a product designer and digital creative helping businesses turn ideas into websites, digital products, branding, graphics and print.">
   <meta name="author" content="Hetal Solanki">
   <meta name="theme-color" content="#111111">
   <link rel="canonical" href="https://solankihetal-coder.github.io/hetofolio/">
@@ -14,14 +14,23 @@
   <meta property="og:description" content="Websites, digital products, UI/UX, branding, graphics and print.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://solankihetal-coder.github.io/hetofolio/">
-  <meta property="og:image" content="https://solankihetal-coder.github.io/hetofolio/assets/images/profile/pfp-hetal-hero.jpeg">
+  <meta property="og:site_name" content="Hetal Solanki">
+  <meta property="og:image" content="https://solankihetal-coder.github.io/hetofolio/assets/images/og/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hetal Solanki — Product Designer and Digital Creative">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hetal Solanki — Product Designer & Digital Creative">
+  <meta name="twitter:description" content="Websites, digital products, UI/UX, branding, graphics and print.">
+  <meta name="twitter:image" content="https://solankihetal-coder.github.io/hetofolio/assets/images/og/og-cover.jpg">
 
   <link rel="icon" type="image/svg+xml" href="assets/images/logo/hetal-logo-all-black.svg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -29,6 +38,25 @@
   <!-- Page Loader: isolated component -->
   <link rel="stylesheet" href="css/components/page-loader.css"><link rel="stylesheet" href="css/components/content-skeleton.css">
   <link rel="stylesheet" href="css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hetal Solanki",
+    "jobTitle": "Product Designer & Digital Creative",
+    "url": "https://solankihetal-coder.github.io/hetofolio/",
+    "image": "https://solankihetal-coder.github.io/hetofolio/assets/images/og/og-cover.jpg",
+    "sameAs": [
+      "https://github.com/solankihetal-coder",
+      "https://www.linkedin.com/in/hetal-solanki22",
+      "https://www.behance.net/hetalsolanki11"
+    ],
+    "email": "mailto:hetaljsolanki01@gmail.com",
+    "telephone": "+91-7900139238",
+    "knowsAbout": ["Product Design", "UI/UX Design", "Web Development", "Branding", "Graphic Design"]
+  }
+  </script>
 </head>
 
 <body>
@@ -66,6 +94,8 @@
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="#work">Work</a>
         <a href="#visuals">Visuals</a>
+        <a href="#services">Services</a>
+        <!-- <a href="#investment">Budget</a> -->
         <a href="#process">Process</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -106,28 +136,37 @@
             Available for freelance projects
           </p>
 
-          <span class="hero-decorative-line" aria-hidden="true"></span>
-          <h1>
-            Ideas are easy.<br>
-            <em>Making them real</em><br>
-            is my thing.
+          <div class="hero-title-decoration" aria-hidden="true">
+            <span></span>
+            <i></i>
+          </div>
+
+          <h1 class="hero-heading">
+            <span class="heading-line heading-bold">Ideas are easy.</span>
+            <span class="heading-line heading-script">
+              <em>Making them real</em>
+              <svg class="heading-swash" viewBox="0 0 420 34" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M4 28 Q 210 4 416 12" />
+              </svg>
+            </span>
+            <span class="heading-line heading-bold">is my thing.</span>
           </h1>
 
           <p class="hero-description">
-            I'm Hetal — a product designer and digital creative who turns
-            ideas into websites, digital products, branding, graphics
-            and print.
+            I'm Hetal — a product designer and digital creative helping
+            businesses turn ideas into websites, digital products,
+            branding, graphics and print.
           </p>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-dark">
+            <a href="#contact" class="btn btn-dark" data-magnetic>
               Start a Project
               <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="#work" class="btn btn-ghost">
+            <!-- <a href="#work" class="btn btn-ghost" data-magnetic>
               See My Work
               <i class="fa-solid fa-arrow-down"></i>
-            </a>
+            </a> -->
           </div>
 
           <!-- <div class="social-links" aria-label="Social links">
@@ -140,23 +179,24 @@
             <a href="https://www.behance.net/hetalsolanki11" target="_blank" rel="noopener noreferrer" aria-label="Behance">
               <i class="fa-brands fa-behance"></i>
             </a>
-            <a href="https://wa.me/917900139238?text=Hi%20Hetal%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/917900139238" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
-            <a href="mailto:hetaljsolanki01@gmail.com" aria-label="Email Hetal">
+            <a href="mailto:hetaljsolanki01@gmail.com" aria-label="Email">
               <i class="fa-solid fa-envelope"></i>
             </a>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
 
         <div class="hero-visual reveal reveal-delay-1">
           <div class="hero-orbit orbit-one" aria-hidden="true"></div>
           <div class="hero-orbit orbit-two" aria-hidden="true"></div>
 
           <div class="hero-photo-wrap">
-            <img src="assets/images/profile/pfp-hetal-hero.jpeg"
+            <img src="assets/images/profile/pfp-hetal-hero.webp"
                  alt="Portrait of Hetal Solanki"
                  class="hero-photo"
+                 width="900" height="895"
                  loading="eager"
                  fetchpriority="high"
                  data-loader-critical>
@@ -176,6 +216,30 @@
             <i class="fa-solid fa-arrow-down"></i>
             <span>SCROLL<br>TO EXPLORE</span>
           </div>
+
+          <!-- =========================================================
+     HERO — "PSST... THERE'S MORE"
+     ========================================================= -->
+
+          <!-- <a
+          href="#my-journey"
+          class="hero-psst"
+          aria-label="Explore more and continue to My Journey"
+          >
+          <span class="hero-psst-text">
+            psst... there's more
+          </span>
+
+          <span class="hero-psst-arrow" aria-hidden="true">
+            ↘
+          </span>
+
+          <span class="hero-psst-sparkles" aria-hidden="true">
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+          </span>
+          </a> -->
         </div>
       </div>
     </section>
@@ -198,24 +262,125 @@
       </div>
     </section>
 
+    <!-- ========================= SERVICES ========================= -->
+    <!-- <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">( What I Can Make For You )</p>
+          <h2>From <em>“I need this”</em><br>to <strong>“This is exactly it.”</strong></h2>
+          <p>
+            You don't need to know design terminology. Just tell me what
+            you need — I'll help figure out the right way to make it.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card service-card-featured reveal">
+            <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+            <span class="service-number">01</span>
+            <h3>Websites</h3>
+            <p>Business websites, portfolio sites, landing pages and custom web experiences.</p>
+            <div class="service-tags">
+              <span>Design</span><span>Responsive</span><span>Development</span>
+            </div>
+            <a href="#contact" class="text-link">Need a website? <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <span class="service-number">02</span>
+            <h3>Apps & Software</h3>
+            <p>Clear, usable interfaces for mobile apps, software products and digital tools.</p>
+            <div class="service-tags">
+              <span>UX Research</span><span>UI</span><span>Prototype</span>
+            </div>
+            <a href="#contact" class="text-link">Sketching out an app? <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+            <span class="service-number">03</span>
+            <h3>Branding & Graphics</h3>
+            <p>Logos, social media creatives, posters, banners and visual assets for your business.</p>
+            <div class="service-tags">
+              <span>Branding</span><span>Graphics</span><span>Social</span>
+            </div>
+            <a href="#contact" class="text-link">Ready to look the part? <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-print"></i></div>
+            <span class="service-number">04</span>
+            <h3>Business & Print</h3>
+            <p>Visiting cards, flyers, brochures and other practical materials your business needs.</p>
+            <div class="service-tags">
+              <span>Print</span><span>Layouts</span><span>Business</span>
+            </div>
+            <a href="#contact" class="text-link">Let's get it printed <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ========================= PROJECT INVESTMENT ========================= -->
+    <!--
+    <section class="section investment-section" id="investment">
+      <div class="container">
+        <div class="section-heading section-heading-row reveal">
+          <div>
+            <p class="eyebrow">( Project Investment )</p>
+            <h2>Let's talk about the <em>numbers</em><br><strong>before we build.</strong></h2>
+          </div>
+          <p class="section-side-copy">
+            Every project is scoped around what you actually need. These ranges are a starting point,
+            not fixed packages — the final quote depends on the work involved.
+          </p>
+        </div>
+
+        <div class="investment-grid">
+          <article class="investment-card reveal">
+            <div class="investment-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <span class="investment-label">SMALL PROJECTS</span>
+            <strong>Under ₹15K</strong>
+            <p>Great for focused design work, small graphics, print materials and straightforward website tasks.</p>
+          </article>
+
+          <article class="investment-card investment-card-featured reveal reveal-delay-1">
+            <div class="investment-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            <span class="investment-label">MOST COMMON</span>
+            <strong>₹15K – ₹50K</strong>
+            <p>Suitable for complete websites, stronger branding work, UI/UX projects and multi-page digital experiences.</p>
+          </article>
+
+          <article class="investment-card reveal reveal-delay-2">
+            <div class="investment-icon"><i class="fa-solid fa-rocket"></i></div>
+            <span class="investment-label">LARGER PROJECTS</span>
+            <strong>₹50K+</strong>
+            <p>For larger product, software, website or design engagements that need deeper planning and collaboration.</p>
+          </article>
+        </div>
+
+        <div class="investment-note reveal">
+          <i class="fa-solid fa-circle-info"></i>
+          <p><strong>Not sure about your budget?</strong> That's completely fine. Tell me what you want to make and we'll figure out the scope together.</p>
+          <a href="#contact" class="text-link">Start a conversation <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    -->
+
     <!-- ========================= FEATURED WORK ========================= -->
     <section class="section work-section" id="work">
       <div class="container">
         <div class="section-heading section-heading-row reveal">
           <div>
             <p class="eyebrow">( Selected Work )</p>
-            <h2>Work that's <em>live</em><br><strong>and shipping.</strong></h2>
+            <h2>Things I've <em>made</em><br><strong>so far.</strong></h2>
           </div>
           <p class="section-side-copy">
-            A focused mix of product design, live websites and web tools — each one
-            shipped, not just mocked up. Full case studies are here where the story's
-            worth telling.
+            A focused mix of product design, websites, web tools and digital builds.
+            Detailed case studies are available where the project story is strongest.
           </p>
-        </div>
-
-        <div class="work-intent reveal">
-          <span><i class="fa-solid fa-bullseye"></i> Featured product & digital work</span>
-          <span><i class="fa-solid fa-arrow-right"></i> Open a project for the full story</span>
         </div>
 
         <div class="work-filters reveal" role="group" aria-label="Filter projects">
@@ -234,8 +399,9 @@
 
           <article class="project-card project-card-large reveal" data-category="design">
             <div class="project-image">
-              <img src="assets/images/projects/swachhata/swachhata-app.svg"
-                   alt="Swachhata app project preview">
+              <img src="assets/images/projects/swachhata/swachhta_banner.png"
+                   alt="Swachhata app project preview"
+                   loading="lazy" width="744" height="376">
               <span class="project-badge"><i class="fa-solid fa-mobile-screen"></i> Product Design</span>
             </div>
             <div class="project-content">
@@ -256,38 +422,43 @@
 
           <article class="project-card reveal" data-category="web">
             <div class="project-image">
-              <div class="project-image-placeholder" aria-label="Twirl Around World live website preview"><i class="fa-solid fa-globe"></i><span>Live website</span></div>
-              <span class="project-badge"><i class="fa-solid fa-globe"></i> Website</span>
+              <img src="assets/images/projects/twirl-around-world/twirl-around-world-banner.png"
+                   alt="Swachhata app project preview"
+                   loading="lazy" width="744" height="376">
+              <span class="project-badge"><i class="fa-solid fa-mobile-screen"></i> Product Design</span>
             </div>
             <div class="project-content">
               <div class="project-meta">Web Design · Development</div>
               <h3>Twirl Around World</h3>
               <p>A live travel brand website designed end-to-end and shipped to a real domain.</p>
-              <a href="https://twirlaroundworld.com/" class="text-link">
-                Live <i class="fa-solid fa-arrow-right"></i>
+              <a href="pages/projects/twirl-around-world.html" class="text-link">
+                Project <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
 
           <article class="project-card reveal reveal-delay-1" data-category="web">
             <div class="project-image">
-              <div class="project-image-placeholder" aria-label="Play Scape Shippers live website preview"><i class="fa-solid fa-truck-fast"></i><span>Live business website</span></div>
+              <img src="assets/images/projects/play-scape/play-scape-banner.png"
+                   alt="Swachhata app project preview"
+                   loading="lazy" width="744" height="376">
               <span class="project-badge"><i class="fa-solid fa-truck-fast"></i> Business Website</span>
             </div>
             <div class="project-content">
               <div class="project-meta">Web Design · Business</div>
               <h3>Play Scape Shippers</h3>
               <p>A live business website designed for a shipping and logistics company.</p>
-              <a href="https://www.playscapeshippers.info/" class="text-link">
-                Live <i class="fa-solid fa-arrow-right"></i>
+              <a href="pages/projects/play-scape-shippers.html" class="text-link">
+                Project <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
 
           <article class="project-card reveal reveal-delay-2" data-category="web">
             <div class="project-image">
-              <img src="assets/images/projects/table-generator/table-generator-mockup.png"
-                   alt="Table Generator project preview">
+              <img src="assets/images/projects/table-generator/table-gen-banner.svg"
+                   alt="Table Generator project preview"
+                   loading="lazy" width="1000" height="437">
               <span class="project-badge"><i class="fa-solid fa-table"></i> Web Tool</span>
             </div>
             <div class="project-content">
@@ -303,8 +474,9 @@
 
           <article class="project-card reveal" data-category="web">
             <div class="project-image">
-              <img src="assets/images/projects/calculator/calculator-device.png"
-                   alt="Kuromi's Chaos Calculator project preview">
+              <img src="assets/images/projects/calculator/kuromi_banner.svg"
+                   alt="Kuromi's Chaos Calculator project preview"
+                   loading="lazy" width="900" height="1086">
               <span class="project-badge"><i class="fa-solid fa-calculator"></i> Web Tool</span>
             </div>
             <div class="project-content">
@@ -320,8 +492,9 @@
 
           <article class="project-card reveal reveal-delay-1" data-category="web">
             <div class="project-image">
-              <img src="assets/images/projects/smart-e-commerce/savvy-shopper-device.png"
-                   alt="SavvyShopper e-commerce project preview">
+              <img src="assets/images/projects/smart-e-commerce/savvy-shopper-banner.svg"
+                   alt="SavvyShopper e-commerce project preview"
+                   loading="lazy" width="1000" height="522">
               <span class="project-badge"><i class="fa-solid fa-cart-shopping"></i> E-commerce</span>
             </div>
             <div class="project-content">
@@ -424,44 +597,32 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         TESTIMONIAL SECTION
-    ===================================================== -->
-    <section id="testimonial" class="testimonial-section">
-    
-        <p class="eyebrow">( A word from a client )</p>
-    
-        <h2 class="section-title">
-            <em>Good work</em> <strong>speaks for itself</strong>
-        </h2>
-    
-        <div class="testimonial-card">
-    
-            <span class="testimonial-mark" aria-hidden="true">“</span>
-    
-            <blockquote>
-            Delivered the work on time, maintained proper coordination throughout the project, and the final work was impressive.
-            </blockquote>
-    
-            <div class="testimonial-author">
-    
-                <div class="testimonial-avatar" aria-hidden="true">
-                    SB
-                </div>
-    
-                <div>
-                    <h3>Shubham Bhati</h3>
-                    <p>
-                        Director · EISPL
-                    </p>
-                </div>
-    
-            </div>
-    
+    <!-- ========================= TESTIMONIAL ========================= -->
+    <section class="section testimonial-section" id="testimonial">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">( A Word From A Client )</p>
+          <h2><em>Good work</em> speaks for itself</h2>
         </div>
-    
+
+        <article class="testimonial-card reveal">
+          <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial-quote">
+            Delivered the work on time, maintained proper coordination throughout the project, and the final work was impressive.
+          </p>
+          <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">
+                <span class="testimonial-avatar-initials">SB</span>
+              </div>
+            <div>
+              <strong>Shubham Bhati</strong>
+              <span>Director · EISPL</span>
+              <!-- <span>Director · Epitoza Infotech Solutions Pvt Ltd</span> -->
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
-    <!-- End Testimonial Section -->
 
     <!-- ========================= PROCESS ========================= -->
     <section class="section process-section" id="process">
@@ -494,7 +655,7 @@
             <span class="process-number">04</span>
             <i class="fa-solid fa-code"></i>
             <h3>Build & test</h3>
-            <p>I build what I can directly and collaborate with developers when a project needs it.</p>
+            <p>I build what I can directly and collaborate with my development team for larger builds.</p>
           </article>
           <article class="process-step reveal">
             <span class="process-number">05</span>
@@ -502,6 +663,27 @@
             <h3>Launch & improve</h3>
             <p>We review the final result and identify what should happen next.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= TEAM / CAPABILITY ========================= -->
+    <section class="section capability-section">
+      <div class="container">
+        <div class="capability-card reveal">
+          <div class="capability-icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <div>
+            <p class="eyebrow">Need more than design?</p>
+            <h2>For larger apps & software, <em>I work with a development team.</em></h2>
+            <p>
+              I handle the research, product thinking and design side.
+              My development team can take care of the larger software or
+              app build when a project needs more engineering support.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-light">Let's Discuss <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </section>
@@ -528,38 +710,16 @@
               something useful: good design needs to communicate value,
               not just look impressive.
             </p>
-            <p>
-              I like to stay focused — giving each project full attention
-              rather than splitting my time thin across too many things at once.
-            </p>
 
             <a href="#contact" class="text-link">Let's work together <i class="fa-solid fa-arrow-right"></i></a>
           </div>
 
-          <!-- <div class="about-stats reveal reveal-delay-1">
-            <div class="about-stat">
-              <strong>16+</strong>
-              <span>Certifications</span>
-            </div>
-            <div class="about-stat">
-              <strong>4+</strong>
-              <span>Projects shipped</span>
-            </div>
-            <div class="about-stat">
-              <strong>UX+</strong>
-              <span>Frontend mindset</span>
-            </div>
-            <div class="about-stat">
-              <strong>∞</strong>
-              <span>Things still learning</span>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
 
     <!-- ========================= JOURNEY ========================= -->
-    <section class="section journey-section" id="journey">
+    <!-- <section class="section journey-section" id="journey">
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">( My Journey )</p>
@@ -569,27 +729,259 @@
         <div class="journey-grid">
           <article class="journey-item reveal">
             <span>01</span>
-            <h3>Design, first</h3>
-            <p>Research, wireframes and prototypes — learning what actually makes an interface work, not just look right.</p>
+            <h3>Started in design</h3>
+            <p>Visual design, wireframes, prototypes and a growing pull toward product thinking.</p>
           </article>
           <article class="journey-item reveal reveal-delay-1">
             <span>02</span>
-            <h3>Then, code</h3>
-            <p>Picked up HTML, CSS and JavaScript so a good idea didn't have to stop at a Figma file.</p>
+            <h3>Learned to build</h3>
+            <p>Picked up HTML, CSS and JavaScript so ideas didn't always have to stop at a design file.</p>
           </article>
           <article class="journey-item reveal reveal-delay-2">
             <span>03</span>
-            <h3>One person, both jobs</h3>
-            <p>Design and development happening in the same head now, not handed off between two people.</p>
+            <h3>Went hybrid</h3>
+            <p>Started working across UI/UX and frontend development with a stronger end-to-end mindset.</p>
           </article>
           <article class="journey-item reveal reveal-delay-3">
             <span>04</span>
-            <h3>Now, taking on projects</h3>
-            <p>Freelance work end-to-end — from research through to a shipped product — alongside looking for the right full-time fit.</p>
+            <h3>Now building independently</h3>
+            <p>Taking on freelance projects while continuing to grow across design, development and AI workflows.</p>
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <!-- =========================================================
+     MY JOURNEY
+     ========================================================= -->
+
+<section class="journey-section" id="journey">
+
+  <!-- Decorative floating elements -->
+  <span class="journey-deco journey-star journey-deco-1">✦</span>
+  <span class="journey-deco journey-star journey-deco-2">✦</span>
+  <span class="journey-deco journey-cross journey-deco-3">+</span>
+  <span class="journey-deco journey-circle journey-deco-4"></span>
+  <span class="journey-deco journey-arrow journey-deco-5">↗</span>
+
+  <div class="container">
+
+    <!-- Section heading -->
+    <div class="section-heading journey-heading reveal">
+
+      <div>
+        <span class="eyebrow">( THE STORY SO FAR )</span>
+
+        <h2>
+          My
+          <em>Journey</em>
+          <span class="heading-arrow">→</span>
+        </h2>
+      </div>
+
+      <p>
+        A few stops, experiments and lessons
+        that shaped the way I design today.
+      </p>
+
+    </div>
+
+
+    <!-- Journey timeline -->
+    <div class="journey-grid">
+
+      <!-- Animated path -->
+      <div class="journey-path" aria-hidden="true">
+        <span class="journey-path-progress"></span>
+        <span class="journey-path-dot"></span>
+      </div>
+
+
+      <!-- =====================================================
+           01 — BEGINNING
+           ===================================================== -->
+
+      <article
+        class="journey-item reveal"
+        data-year="2021"
+        data-chapter="01"
+      >
+
+        <div class="journey-card-glow"></div>
+
+        <div class="journey-card-top">
+
+          <span class="journey-number">
+            01 <small>/ 04</small>
+          </span>
+
+          <span class="journey-symbol">✦</span>
+
+        </div>
+
+        <span class="journey-year">2021</span>
+
+        <h3>THE BEGINNING</h3>
+
+        <p>
+          Where curiosity turned into creativity
+          and I started exploring the world of design.
+        </p>
+
+        <span class="journey-tag">CURIOUS</span>
+
+        <span class="journey-hover-arrow">↗</span>
+
+      </article>
+
+
+      <!-- =====================================================
+           02 — EXPLORATION
+           ===================================================== -->
+
+      <article
+        class="journey-item reveal reveal-delay-1"
+        data-year="2022"
+        data-chapter="02"
+      >
+
+        <div class="journey-card-glow"></div>
+
+        <div class="journey-card-top">
+
+          <span class="journey-number">
+            02 <small>/ 04</small>
+          </span>
+
+          <span class="journey-symbol">↗</span>
+
+        </div>
+
+        <span class="journey-year">2022</span>
+
+        <h3>THE EXPLORATION</h3>
+
+        <p>
+          Started experimenting with interfaces,
+          visual systems and different ways of solving problems.
+        </p>
+
+        <span class="journey-tag">LEARNING</span>
+
+        <span class="journey-hover-arrow">↗</span>
+
+      </article>
+
+
+      <!-- =====================================================
+           03 — BUILDING
+           ===================================================== -->
+
+      <article
+        class="journey-item reveal reveal-delay-2"
+        data-year="2024"
+        data-chapter="03"
+      >
+
+        <div class="journey-card-glow"></div>
+
+        <div class="journey-card-top">
+
+          <span class="journey-number">
+            03 <small>/ 04</small>
+          </span>
+
+          <span class="journey-symbol">○</span>
+
+        </div>
+
+        <span class="journey-year">2024</span>
+
+        <h3>THE BUILDING</h3>
+
+        <p>
+          Turning ideas into real projects and
+          creating experiences people could actually use.
+        </p>
+
+        <span class="journey-tag">CREATING</span>
+
+        <span class="journey-hover-arrow">↗</span>
+
+      </article>
+
+
+      <!-- =====================================================
+           04 — NOW
+           ===================================================== -->
+
+      <article
+        class="journey-item journey-now reveal reveal-delay-3"
+        data-year="2026"
+        data-chapter="04"
+      >
+
+        <div class="journey-card-glow"></div>
+
+        <div class="journey-card-top">
+
+          <span class="journey-number">
+            04 <small>/ 04</small>
+          </span>
+
+          <span class="journey-live">
+            <i></i>
+            NOW
+          </span>
+
+        </div>
+
+        <span class="journey-year">2026</span>
+
+        <h3>STILL CREATING</h3>
+
+        <p>
+          Still learning. Still building.
+          Still curious about what comes next.
+        </p>
+
+        <span class="journey-tag">IN PROGRESS</span>
+
+        <span class="journey-hover-arrow">↗</span>
+
+      </article>
+
+    </div>
+
+
+    <!-- Journey ending -->
+    <div class="journey-ending reveal">
+
+      <span class="journey-ending-line"></span>
+
+      <div class="journey-ending-content">
+
+        <span class="journey-ending-label">
+          NEXT STOP
+        </span>
+
+        <h3>
+          TO BE
+          <em>CONTINUED</em>
+        </h3>
+
+        <p>
+          The journey is still moving.
+        </p>
+
+      </div>
+
+      <span class="journey-ending-line"></span>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- ========================= SKILLS ========================= -->
     <section class="section skills-section" id="skills">
@@ -646,7 +1038,7 @@
     </section>
 
     <!-- ========================= HOBBIES ========================= -->
-    <section class="section hobbies-section" id="hobbies">
+    <!-- <section class="section hobbies-section" id="hobbies">
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">( Beyond Design )</p>
@@ -655,38 +1047,350 @@
 
         <div class="hobbies-grid">
           <article class="hobby-card reveal">
-            <img src="assets/images/hobbies/wildflower-song.jpg" alt="Music">
+            <img src="assets/images/hobbies/wildflower-song.webp" alt="Music" loading="lazy" width="736" height="1308">
             <div><i class="fa-solid fa-music"></i><span>Music</span></div>
           </article>
           <article class="hobby-card reveal reveal-delay-1">
-            <img src="assets/images/hobbies/fashiondesigning.jpg" alt="Fashion designing">
+            <img src="assets/images/hobbies/fashiondesigning.webp" alt="Fashion designing" loading="lazy" width="736" height="981">
             <div><i class="fa-solid fa-shirt"></i><span>Fashion</span></div>
           </article>
           <article class="hobby-card reveal reveal-delay-2">
-            <img src="assets/images/hobbies/poetry.jpg" alt="Poetry">
+            <img src="assets/images/hobbies/poetry.webp" alt="Poetry" loading="lazy" width="736" height="920">
             <div><i class="fa-solid fa-feather"></i><span>Poetry</span></div>
           </article>
           <article class="hobby-card reveal reveal-delay-3">
-            <img src="assets/images/hobbies/sketching.jpg" alt="Sketching">
+            <img src="assets/images/hobbies/sketching.webp" alt="Sketching" loading="lazy" width="736" height="920">
             <div><i class="fa-solid fa-pencil"></i><span>Sketching</span></div>
           </article>
         </div>
       </div>
+    </section> -->
+
+
+<!-- =========================================================
+     BEYOND DESIGN — PERSONAL MOODBOARD
+     ========================================================= -->
+
+     <section class="section beyond-design" id="beyond-design">
+
+      <!-- Ambient decorative elements -->
+      <span class="beyond-deco beyond-deco-star">✦</span>
+      <span class="beyond-deco beyond-deco-plus">+</span>
+      <span class="beyond-deco beyond-deco-circle"></span>
+      <span class="beyond-deco beyond-deco-spark">✧</span>
+    
+      <div class="container">
+    
+        <!-- =====================================================
+             SECTION INTRO
+             ===================================================== -->
+    
+        <div class="beyond-intro beyond-reveal">
+    
+          <div class="beyond-title-wrap">
+    
+            <span class="beyond-eyebrow">
+             ( A LITTLE LIFE OUTSIDE THE PIXELS )
+            </span>
+    
+            <h2>
+              Beyond
+              <em>Design</em>
+            </h2>
+    
+          </div>
+    
+          <p class="beyond-intro-copy">
+            A few things that keep me curious
+            and creatively restless when I'm
+            away from the screen.
+          </p>
+    
+        </div>
+    
+    
+        <!-- =====================================================
+             PERSONAL MOODBOARD
+             ===================================================== -->
+    
+        <div class="beyond-board" id="beyondBoard">
+    
+    
+          <!-- ===================================================
+               FASHION DESIGNING
+               =================================================== -->
+    
+          <article
+            class="mood-piece mood-fashion beyond-reveal"
+            data-piece="fashion"
+          >
+    
+            <div class="paper-tape tape-fashion"></div>
+    
+            <div class="photo-frame">
+    
+              <img
+                src="/hetofolio/assets/images/hobbies/fashiondesigning.webp"
+                alt="Fashion designing"
+              >
+    
+              <div class="photo-shine"></div>
+    
+            </div>
+    
+            <div class="mood-caption">
+    
+              <span class="mood-small">
+                FASHION DESIGNING
+              </span>
+    
+              <h3>
+                I turn ideas into
+                <em>form.</em>
+              </h3>
+    
+              <p>
+                Exploring silhouettes, textures and
+                details lets me think beyond the
+                digital canvas.
+              </p>
+    
+            </div>
+    
+            <span class="photo-meta">
+              01 / 03
+            </span>
+    
+            <span class="mood-doodle doodle-fashion">
+              ✦
+            </span>
+    
+          </article>
+    
+    
+          <!-- ===================================================
+               SKETCHING
+               =================================================== -->
+    
+          <article
+            class="mood-piece mood-sketching beyond-reveal"
+            data-piece="sketching"
+          >
+    
+            <div class="paper-tape tape-sketching"></div>
+    
+            <div class="photo-frame sketch-frame">
+    
+              <img
+                src="/hetofolio/assets/images/hobbies/sketching.webp"
+                alt="Sketching"
+              >
+    
+              <div class="photo-shine"></div>
+    
+            </div>
+    
+    
+            <div class="sketch-pencil">
+              ✎
+            </div>
+    
+    
+            <div class="mood-caption">
+    
+              <span class="mood-small">
+                SKETCHING
+              </span>
+    
+              <h3>
+                I let ideas
+                <em>wander.</em>
+              </h3>
+    
+              <p>
+                Before an idea becomes polished,
+                I like letting it exist freely
+                on paper.
+              </p>
+    
+            </div>
+    
+    
+            <span class="sketch-note">
+              rough ideas<br>
+              become real things.
+            </span>
+    
+            <span class="mood-doodle doodle-sketch">
+              ~
+            </span>
+    
+          </article>
+    
+    
+          <!-- ===================================================
+               POETRY
+               =================================================== -->
+    
+          <article
+            class="mood-piece mood-poetry beyond-reveal"
+            data-piece="poetry"
+          >
+    
+            <div class="paper-tape tape-poetry"></div>
+    
+            <div class="poetry-paper">
+    
+              <span class="poetry-number">
+                03
+              </span>
+    
+              <div class="poetry-lines">
+    
+                <p>
+                  sometimes
+                </p>
+    
+                <p>
+                  a thought
+                </p>
+    
+                <p class="poetry-accent">
+                  needs a few
+                </p>
+    
+                <p>
+                  quiet words
+                </p>
+    
+                <p>
+                  before it
+                </p>
+    
+                <p>
+                  becomes
+                  <em>something.</em>
+                </p>
+    
+              </div>
+    
+            </div>
+    
+    
+            <div class="mood-caption poetry-caption">
+    
+              <span class="mood-small">
+                POETRY
+              </span>
+    
+              <h3>
+                I find meaning in
+                <em>words.</em>
+              </h3>
+    
+              <p>
+                Writing gives me another way
+                to explore emotions, stories
+                and little observations.
+              </p>
+    
+            </div>
+    
+    
+            <span class="poetry-note">
+              keep a little<br>
+              room for wonder.
+            </span>
+    
+          </article>
+    
+    
+          <!-- ===================================================
+               HANDWRITTEN NOTES
+               =================================================== -->
+    
+          <span class="board-note note-one">
+            collect little things ✦
+          </span>
+    
+          <span class="board-note note-two">
+            currently curious about...
+          </span>
+    
+          <span class="board-note note-three">
+            ideas rarely arrive finished.
+          </span>
+    
+    
+          <!-- ===================================================
+               SHUFFLE BUTTON
+               =================================================== -->
+    
+          <button
+            class="moodboard-shuffle"
+            id="moodboardShuffle"
+            type="button"
+          >
+    
+            <span class="shuffle-icon">
+              ✦
+            </span>
+    
+            <span>
+              Shuffle my world
+            </span>
+    
+            <span class="shuffle-arrow">
+              ↗
+            </span>
+    
+          </button>
+    
+        </div>
+    
+    
+        <!-- =====================================================
+             ENDING
+             ===================================================== -->
+    
+        <div class="beyond-ending beyond-reveal">
+    
+          <span class="ending-line"></span>
+    
+          <div class="ending-content">
+    
+            <span>
+              A FEW MORE THINGS ABOUT ME
+            </span>
+    
+            <h3>
+              Curious by nature,
+              <em>creative by habit.</em>
+            </h3>
+    
+          </div>
+    
+          <span class="ending-line"></span>
+    
+        </div>
+    
+      </div>
+    
     </section>
 
     <!-- ========================= CONTACT ========================= -->
-    <section class="section contact-section" id="contact">
+    <!-- <section class="section contact-section" id="contact">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-intro reveal">
-            <p class="eyebrow">( Let's Connect )</p>
-            <h2>Let's make<br><em>something real.</em></h2>
+            <p class="eyebrow">( Have A Project In Mind? )</p>
+            <h2>Let's make<br><em>something useful.</em></h2>
             <p>
-              Full-time roles, freelance projects, or just a good conversation
-              about design — happy to hear what you have in mind.
+              Website, app, poster, visiting card or something you haven't
+              figured out yet — tell me what you're trying to make.
             </p>
 
-            <!-- <div class="contact-direct">
+            <div class="contact-direct">
               <a href="https://www.linkedin.com/in/hetal-solanki22" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-linkedin-in"></i>
                 <span>LinkedIn</span>
@@ -695,7 +1399,7 @@
                 <i class="fa-brands fa-behance"></i>
                 <span>Behance</span>
               </a>
-              <a href="https://wa.me/917900139238?text=Hi%20Hetal%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/917900139238" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-whatsapp"></i>
                 <span>WhatsApp</span>
               </a>
@@ -703,50 +1407,11 @@
                 <i class="fa-solid fa-envelope"></i>
                 <span>Email</span>
               </a>
-            </div> -->
-          </div>
-
-          <div class="contact-form-card reveal reveal-delay-1">
-            <form id="contact-form" action="https://formspree.io/f/mgolvkea" method="POST">
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="name">Your name</label>
-                  <input id="name" name="name" type="text" autocomplete="name" required>
-                </div>
-                <div class="form-field">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email" required>
-                </div>
-              </div>
-
-              <div class="form-field">
-                <label for="service">What's this about?</label>
-                <select id="service" name="service" required>
-                  <option value="" selected disabled>Select an option</option>
-                  <option>Full-time Opportunity</option>
-                  <option>Freelance Project</option>
-                  <option>Just Connecting</option>
-                  <option>Something else</option>
-                </select>
-              </div>
-
-              <div class="form-field">
-                <label for="message">Tell me more</label>
-                <textarea id="message" name="message" rows="6" maxlength="1000"
-                          placeholder="What are you reaching out about?"></textarea>
-                <div class="character-count"><span id="current-char">0</span>/1000</div>
-              </div>
-
-              <button class="btn btn-dark btn-submit" id="submit-btn" type="submit">
-                Send It Over <i class="fa-solid fa-paper-plane"></i>
-              </button>
-
-              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ========================= FINAL CTA ========================= -->
     <section class="final-cta">
@@ -770,19 +1435,20 @@
         <a href="https://github.com/solankihetal-coder" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/hetal-solanki22" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://www.behance.net/hetalsolanki11" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
-        <!-- <a href="https://wa.me/917900139238?text=Hi%20Hetal%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a> -->
-        <a href="mailto:hetaljsolanki01@gmail.com" aria-label="Email Hetal"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/917900139238" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:hetaljsolanki01@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
 
     <div class="container footer-bottom">
       <span>© <span id="current-year"></span> Hetal Solanki</span>
-      <span>Built procastination & overthinking.</span>
-      <!-- <a href="#home">Back to top <i class="fa-solid fa-arrow-up"></i></a> -->
+      <span>Built with procastination & overthinking</span>
     </div>
   </footer>
 
   <script src="js/components/page-loader.js" defer></script>
-  <script src="js/components/content-skeleton.js" defer></script><script src="js/main.js" defer></script>
+  <script src="js/components/content-skeleton.js" defer></script>
+  <script src="js/components/micro-interactions.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
