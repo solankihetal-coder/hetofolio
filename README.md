@@ -1,4 +1,4 @@
-# Hetal Solanki Portfolio — Phase 4
+# Welcome to hetofolio
 
 Phase 4 upgrades the first content-complete case study from a generic project template into a mature, compact technical case study.
 
