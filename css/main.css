@@ -287,10 +287,9 @@
     background: var(--dark);
     color: var(--light);
     cursor: pointer;
-    transition: transform .55s var(--ease-spring), background-color .35s ease, color .35s ease, box-shadow .55s var(--ease-spring);
+    /* transition: transform .55s var(--ease-spring), background-color .35s ease, color .35s ease, box-shadow .55s var(--ease-spring); */
   }
   
-  .nav-toggle:hover,
   .nav-toggle:focus-visible {
     background: radial-gradient(circle at var(--hover-x, 50%) var(--hover-y, 50%), rgba(79, 174, 98, 1) 0 20%, rgba(79, 174, 98, 0) 62%), var(--dark);
     color: #111;
