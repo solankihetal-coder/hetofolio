@@ -1,16 +1,17 @@
 /**
  * Hetal Solanki Portfolio
- * Cleaned page interaction layer
+ * Phase 1 application logic
  *
- * Focus: navigation, project filtering, shared reveal animations,
- * journey motion, beyond-design interactions, and small UI utilities.
+ * Keep this file focused on behavior:
+ * navigation, filtering, reveal animations, form UX and small UI utilities.
  */
 
 "use strict";
 
 const CONFIG = {
   mobileBreakpoint: 820,
-  revealThreshold: 0.12
+  revealThreshold: 0.12,
+  formMessageMax: 1000
 };
 
 const DOM = {
@@ -19,6 +20,11 @@ const DOM = {
   header: document.getElementById("site-header"),
   projectGrid: document.getElementById("project-grid"),
   filterButtons: document.querySelectorAll(".filter-btn"),
+  contactForm: document.getElementById("contact-form"),
+  message: document.getElementById("message"),
+  characterCount: document.getElementById("current-char"),
+  formStatus: document.getElementById("form-status"),
+  submitButton: document.getElementById("submit-btn"),
   year: document.getElementById("current-year")
 };
 
@@ -27,10 +33,18 @@ const DOM = {
    ========================================================= */
 
 const Navigation = {
-  init() {
-    if (!DOM.navToggle || !DOM.siteNav) return;
+  initialized: false,
 
-    DOM.navToggle.addEventListener("click", () => this.toggle());
+  init() {
+    if (this.initialized || !DOM.navToggle || !DOM.siteNav) return;
+
+    this.initialized = true;
+
+    DOM.navToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      this.toggle();
+    });
 
     DOM.siteNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => this.close());
@@ -40,23 +54,30 @@ const Navigation = {
       if (event.key === "Escape") this.close();
     });
 
-    document.addEventListener("click", (event) => {
+    document.addEventListener("pointerdown", (event) => {
+      if (!DOM.siteNav.classList.contains("is-open")) return;
+
       const clickedInsideNav =
         DOM.siteNav.contains(event.target) ||
         DOM.navToggle.contains(event.target);
 
-      if (!clickedInsideNav && DOM.siteNav.classList.contains("is-open")) {
-        this.close();
-      }
+      if (!clickedInsideNav) this.close();
     });
 
     window.addEventListener("resize", () => {
       if (window.innerWidth > CONFIG.mobileBreakpoint) this.close();
     });
+
+    this.sync(false);
   },
 
   toggle() {
-    const isOpen = DOM.siteNav.classList.toggle("is-open");
+    const isOpen = DOM.siteNav.classList.contains("is-open");
+    this.setOpenState(!isOpen);
+  },
+
+  setOpenState(isOpen) {
+    DOM.siteNav.classList.toggle("is-open", isOpen);
     DOM.navToggle.setAttribute("aria-expanded", String(isOpen));
     DOM.navToggle.setAttribute(
       "aria-label",
@@ -64,22 +85,18 @@ const Navigation = {
     );
 
     DOM.navToggle.innerHTML = isOpen
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
+      ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+      : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
 
     document.body.classList.toggle("menu-open", isOpen);
   },
 
+  sync(isOpen = false) {
+    this.setOpenState(isOpen);
+  },
+
   close() {
-    DOM.siteNav.classList.remove("is-open");
-    DOM.navToggle?.setAttribute("aria-expanded", "false");
-    DOM.navToggle?.setAttribute("aria-label", "Open navigation");
-
-    if (DOM.navToggle) {
-      DOM.navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-    }
-
-    document.body.classList.remove("menu-open");
+    this.setOpenState(false);
   }
 };
 
@@ -154,6 +171,78 @@ const Reveal = {
 };
 
 /* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+const ContactForm = {
+  init() {
+    if (!DOM.contactForm) return;
+
+    this.updateCharacterCount();
+
+    DOM.message?.addEventListener("input", () => this.updateCharacterCount());
+
+    DOM.contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      this.submit();
+    });
+  },
+
+  updateCharacterCount() {
+    if (!DOM.message || !DOM.characterCount) return;
+    DOM.characterCount.textContent = DOM.message.value.length;
+  },
+
+  setStatus(message, type = "") {
+    if (!DOM.formStatus) return;
+    DOM.formStatus.textContent = message;
+    DOM.formStatus.className = `form-status ${type}`.trim();
+  },
+
+  async submit() {
+    if (!DOM.submitButton) return;
+
+    const formData = new FormData(DOM.contactForm);
+
+    DOM.submitButton.disabled = true;
+    DOM.submitButton.innerHTML =
+      'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+    this.setStatus("");
+
+    try {
+      const response = await fetch(DOM.contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Form submission failed: ${response.status}`);
+      }
+
+      DOM.contactForm.reset();
+      this.updateCharacterCount();
+      this.setStatus(
+        "Thanks! Your enquiry has been sent. I'll get back to you soon.",
+        "success"
+      );
+    } catch (error) {
+      console.error("Contact form error:", error);
+      this.setStatus(
+        "Something went wrong. Please try again or contact me directly.",
+        "error"
+      );
+    } finally {
+      DOM.submitButton.disabled = false;
+      DOM.submitButton.innerHTML =
+        'Send Enquiry <i class="fa-solid fa-paper-plane"></i>';
+    }
+  }
+};
+
+/* =========================================================
    HEADER SCROLL STATE
    ========================================================= */
 
@@ -171,6 +260,95 @@ const HeaderState = {
 };
 
 
+
+/* =========================================================
+   VISUAL GALLERY
+   ========================================================= */
+
+const VisualGallery = {
+  init() {
+    this.gallery = document.getElementById("visual-gallery");
+    this.filters = document.querySelectorAll(".gallery-filter");
+    this.empty = document.getElementById("gallery-empty");
+    this.lightbox = document.getElementById("gallery-lightbox");
+    this.image = document.getElementById("lightbox-image");
+    this.title = document.getElementById("lightbox-title");
+    this.category = document.getElementById("lightbox-category");
+    this.description = document.getElementById("lightbox-description");
+
+    if (!this.gallery) return;
+
+    this.filters.forEach((button) => {
+      button.addEventListener("click", () => this.filter(button.dataset.galleryFilter));
+    });
+
+    this.gallery.querySelectorAll(".gallery-card").forEach((card) => {
+      card.addEventListener("click", () => this.open(card));
+
+      const image = card.querySelector("img");
+      image?.addEventListener("error", () => {
+        image.style.display = "none";
+        const media = image.closest(".gallery-media");
+        if (media) media.classList.add("image-missing");
+      });
+    });
+
+    this.lightbox?.querySelectorAll("[data-lightbox-close]").forEach((element) => {
+      element.addEventListener("click", () => this.close());
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && this.lightbox?.classList.contains("is-open")) {
+        this.close();
+      }
+    });
+  },
+
+  filter(category) {
+    this.filters.forEach((button) => {
+      const active = button.dataset.galleryFilter === category;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", String(active));
+    });
+
+    let visible = 0;
+    this.gallery.querySelectorAll(".gallery-card").forEach((card) => {
+      const show = category === "all" || card.dataset.galleryCategory === category;
+      card.classList.toggle("is-hidden", !show);
+      if (show) visible += 1;
+    });
+
+    if (this.empty) this.empty.hidden = visible !== 0;
+  },
+
+  open(card) {
+    if (!this.lightbox) return;
+
+    const source = card.dataset.galleryImage;
+    const title = card.dataset.galleryTitle || "Visual Work";
+    const category = card.dataset.galleryCategory || "Selected Work";
+    const description = card.dataset.galleryCaption || "";
+
+    this.image.src = source;
+    this.image.alt = title;
+    this.title.textContent = title;
+    this.category.textContent = category.replace(/-/g, " ");
+    this.description.textContent = description;
+
+    this.lightbox.classList.add("is-open");
+    this.lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("menu-open");
+    this.lightbox.querySelector(".lightbox-close")?.focus();
+  },
+
+  close() {
+    if (!this.lightbox) return;
+    this.lightbox.classList.remove("is-open");
+    this.lightbox.setAttribute("aria-hidden", "true");
+    this.image.src = "";
+    document.body.classList.remove("menu-open");
+  }
+};
 
 /* =========================================================
    CURRENT YEAR
@@ -192,13 +370,115 @@ document.addEventListener("DOMContentLoaded", () => {
   Navigation.init();
   ProjectFilter.init();
   Reveal.init();
+  ContactForm.init();
   HeaderState.init();
   FooterYear.init();
+  VisualGallery.init();
 
 });
 
 
 /* =========================================================
+   CUSTOM SERVICE DROPDOWN
+   ========================================================= */
+
+   (() => {
+    const customSelect = document.getElementById("service-select");
+  
+    if (!customSelect) return;
+  
+    const realSelect = document.getElementById("service");
+    const trigger = customSelect.querySelector(".custom-select-trigger");
+    const valueText = customSelect.querySelector(".custom-select-value");
+    const options = customSelect.querySelectorAll(".custom-select-option");
+  
+    // Set initial placeholder state
+    valueText.classList.add("is-placeholder");
+  
+    // Open / close dropdown
+    trigger.addEventListener("click", () => {
+      const isOpen = customSelect.classList.toggle("is-open");
+  
+      trigger.setAttribute("aria-expanded", isOpen);
+    });
+  
+    // Select an option
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        const selectedValue = option.dataset.value;
+  
+        // Update visible text
+        valueText.textContent = selectedValue;
+        valueText.classList.remove("is-placeholder");
+  
+        // Update the real select
+        realSelect.value = selectedValue;
+  
+        // Update selected visual state
+        options.forEach((item) => {
+          item.classList.remove("is-selected");
+          item.setAttribute("aria-selected", "false");
+        });
+  
+        option.classList.add("is-selected");
+        option.setAttribute("aria-selected", "true");
+  
+        // Trigger normal change event
+        realSelect.dispatchEvent(
+          new Event("change", { bubbles: true })
+        );
+  
+        // Close dropdown
+        customSelect.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+  
+        // Return focus to trigger
+        trigger.focus();
+      });
+    });
+  
+    // Close when clicking outside
+    document.addEventListener("click", (event) => {
+      if (!customSelect.contains(event.target)) {
+        customSelect.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  
+    // Keyboard support
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        customSelect.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.focus();
+      }
+  
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+  
+        if (!customSelect.classList.contains("is-open")) {
+          customSelect.classList.add("is-open");
+          trigger.setAttribute("aria-expanded", "true");
+        }
+  
+        options[0].focus();
+      }
+    });
+  
+    // Escape key inside options
+    options.forEach((option) => {
+      option.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          customSelect.classList.remove("is-open");
+          trigger.setAttribute("aria-expanded", "false");
+          trigger.focus();
+        }
+      });
+    });
+  })();
+
+
+  /* =========================================================
    MY JOURNEY — INTERACTIVE MOTION
    ========================================================= */
 
@@ -371,6 +651,279 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })();
 
+
+/* =========================================================
+   BEYOND DESIGN — PERSONAL MOODBOARD INTERACTIONS
+   ========================================================= */
+
+(() => {
+
+  const section =
+    document.querySelector(".beyond-design");
+
+  if (!section) return;
+
+
+  /* =======================================================
+     SCROLL REVEAL
+     ======================================================= */
+
+  const revealItems =
+    section.querySelectorAll(".beyond-reveal");
+
+
+  const revealObserver =
+    new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add(
+              "is-visible"
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+  revealItems.forEach((item) => {
+
+    revealObserver.observe(item);
+
+  });
+
+
+  /* =======================================================
+     CURSOR PARALLAX
+     ======================================================= */
+
+  const pieces =
+    section.querySelectorAll(".mood-piece");
+
+
+  pieces.forEach((piece) => {
+
+    piece.addEventListener(
+      "pointermove",
+      (event) => {
+
+        const rect =
+          piece.getBoundingClientRect();
+
+        const x =
+          event.clientX - rect.left;
+
+        const y =
+          event.clientY - rect.top;
+
+        const centerX =
+          rect.width / 2;
+
+        const centerY =
+          rect.height / 2;
+
+        const moveX =
+          ((x - centerX) / centerX) * 7;
+
+        const moveY =
+          ((y - centerY) / centerY) * 7;
+
+
+        piece.style.setProperty(
+          "--mx",
+          `${moveX}px`
+        );
+
+        piece.style.setProperty(
+          "--my",
+          `${moveY}px`
+        );
+
+      }
+    );
+
+
+    piece.addEventListener(
+      "pointerleave",
+      () => {
+
+        piece.style.setProperty(
+          "--mx",
+          "0px"
+        );
+
+        piece.style.setProperty(
+          "--my",
+          "0px"
+        );
+
+      }
+    );
+
+  });
+
+
+  /* =======================================================
+     MUSIC CARD INTERACTION
+     
+     NOTE:
+     This does NOT play a copyrighted recording.
+     It only controls the visual state of the custom player.
+     Connect it to an authorized audio source if available.
+     ======================================================= */
+
+  const musicCard =
+    section.querySelector(".music-card");
+
+  const musicButton =
+    section.querySelector(".music-play");
+
+
+  if (musicCard && musicButton) {
+
+    let isPlaying = false;
+
+
+    musicButton.addEventListener(
+      "click",
+      () => {
+
+        isPlaying = !isPlaying;
+
+        musicCard.classList.toggle(
+          "is-playing",
+          isPlaying
+        );
+
+      }
+    );
+
+  }
+
+
+  /* =======================================================
+     SHUFFLE MY WORLD
+     ======================================================= */
+
+  const board =
+    section.querySelector("#beyondBoard");
+
+  const shuffleButton =
+    section.querySelector(
+      "#moodboardShuffle"
+    );
+
+
+  if (board && shuffleButton) {
+
+    let shuffleState = 0;
+
+
+    shuffleButton.addEventListener(
+      "click",
+      () => {
+
+        shuffleState++;
+
+        if (shuffleState > 2) {
+
+          shuffleState = 0;
+
+        }
+
+
+        board.classList.remove(
+          "shuffle-one",
+          "shuffle-two"
+        );
+
+
+        if (shuffleState === 1) {
+
+          board.classList.add(
+            "shuffle-one"
+          );
+
+        }
+
+
+        if (shuffleState === 2) {
+
+          board.classList.add(
+            "shuffle-two"
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+
+  /* =======================================================
+     SUBTLE BOARD PARALLAX
+     ======================================================= */
+
+  let boardTicking = false;
+
+
+  section.addEventListener(
+    "pointermove",
+    (event) => {
+
+      if (boardTicking) return;
+
+      boardTicking = true;
+
+
+      window.requestAnimationFrame(
+        () => {
+
+          const rect =
+            section.getBoundingClientRect();
+
+          const x =
+            (event.clientX - rect.left)
+            / rect.width
+            - .5;
+
+          const y =
+            (event.clientY - rect.top)
+            / rect.height
+            - .5;
+
+
+          section.style.setProperty(
+            "--board-x",
+            `${x * 8}px`
+          );
+
+          section.style.setProperty(
+            "--board-y",
+            `${y * 8}px`
+          );
+
+
+          boardTicking = false;
+
+        }
+      );
+
+    }
+  );
+
+
+})();
 
 /* =========================================================
    BEYOND DESIGN — PERSONAL MOODBOARD INTERACTIONS
@@ -711,29 +1264,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     }
   
-  
-  /* =======================================================
-     SUBTLE BOARD PARALLAX
-     ======================================================= */
-
-  let boardTicking = false;
-
-  section.addEventListener("pointermove", (event) => {
-    if (boardTicking) return;
-    boardTicking = true;
-
-    window.requestAnimationFrame(() => {
-      const rect = section.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-
-      section.style.setProperty("--board-x", `${x * 8}px`);
-      section.style.setProperty("--board-y", `${y * 8}px`);
-      boardTicking = false;
-    });
-  });
-
-})();
+  })();
 
 
 
