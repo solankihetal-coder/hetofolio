@@ -650,27 +650,33 @@
 
   <noscript><style>#page-loader{display:none!important}</style></noscript>
 
-<header class="site-header" id="site-header">
-  <div class="container nav-container">
-    <a class="brand" href="../../index.html#home" aria-label="Hetal Solanki home">
-      <img src="../../assets/images/logo/hetal-logo-all-black.svg" alt="Hetal Solanki logo">
-    </a>
-    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="../../index.html#work">Work</a>
-      <a href="../../index.html#visuals">Visuals</a>
-      <a href="../../index.html#services">Services</a>
-      <a href="../../index.html#about">About</a>
-      <a href="../../index.html#contact">Contact</a>
-      <a href="../../index.html#contact" class="nav-cta">Start a Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    </nav>
-  </div>
-</header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ========================= NAVBAR (matches index.html) ========================= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="../../index.html#home" aria-label="Hetal Solanki home">
+        <img src="../../assets/images/logo/hetal-logo-all-black.svg" alt="Hetal Solanki logo">
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="../../index.html#work">Work</a>
+        <a href="../../index.html#visuals">Visuals</a>
+        <a href="../../index.html#about">About</a>
+        <a href="mailto:hetaljsolanki01@gmail.com" class="nav-cta">
+          Say Hi! <i class="fas fa-paper-plane"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
 
 
-<main>
+<main id="main-content">
 
     <div class="content-skeleton" data-content-skeleton aria-hidden="true">
         <div class="content-skeleton__inner">
@@ -1289,48 +1295,26 @@
 
 </div>
 </main>
-<!-- <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Hetal Solanki. Built with intent.</p><a href="../../index.html">Back home <i class="fa-solid fa-arrow-up"></i></a></div></footer> -->
 
-<footer class="site-footer">
-    <div class="footer-inner">
-  
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h2>Hetal Solanki:</h2>
-          <p>Product Designer · Digital Creative · Developer</p>
-        </div>
-  
-        <div class="footer-socials">
-          <a href="#" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-  
-          <a href="#" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-  
-          <a href="#" aria-label="Behance">
-            <i class="fa-brands fa-behance"></i>
-          </a>
-  
-          <a href="#" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-  
-          <a href="#" aria-label="Email">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-        </div>
+  <!-- ========================= FOOTER (matches index.html) ========================= -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <a class="footer-brand" href="../../index.html#home">Hetal Solanki.</a>
+        <p>Product Designer · Digital Creative · Developer</p>
       </div>
-  
-      <div class="footer-bottom">
-        <span>© 2026 Hetal Solanki</span>
-  
-        <span>Built with curiosity &amp; a little too much coffee.</span>
-  
-        <a href="#top">Back to top ↑</a>
+
+      <div class="footer-socials">
+        <a href="https://github.com/solankihetal-coder" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hetal-solanki22" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.behance.net/hetalsolanki11" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        <a href="mailto:hetaljsolanki01@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
-  
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="current-year"></span> Hetal Solanki</span>
+      <span>Built with procastination & overthinking</span>
     </div>
   </footer>
 
