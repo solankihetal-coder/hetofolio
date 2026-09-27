@@ -46,22 +46,22 @@ window.GALLERY_ITEMS = [
     "image": "../assets/images/gallery/branding/slinky-trading-pvt-ltd-logo.svg",
     "alt": "Slinky Trading Pvt Ltd Logo — branding design"
   },
-  {
-    "id": "social-01",
-    "category": "social",
-    "title": "Benefits Of SEO Social Media",
-    "caption": "Social media creative / promotional graphic.",
-    "image": "../assets/images/gallery/social/benefits-of-seo-social-media.svg",
-    "alt": "Benefits Of SEO Social Media — social design"
-  },
-  {
-    "id": "social-02",
-    "category": "social",
-    "title": "Web Development Social Mediawebdev",
-    "caption": "Social media creative / promotional graphic.",
-    "image": "../assets/images/gallery/social/web-development-social-mediawebdev.svg",
-    "alt": "Web Development Social Mediawebdev — social design"
-  },
+  // {
+  //   "id": "social-01",
+  //   "category": "social",
+  //   "title": "Benefits Of SEO Social Media",
+  //   "caption": "Social media creative / promotional graphic.",
+  //   "image": "../assets/images/gallery/social/benefits-of-seo-social-media.svg",
+  //   "alt": "Benefits Of SEO Social Media — social design"
+  // },
+  // {
+  //   "id": "social-02",
+  //   "category": "social",
+  //   "title": "Web Development Social Mediawebdev",
+  //   "caption": "Social media creative / promotional graphic.",
+  //   "image": "../assets/images/gallery/social/web-development-social-mediawebdev.svg",
+  //   "alt": "Web Development Social Mediawebdev — social design"
+  // },
   {
     "id": "social-03",
     "category": "social",
