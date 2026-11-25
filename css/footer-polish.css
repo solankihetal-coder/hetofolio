@@ -1,0 +1,29 @@
+/* Shared compact ending across portfolio pages. */
+.final-cta, .site-footer { background: #111; }
+.final-cta { padding: 72px 0; min-height: 0; }
+.final-cta .section-heading { margin-bottom: 0; }
+.final-cta h2 { font-size: clamp(2.5rem, 5.2vw, 5rem); margin-bottom: 24px; }
+.final-cta h2 em { position: relative; display: inline-block; }
+.final-cta h2 em::after { content: ''; position: absolute; height: 6px; left: 2%; right: 0; bottom: -7px; border-bottom: 2px solid #81c995; border-radius: 50%; transform-origin: left; transform: scaleX(0); }
+.final-cta.is-contact-visible h2 em::after { transform: scaleX(1); }
+.final-cta .email-fallback { margin-top: 24px; }
+.final-cta .email-fallback-label { margin-bottom: 8px; }
+#copy-email-status { min-height: 1.5em; margin-top: 8px; }
+.site-footer { padding: 32px 0 20px; }
+.site-footer .footer-top { padding-bottom: 24px; gap: 28px; }
+.site-footer .footer-bottom { padding-top: 18px; }
+.site-footer .footer-socials a { min-width: 36px; min-height: 44px; justify-content: center; }
+.site-footer .footer-socials a:is(:hover,:focus-visible) { color: #81c995; }
+@media (prefers-reduced-motion: no-preference) {
+ .final-cta h2 em::after { transition: transform 350ms cubic-bezier(.2,.7,.3,1); }
+ .final-cta .btn i, .site-footer .footer-socials a { transition: transform 200ms ease, color 200ms ease; }
+ .final-cta .btn:is(:hover,:focus-visible) i { transform: translate(3px,-3px); }
+ .site-footer .footer-socials a:is(:hover,:focus-visible) { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: reduce) { .final-cta h2 em::after { transform: scaleX(1); } }
+@media (max-width: 640px) {
+ .final-cta { padding: 48px 0; }
+ .site-footer { padding: 28px 0 20px; }
+ .site-footer .footer-top, .site-footer .footer-bottom { flex-direction: column; align-items: flex-start; gap: 18px; }
+ .site-footer .footer-socials { justify-content: flex-start; gap: 12px; }
+}

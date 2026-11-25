@@ -49,7 +49,6 @@
    PHASE 4 — TECHNICAL CASE STUDY
    Table Generator
 ===================================================== */
-.case-study-page .site-header{background:rgba(255,255,255,.88);backdrop-filter:blur(16px)}
 .case-hero-technical{padding-bottom:110px}
 .case-meta-row{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1000px}
 .case-status{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;opacity:.7}
@@ -170,7 +169,6 @@
    RICH CASE STUDIES — CONTENT + VISUAL POLISH
 ===================================================== */
 .case-rich{--case-line:rgba(17,17,17,.11);--case-muted:#6e6e6e}
-.case-rich .site-header{background:rgba(246,245,241,.86)}
 .case-hero-rich{padding-bottom:85px}
 .case-hero-rich h1{max-width:1120px;font-size:clamp(4rem,9vw,8.8rem);line-height:.88;letter-spacing:-.07em}
 .case-rich .case-meta{color:var(--project-accent)}

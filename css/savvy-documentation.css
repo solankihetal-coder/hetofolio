@@ -1,0 +1,28 @@
+/* SavvyShopper documentation controls; existing case-study visuals stay shared. */
+.case-documentation {
+  margin-top: 24px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--white);
+  min-width: 0;
+}
+.case-documentation > summary {
+  padding: 18px 24px;
+  cursor: pointer;
+  color: var(--green-dark);
+  font-weight: 600;
+  border-radius: inherit;
+}
+.case-documentation > summary:hover { background: var(--green-mist); }
+.case-documentation > summary:focus-visible { outline: 2px solid var(--green-mid); outline-offset: 4px; }
+.case-documentation[open] > summary { border-bottom: 1px solid var(--rule); border-radius: var(--radius) var(--radius) 0 0; }
+.case-documentation-content { padding: 24px; min-width: 0; }
+.case-documentation-content > :first-child { margin-top: 0; }
+.case-back-link { margin-top: 32px; display: inline-flex; gap: 12px; align-items: center; }
+@media (max-width: 600px) {
+  .case-documentation > summary { padding: 16px; }
+  .case-documentation-content { padding: 16px; }
+}
+@media print {
+  .case-documentation > .case-documentation-content { display: block; }
+}

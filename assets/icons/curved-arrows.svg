@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <symbol id="up-right" viewBox="0 0 52 32">
+    <path d="M3 27C17 30 31 21 47 6m-13 1 13-1-2 12"/>
+  </symbol>
+  <symbol id="down" viewBox="0 0 72 84">
+    <path d="M8 5c0 30 13 39 37 38 23-1 25 4 11 34m-3-10 3 10 10-3"/>
+  </symbol>
+  <symbol id="swoop-left" viewBox="0 0 96 84">
+    <path d="M91 6C65 15 56 32 53 55c-3 23-12 26-42 18m11-6-11 6 5 9"/>
+  </symbol>
+  <symbol id="swoop-right" viewBox="0 0 96 76">
+    <path d="M13 6C4 34 8 57 30 64c20 6 40-1 56-17m-15-2 15 2-2 15"/>
+  </symbol>
+  <symbol id="curl-down" viewBox="0 0 68 72">
+    <path d="M6 7C48 3 66 31 36 61m1-10-1 10 10 2"/>
+  </symbol>
+</svg>

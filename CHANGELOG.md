@@ -1,5 +1,16 @@
 # Changelog
 
+## v74 — GitHub Pages deployment preparation
+
+- Preserved v73 design, responsive testimonials and floating navigation.
+- Updated canonical, social sharing, structured data and sitemap URLs for GitHub Pages.
+- Restored original-only files including `.nojekyll` and legacy assets.
+- Configured custom 404 links for the project subpath.
+- Redirected the obsolete playground HTML under assets to the current playground page.
+- Updated documentation and asset manifest.
+
+# Changelog
+
 ## Page Loader Integration
 
 - Added an isolated `css/components/page-loader.css` component.

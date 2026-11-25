@@ -20,8 +20,10 @@ const Gallery = {
     this.cache();
     if (!this.elements.grid) return;
 
+    // These pieces are featured on the homepage only.
+    const homepageOnlyIds = new Set(["social-01", "social-02"]);
     this.state.items = Array.isArray(window.GALLERY_ITEMS)
-      ? window.GALLERY_ITEMS
+      ? window.GALLERY_ITEMS.filter(({ id }) => !homepageOnlyIds.has(id))
       : [];
 
     const requestedCategory = new URLSearchParams(window.location.search).get("category");
@@ -48,6 +50,8 @@ const Gallery = {
     this.elements.lightboxCaption = document.getElementById("gallery-lightbox-caption");
     this.elements.previous = document.getElementById("gallery-prev");
     this.elements.next = document.getElementById("gallery-next");
+    this.elements.imageStatus = document.getElementById("gallery-image-status");
+    this.elements.imageRetry = document.getElementById("gallery-image-retry");
   },
 
   bindFilters() {
@@ -91,7 +95,6 @@ const Gallery = {
     items.forEach((item, index) => {
       const card = document.createElement("article");
       card.className = `gallery-item gallery-item--${this.escape(item.category)}`;
-      card.tabIndex = 0;
       card.dataset.index = String(index);
 
       card.innerHTML = `
@@ -108,14 +111,8 @@ const Gallery = {
       `;
 
       card.querySelector(".gallery-item-button")?.addEventListener("click", () => {
+        this.state.trigger = card.querySelector(".gallery-item-button");
         this.open(index, items);
-      });
-
-      card.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          this.open(index, items);
-        }
       });
 
       this.elements.grid.appendChild(card);
@@ -125,6 +122,10 @@ const Gallery = {
   bindLightbox() {
     const lightbox = this.elements.lightbox;
     if (!lightbox) return;
+    this.elements.imageRetry.addEventListener("click", () => {
+      const item = this.state.visibleItems?.[this.state.activeIndex];
+      if (item) this.loadPreview(item);
+    });
 
     lightbox.querySelectorAll("[data-gallery-close]").forEach((element) => {
       element.addEventListener("click", () => this.close());
@@ -136,6 +137,18 @@ const Gallery = {
     document.addEventListener("keydown", (event) => {
       if (!lightbox.classList.contains("is-open")) return;
 
+      if (event.key === "Tab") {
+        const controls = Array.from(lightbox.querySelectorAll("button:not([disabled])")).filter(button => !button.hidden);
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
       if (event.key === "Escape") this.close();
       if (event.key === "ArrowLeft") this.step(-1);
       if (event.key === "ArrowRight") this.step(1);
@@ -146,11 +159,11 @@ const Gallery = {
     const item = visibleItems[index];
     if (!item || !this.elements.lightbox) return;
 
+    const wasOpen = this.elements.lightbox.classList.contains("is-open");
     this.state.activeIndex = index;
     this.state.visibleItems = visibleItems;
 
-    this.elements.lightboxImage.src = item.image;
-    this.elements.lightboxImage.alt = item.alt || item.title;
+    this.loadPreview(item);
     this.elements.lightboxTitle.textContent = item.title;
     this.elements.lightboxCategory.textContent = this.formatCategory(item.category);
     this.elements.lightboxCaption.textContent = item.caption || "";
@@ -158,7 +171,48 @@ const Gallery = {
     this.elements.lightbox.classList.add("is-open");
     this.elements.lightbox.setAttribute("aria-hidden", "false");
     document.body.classList.add("lightbox-open");
-    this.elements.lightbox.querySelector(".gallery-lightbox-close")?.focus();
+    if (!wasOpen) {
+      this.state.backgroundElements = Array.from(document.body.children)
+        .filter((element) => element !== this.elements.lightbox && !element.contains(this.elements.lightbox) && !element.inert);
+      this.state.backgroundElements.forEach((element) => { element.inert = true; });
+      this.elements.lightbox.querySelector(".gallery-lightbox-close")?.focus();
+    }
+  },
+
+  loadPreview(item) {
+    const image = this.elements.lightboxImage;
+    const status = this.elements.imageStatus;
+    const retry = this.elements.imageRetry;
+    clearTimeout(this.previewTimer);
+    image.hidden = true;
+    if (document.activeElement === retry) {
+      this.elements.lightbox.querySelector(".gallery-lightbox-close")?.focus();
+    }
+    retry.hidden = true;
+    status.textContent = "Loading image…";
+    const ready = () => {
+      clearTimeout(this.previewTimer);
+      image.hidden = false;
+      if (document.activeElement === retry) this.elements.lightbox.querySelector(".gallery-lightbox-close").focus();
+      retry.hidden = true;
+      status.textContent = "";
+    };
+    const failed = () => {
+      clearTimeout(this.previewTimer);
+      image.hidden = true;
+      status.textContent = "This image couldn’t load. Retry, or use the arrows to view another piece.";
+      retry.hidden = false;
+    };
+    image.onload = ready;
+    image.onerror = failed;
+    image.alt = item.alt || item.title;
+    image.removeAttribute("src");
+    image.src = item.image;
+    this.previewTimer = setTimeout(() => {
+      status.textContent = "This image is taking longer than expected. You can retry or view another piece.";
+      retry.hidden = false;
+    }, 10000);
+    if (image.complete && image.naturalWidth) ready();
   },
 
   step(direction) {
@@ -172,12 +226,18 @@ const Gallery = {
   },
 
   close() {
+    clearTimeout(this.previewTimer);
+    this.elements.lightboxImage.onload = null;
+    this.elements.lightboxImage.onerror = null;
     if (!this.elements.lightbox) return;
 
     this.elements.lightbox.classList.remove("is-open");
     this.elements.lightbox.setAttribute("aria-hidden", "true");
     this.elements.lightboxImage.removeAttribute("src");
     document.body.classList.remove("lightbox-open");
+    this.state.backgroundElements?.forEach((element) => { element.inert = false; });
+    this.state.backgroundElements = [];
+    this.state.trigger?.focus();
   },
 
   formatCategory(category = "") {

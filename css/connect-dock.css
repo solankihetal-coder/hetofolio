@@ -1,0 +1,45 @@
+/* Shared bottom navigation and contact sheet, adapted from the supplied prototype. */
+html { scroll-padding-top: 20px; }
+.dock-brand-header { padding: 12px 0 8px; }
+.dock-brand { display: inline-flex; align-items: center; min-height: 44px; }
+.dock-brand img { width: 58px; height: 42px; object-fit: contain; }
+.connect-dock, .dock-sheet { --dock-card: #fffffb; --dock-ink: #141414; --dock-line: #dcdcd0; --dock-muted: #55584f; --dock-green: #2c7a47; font-family: "DM Sans", sans-serif; }
+.connect-dock { position: fixed; inset: auto 0 0; z-index: 1050; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 0 16px calc(14px + env(safe-area-inset-bottom, 0px)); pointer-events: none; }
+.connect-dock > button { pointer-events: auto; cursor: pointer; flex: none; }
+.dock-menu { width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--dock-line); background: var(--dock-card); color: var(--dock-ink); display: grid; place-items: center; box-shadow: 0 6px 18px #0003; }
+.dock-connect { position: relative; min-height: 52px; max-width: calc(100% - 62px); padding: 0 22px; border: 1px solid #b8d9bd; border-radius: 6px 6px 10px 6px; background: #e8f3e9; color: #203d28; font: 700 16px/1.2 "DM Sans", sans-serif; box-shadow: 0 8px 20px #0003; transform: rotate(-1.5deg); transition: transform .35s cubic-bezier(.2,.9,.3,1.2), opacity .25s; }
+.dock-connect::before { content: ""; position: absolute; top: -8px; left: 50%; width: 44px; height: 15px; margin-left: -22px; background: #b8d9bd99; border: 1px solid #4fae621f; transform: rotate(2deg); pointer-events: none; }
+.dock-label { display: inline-block; transition: opacity .18s, transform .18s; }
+.dock-connect.is-swapping .dock-label { opacity: 0; transform: translateY(6px); }
+.dock-connect[hidden] { display: none; }
+.dock-sheet { position: fixed; inset: auto 0 0; margin: 0 auto; width: min(100%, 520px); max-width: 100%; max-height: calc(100dvh - 24px); overflow-y: auto; overscroll-behavior: contain; padding: 10px 20px calc(24px + env(safe-area-inset-bottom, 0px)); border: 0; border-radius: 24px 24px 0 0; background: var(--dock-card); color: var(--dock-ink); box-shadow: 0 -12px 48px #0002; }
+.dock-sheet[open] { animation: dock-slide .32s cubic-bezier(.2,.8,.2,1) both; }
+.dock-sheet::backdrop { background: #0008; }
+@keyframes dock-slide { from { transform: translateY(105%); } to { transform: translateY(0); } }
+body.dock-modal-open { overflow: hidden; }
+.dock-grab { width: 40px; height: 4px; border-radius: 4px; background: var(--dock-line); margin: 0 auto 16px; }
+.dock-close { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--dock-ink); font: 400 28px/1 "DM Sans", sans-serif; cursor: pointer; }
+.dock-sheet h2 { margin: 0 48px 4px 0; font: 700 22px/1.3 "DM Sans", sans-serif; letter-spacing: -.02em; color: var(--dock-ink); }
+.dock-sheet p { margin: 0 0 16px; font-size: 15px; color: var(--dock-muted); }
+.dock-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; width: 100%; min-height: 56px; padding: 10px 14px; margin: 0 0 10px; border: 1px solid var(--dock-line); border-radius: 14px; background: transparent; color: var(--dock-ink); font: 500 16px/1.4 "DM Sans", sans-serif; text-decoration: none; text-align: left; cursor: pointer; }
+.dock-row small { color: var(--dock-muted); font-size: 13px; overflow-wrap: anywhere; }
+.dock-primary { background: var(--dock-ink); color: var(--dock-card); border-color: var(--dock-ink); }
+.dock-primary small { color: inherit; opacity: .8; }
+.dock-nav a { display: block; padding: 12px 4px; min-height: 48px; font: 600 18px/1.4 "DM Sans", sans-serif; letter-spacing: -.03em; color: var(--dock-ink); text-decoration: none; border-bottom: 1px solid var(--dock-line); }
+.dock-row:hover, .dock-nav a:hover { border-color: var(--dock-green); }
+.dock-sheet .dock-copy-status { margin: 0; min-height: 1.4em; }
+.dock-footer-contact { background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 999px; min-height: 44px; padding: 0 16px; font: inherit; cursor: pointer; }
+.site-footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+.dock-brand:focus-visible, .connect-dock button:focus-visible, .dock-sheet :is(a,button):focus-visible, .dock-inline-contact:focus-visible { outline: 3px solid #2c7a47; outline-offset: 3px; }
+@media (max-width: 640px) { .site-footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); } .site-footer .footer-socials { flex-wrap: wrap; } }
+@media (prefers-reduced-motion: reduce) { .dock-sheet[open] { animation: none; } .dock-connect, .dock-label { transition: none; } }
+
+/* Contact refinements: original footer, portfolio-green paper sticker. */
+.dock-connect:hover { background: #d5ead9; transform: rotate(0deg) translateY(-2px); }
+.dock-primary { background: #e8f3e9; color: #203d28; border-color: #b8d9bd; }
+.dock-primary span { overflow-wrap: anywhere; min-width: 0; }
+.final-cta .email-fallback { margin-top: 24px; }
+.final-cta #copy-email-status { min-height: 1.5em; }
+
+.gallery-direct-email { text-decoration: underline; text-underline-offset: 5px; overflow-wrap: anywhere; }
+body:has(.connect-dock) .site-footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }

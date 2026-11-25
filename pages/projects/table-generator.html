@@ -8,9 +8,14 @@
 <meta property="og:url" content="https://solankihetal-coder.github.io/hetofolio/pages/projects/table-generator.html">
 <link rel="canonical" href="https://solankihetal-coder.github.io/hetofolio/pages/projects/table-generator.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="../../css/components/page-loader.css"><link rel="stylesheet" href="../../css/components/content-skeleton.css"><link rel="stylesheet" href="../../css/main.css"><link rel="stylesheet" href="../../css/project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Caveat:wght@400;600&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/logo/hetal-logo-all-black.svg">
+<link rel="stylesheet" href="../../css/portfolio-motion.css">
+<link rel="stylesheet" href="../../css/footer-polish.css">
+<link rel="stylesheet" href="../../css/connect-dock.css">
 </head>
 <body class="case-study-page case-rich" style="--project-accent:#5674b8;--project-accent-soft:#e8edf8;">
 
@@ -31,26 +36,10 @@
   <noscript><style>#page-loader{display:none!important}</style></noscript>
 
 
-<header class="site-header" id="site-header">
-  <div class="container nav-container">
-    <a class="brand" href="../../index.html#home" aria-label="Hetal Solanki home">
-      <img src="../../assets/images/logo/hetal-logo-all-black.svg" alt="Hetal Solanki logo">
-    </a>
-    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="../../index.html#work">Work</a>
-      <a href="../../index.html#visuals">Visuals</a>
-      <a href="../../index.html#services">Services</a>
-      <a href="../../index.html#about">About</a>
-      <a href="../../index.html#contact">Contact</a>
-      <a href="../../index.html#contact" class="nav-cta">Start a Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    </nav>
-  </div>
-</header>
+<a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="dock-brand-header"><div class="container"><a class="dock-brand" href="../../index.html#home" aria-label="Hetal Solanki home"><img src="../../assets/images/logo/hetal-logo-all-black.svg" alt="Hetal Solanki logo" width="58" height="42"></a></div></header>
 
-<main>
+<main id="main-content">
 <div class="content-skeleton" data-content-skeleton aria-hidden="true">
   <div class="content-skeleton__inner">
     <div class="content-skeleton__hero">
@@ -77,7 +66,7 @@
   <div class="case-tags case-tags-large"><span>Vanilla JS</span><span>HTML / CSS</span><span>∞ Input Range</span><span>CSV Export</span><span>Quiz Mode</span></div>
   <div class="case-facts case-facts-four"><div><span>Project Type</span><strong>Practice Project</strong></div><div><span>Tech Stack</span><strong>HTML · CSS · JS</strong></div><div><span>Input Range</span><strong>−∞ to +∞</strong></div><div><span>Layouts</span><strong>3 Modes</strong></div><div><span>Export Formats</span><strong>CSV + HTML</strong></div></div>
   <div class="case-hero-actions"><a class="project-action project-action-primary" href="https://solankihetal-coder.github.io/Table-Generator/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a><a class="project-action" href="#overview"><i class="fa-solid fa-arrow-down"></i> Explore</a></div>
-  <div class="case-art"><div class="case-art-card case-art-image case-art-table"><img src="../../assets/images/projects/table-generator/table-generator-mockup.png" alt="Table Generator project presentation" loading="eager" data-loader-critical><div class="art-overlay"><span>TABLE ENGINE</span><span>∞ RANGE</span></div><div class="art-caption"><strong>LIVE PREVIEW · CSV · QUIZ</strong><small>3 LAYOUT MODES · THEME SWITCHING</small></div></div></div>
+  <div class="case-art"><div class="case-art-card case-art-image case-art-table"><img src="../../assets/images/projects/table-generator-banner.svg" alt="Table Generator project presentation" loading="eager" data-loader-critical width="1500" height="1125"><div class="art-overlay"><span>TABLE ENGINE</span><span>∞ RANGE</span></div><div class="art-caption"><strong>LIVE PREVIEW · CSV · QUIZ</strong><small>3 LAYOUT MODES · THEME SWITCHING</small></div></div></div>
 </div></section>
 <section class="case-content case-rich-content"><div class="container case-grid-wide">
 <div class="case-main-wide"><section class="case-summary case-summary-rich reveal" id="overview"><p class="case-kicker">LOGIC &amp; ALGORITHM PRACTICE PROJECT</p><h2>Multiplication table engine with infinite range, multi-layout output, CSV export &amp; quiz mode.</h2><div class="summary-grid"><div><span>Project Type</span><strong>Practice Project</strong></div><div><span>Tech Stack</span><strong>HTML · CSS · JS</strong></div><div><span>Input Range</span><strong>−∞ to +∞</strong></div><div><span>Layouts</span><strong>3 Modes</strong></div><div><span>Export Formats</span><strong>CSV + HTML</strong></div></div></section>
@@ -129,7 +118,47 @@ function toCSV(rows) {
 </div></section>
 </main>
 
-<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Hetal Solanki. Built with intent.</p><a href="../../index.html">Back home <i class="fa-solid fa-arrow-up"></i></a></div></footer>
+<footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <a class="footer-brand" href="../../index.html#home">Hetal Solanki.</a>
+        <p>Product Designer · Digital Creative</p>
+      </div>
+
+      <div class="footer-socials">
+
+        <a href="https://github.com/solankihetal-coder" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hetal-solanki22" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.behance.net/hetalsolanki11" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        <a href="mailto:hetaljsolanki01@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="current-year"></span> Hetal Solanki</span>
+      <span>Built with procrastination &amp; overthinking</span>
+    </div>
+  </footer>
 <script src="../../js/components/page-loader.js" defer></script><script src="../../js/components/content-skeleton.js" defer></script><script src="../../js/main.js" defer></script>
 
+<script src="../../js/portfolio-motion.js" defer></script>
+<div class="connect-dock" aria-label="Quick navigation">
+  <button type="button" class="dock-menu" data-dock-open="menu" aria-label="Open navigation" aria-haspopup="dialog" aria-controls="dock-menu-dialog" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+  <button type="button" class="dock-connect" data-dock-open="contact" aria-haspopup="dialog" aria-controls="dock-contact-dialog" aria-expanded="false"><span class="dock-label">Say Hi!</span></button>
+</div>
+<dialog class="dock-sheet" id="dock-menu-dialog" aria-labelledby="dock-menu-title">
+  <div class="dock-grab" aria-hidden="true"></div><button type="button" class="dock-close" aria-label="Close navigation" data-dock-close>×</button>
+  <h2 id="dock-menu-title">Explore</h2>
+  <nav class="dock-nav" aria-label="Primary navigation"><a href="../../index.html#home">Home</a><a href="../../index.html#work">Work</a><a href="../../index.html#visuals">Visuals</a><a href="../../pages/projects/playground.html">Playground</a><a href="../../index.html#about">About</a><a href="../../index.html#contact">Contact</a></nav>
+</dialog>
+<dialog class="dock-sheet" id="dock-contact-dialog" aria-labelledby="dock-contact-title">
+  <div class="dock-grab" aria-hidden="true"></div><button type="button" class="dock-close" aria-label="Close contact options" data-dock-close>×</button>
+  <h2 id="dock-contact-title">Let’s talk</h2><p>Drop me an email.</p>
+  <a class="dock-row dock-primary" href="mailto:hetaljsolanki01@gmail.com"><span>hetaljsolanki01@gmail.com</span><small>Send email ↗</small></a>
+  <button type="button" class="dock-row" data-dock-copy>Copy email address <small>Copy</small></button>
+
+
+  <p class="dock-copy-status" role="status" aria-live="polite"></p>
+</dialog>
+<script src="../../js/connect-dock.js" defer></script>
 </body></html>
