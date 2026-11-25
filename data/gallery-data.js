@@ -46,22 +46,22 @@ window.GALLERY_ITEMS = [
     "image": "../assets/images/gallery/branding/slinky-trading-pvt-ltd-logo.svg",
     "alt": "Slinky Trading Pvt Ltd Logo — branding design"
   },
-  // {
-  //   "id": "social-01",
-  //   "category": "social",
-  //   "title": "Benefits Of SEO Social Media",
-  //   "caption": "Social media creative / promotional graphic.",
-  //   "image": "../assets/images/gallery/social/benefits-of-seo-social-media.svg",
-  //   "alt": "Benefits Of SEO Social Media — social design"
-  // },
-  // {
-  //   "id": "social-02",
-  //   "category": "social",
-  //   "title": "Web Development Social Mediawebdev",
-  //   "caption": "Social media creative / promotional graphic.",
-  //   "image": "../assets/images/gallery/social/web-development-social-mediawebdev.svg",
-  //   "alt": "Web Development Social Mediawebdev — social design"
-  // },
+{
+  "id": "social-01",
+  "category": "social",
+  "title": "Benefits Of SEO Social Media",
+  "caption": "Social media creative / promotional graphic.",
+  "image": "../assets/images/gallery/social/benefits-of-seo-social-media.svg",
+  "alt": "Benefits Of SEO Social Media — social design"
+},
+{
+  "id": "social-02",
+  "category": "social",
+  "title": "Web Development Campaign",
+  "caption": "Social media creative / promotional graphic.",
+  "image": "../assets/images/gallery/social/web-development-social-mediawebdev.svg",
+  "alt": "Web Development Campaign — social design"
+},
   {
     "id": "social-03",
     "category": "social",
@@ -75,7 +75,7 @@ window.GALLERY_ITEMS = [
     "category": "graphics",
     "title": "Velvet Vine Jewellery Banner 1",
     "caption": "Graphic and banner design.",
-    "image": "../assets/images/gallery/graphics/velvet-vine-jwellery-banner-1.svg",
+    "image": "../assets/images/gallery/graphics/velvet-vine-jwellery-banner-1.webp",
     "alt": "Velvet Vine Jewellery Banner 1 — graphics design"
   },
   {
@@ -83,7 +83,7 @@ window.GALLERY_ITEMS = [
     "category": "graphics",
     "title": "Velvet Vine Jewellery Banner 2",
     "caption": "Graphic and banner design.",
-    "image": "../assets/images/gallery/graphics/velvet-vine-jwellery-banner-2.svg",
+    "image": "../assets/images/gallery/graphics/velvet-vine-jwellery-banner-2.webp",
     "alt": "Velvet Vine Jewellery Banner 2 — graphics design"
   },
   {
@@ -99,7 +99,7 @@ window.GALLERY_ITEMS = [
     "category": "graphics",
     "title": "Velvet Vine Jewellery Banner 4",
     "caption": "Graphic and banner design.",
-    "image": "../assets/images/gallery/graphics/velvet-vine-jwellery-banner-4.svg",
+    "image": "../assets/images/gallery/graphics/velvet-vine-jwellery-banner-4.webp",
     "alt": "Velvet Vine Jewellery Banner 4 — graphics design"
   },
   {
@@ -107,7 +107,7 @@ window.GALLERY_ITEMS = [
     "category": "print",
     "title": "Play Scape Business Card",
     "caption": "Print-ready business collateral.",
-    "image": "../assets/images/gallery/print/play-scape-business-card.svg",
+    "image": "../assets/images/gallery/print/play-scape-business-card.webp",
     "alt": "Play Scape Business Card — print design"
   }
 ];

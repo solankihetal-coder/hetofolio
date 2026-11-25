@@ -1,0 +1,30 @@
+.curved-arrow {
+  display: inline-block;
+  flex: none;
+  width: 1.65em;
+  height: 1em;
+  vertical-align: -.14em;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.7;
+  overflow: visible;
+  pointer-events: none;
+}
+.strip-annotation .curved-arrow {
+  width: clamp(42px, 5vw, 67px);
+  height: auto;
+  aspect-ratio: 68 / 72;
+  vertical-align: -2.2em;
+  margin-left: .2em;
+  color: #67c47b;
+}
+.board-scribble .curved-arrow {
+  width: clamp(48px, 6vw, 86px);
+  height: auto;
+  aspect-ratio: 1;
+  vertical-align: -1.8em;
+  margin-left: .15em;
+  color: #46a45b;
+}

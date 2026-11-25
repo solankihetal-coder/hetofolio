@@ -1,0 +1,557 @@
+[
+  {
+    "path": "assets/icons/curved-arrows.svg",
+    "bytes": 736,
+    "sha256": "742c8c3e09e8b7c509ceb6dd84d5897d6e8a7603410713b54a138d748942f88d"
+  },
+  {
+    "path": "assets/icons/portfolio-cursor.svg",
+    "bytes": 200,
+    "sha256": "713a986df83903945815ca2ed83814f65816eb2ab16fee59083f46494fc4eec7"
+  },
+  {
+    "path": "assets/images/README.md",
+    "bytes": 1240,
+    "sha256": "450acf091abd178717bfbb27d2c062b7d95cfb9598e83655e6bbc4b165c31e90"
+  },
+  {
+    "path": "assets/images/certificates/ML-certificate.jpeg",
+    "bytes": 72513,
+    "sha256": "e5cbda80e43f00747672fcf5938e9d1b66f7057c91758744e9def37e2ee12fcd"
+  },
+  {
+    "path": "assets/images/certificates/ML-certificate.jpg",
+    "bytes": 87868,
+    "sha256": "98d71ff9cd2370e33946e4fc8b6c0157d66da08bd8659cfd6343090c5fd26183"
+  },
+  {
+    "path": "assets/images/certificates/SQLL-certificate.jpeg",
+    "bytes": 61655,
+    "sha256": "da03132a96d111175e6dc1e4625a66255794332958ef1522ffe71802e43d4f1c"
+  },
+  {
+    "path": "assets/images/certificates/ai-capabilities-and-limitations.jpeg",
+    "bytes": 42647,
+    "sha256": "c39699c0e18f213fa70c0a5d698fef32f550d9013a8e40bc395b0e6914d3a9b8"
+  },
+  {
+    "path": "assets/images/certificates/ai-fluency-framework.jpeg",
+    "bytes": 44379,
+    "sha256": "2c3e39e21794945f2314fac2f14443a984605efd3b4d1b72a514a39384c0a4b9"
+  },
+  {
+    "path": "assets/images/certificates/angular-certicate.jpeg",
+    "bytes": 69444,
+    "sha256": "47d0cd48148309561578c76964b296d7377a025015f10a59126ae05dd5328e38"
+  },
+  {
+    "path": "assets/images/certificates/big-data-computing-certificate.jpeg",
+    "bytes": 65047,
+    "sha256": "6d2cbdf4263c249f43c71e6c66949fc866232d5642e6a01f36d542133a4403fe"
+  },
+  {
+    "path": "assets/images/certificates/big-data-computing-certificate.jpg",
+    "bytes": 78964,
+    "sha256": "2a4b66477a7f58397e83d317b2b9c3b36e265a4ccf768e6f15efd122f321a878"
+  },
+  {
+    "path": "assets/images/certificates/c-certificate.jpeg",
+    "bytes": 58955,
+    "sha256": "4236af6629517b89dd81bd2b5f8dc1093115b87fdf34f1e4282f3147cc7d1716"
+  },
+  {
+    "path": "assets/images/certificates/claude-code-in-action.jpeg",
+    "bytes": 30119,
+    "sha256": "6a98bc2f68e41c46d236e5aea462879e04b949a14e40090a842942ad30f256fe"
+  },
+  {
+    "path": "assets/images/certificates/design-fusion.jpeg",
+    "bytes": 186553,
+    "sha256": "62a6282abc7f12b9adbba08abc037fa6d7b8045424f8d6742882fa8e3fd72984"
+  },
+  {
+    "path": "assets/images/certificates/html-certificate.jpeg",
+    "bytes": 61056,
+    "sha256": "a42006159272c1a2105d836fe5ef3e4e51ac6b82196e24c284acbf6083cce229"
+  },
+  {
+    "path": "assets/images/certificates/mcp-advanced-topic.jpeg",
+    "bytes": 41189,
+    "sha256": "24850704c7ff7f3cb7ecd05cbca5035b75cf5daf4f658d224cc46faf4377fff3"
+  },
+  {
+    "path": "assets/images/certificates/prompt-engineering-certificate.jpg",
+    "bytes": 252767,
+    "sha256": "d8e029d1aca3f18151dc1a24667fa3b6260a00cb5530cae21c6c7ab08b07f2d4"
+  },
+  {
+    "path": "assets/images/certificates/python-certficate.jpeg",
+    "bytes": 66448,
+    "sha256": "b08f4843e75093ebc9f8287f096799bb71a5650392456f73d53dfe9a874b4ade"
+  },
+  {
+    "path": "assets/images/certificates/sql-certificate.jpeg",
+    "bytes": 65202,
+    "sha256": "854d906366ee727671b2eabce7798dc081da79ea0f63fe51361d2a98f548b98b"
+  },
+  {
+    "path": "assets/images/certificates/uipath-certification.jpg",
+    "bytes": 59215,
+    "sha256": "9a16497a818d93429e8afeec363d6d3bba432346dfcfa50665ae46dc1f67746d"
+  },
+  {
+    "path": "assets/images/certificates/write-with-AI-certificate.jpeg",
+    "bytes": 63238,
+    "sha256": "acaa5981b0a65511df69429992437888e700a99cf34c20a6307c2eaa6fd8068c"
+  },
+  {
+    "path": "assets/images/gallery/README.md",
+    "bytes": 521,
+    "sha256": "bf20ac377032ead511a91c5a8602dd0e6f78d524a24e7ad48da32b2ccf0ef049"
+  },
+  {
+    "path": "assets/images/gallery/branding/.gitkeep",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "assets/images/gallery/branding/eliteast-multitrade-pvt-ltd-logo.svg",
+    "bytes": 1148968,
+    "sha256": "7f0f5a44c9b1ba50ab6af9118ac4ac5777c18d4b082dbb1da4df53846ee402e6"
+  },
+  {
+    "path": "assets/images/gallery/branding/lighthost-media-logo.svg",
+    "bytes": 11095,
+    "sha256": "fef194f7627532252e84a39ae2fa0fe7d68350a7dd84151ab9a761a786a3f3a9"
+  },
+  {
+    "path": "assets/images/gallery/branding/muni-media-logo.svg",
+    "bytes": 153517,
+    "sha256": "1c4c7be11658f240502af2213cf10aaf36cc166f69218d8496b8128774bc9a79"
+  },
+  {
+    "path": "assets/images/gallery/branding/shivaay-7-logo.svg",
+    "bytes": 8235,
+    "sha256": "386dd6d969baf0b2399abf021c88dee663d454fc14823a0e11d0761d339d50b8"
+  },
+  {
+    "path": "assets/images/gallery/branding/slinky-trading-pvt-ltd-logo.svg",
+    "bytes": 1168089,
+    "sha256": "79d04b4338c95e216673d4b45bfd03da07cd997173eb439d74aa094c67310d99"
+  },
+  {
+    "path": "assets/images/gallery/graphics/.gitkeep",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "assets/images/gallery/graphics/velvet-vine-jwellery-banner-1.svg",
+    "bytes": 8374271,
+    "sha256": "d0af5a6d5ea588018e3d324d8e97053713e3642f6e6d992d8120047e51f56880"
+  },
+  {
+    "path": "assets/images/gallery/graphics/velvet-vine-jwellery-banner-1.webp",
+    "bytes": 61048,
+    "sha256": "44d2227c169996496839e86bd77cad0aa6d659c308b39c848df825c7048f4a35"
+  },
+  {
+    "path": "assets/images/gallery/graphics/velvet-vine-jwellery-banner-2.svg",
+    "bytes": 16791123,
+    "sha256": "70333e9ad0de0fd2e0b57a39be5a6f6af4579b0229508e20344e02ec3a776506"
+  },
+  {
+    "path": "assets/images/gallery/graphics/velvet-vine-jwellery-banner-2.webp",
+    "bytes": 124238,
+    "sha256": "e91722d88d0f0b2ab6f8982edca84048616eb95763422b802019d799c26768c3"
+  },
+  {
+    "path": "assets/images/gallery/graphics/velvet-vine-jwellery-banner-3.svg",
+    "bytes": 115499,
+    "sha256": "08690649345da7b3d32b89903fff6aa16e180cc25f620f41b9d6abd62eb85449"
+  },
+  {
+    "path": "assets/images/gallery/graphics/velvet-vine-jwellery-banner-4.svg",
+    "bytes": 21993258,
+    "sha256": "bce5b6d08efdb3a4a74d3fe3c1b61168815fc89b7315827fcfcb2252cd6bc613"
+  },
+  {
+    "path": "assets/images/gallery/graphics/velvet-vine-jwellery-banner-4.webp",
+    "bytes": 120148,
+    "sha256": "5b1a1db0484d72e520a0a8c3cdc8e378c73db5d0de9a08aae789fe9a8d02808b"
+  },
+  {
+    "path": "assets/images/gallery/print/.gitkeep",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "assets/images/gallery/print/play-scape-business-card.svg",
+    "bytes": 12403103,
+    "sha256": "187f4f2085c18bdc6400541ec8ea9c5276854f90ab1169ed94793a0fe8b13c82"
+  },
+  {
+    "path": "assets/images/gallery/print/play-scape-business-card.webp",
+    "bytes": 80970,
+    "sha256": "5dd138a8338a5535736165dfa3e3da4e57e5a0e9eb177b7421e6fe7df76e5245"
+  },
+  {
+    "path": "assets/images/gallery/social/.gitkeep",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "assets/images/gallery/social/benefits-of-seo-social-media.svg",
+    "bytes": 165890,
+    "sha256": "aad0c5e2b5863b82c814d9b48b70b95941c62bd5203bb5183d46227d89082af2"
+  },
+  {
+    "path": "assets/images/gallery/social/web-development-social-mediawebdev.svg",
+    "bytes": 834574,
+    "sha256": "8b55cd2bc2758f595f654f125d1f15aceef9176e9fe4425df2d23023241ec570"
+  },
+  {
+    "path": "assets/images/gallery/social/website-redesign-banner.svg",
+    "bytes": 302362,
+    "sha256": "cfc1524a8f56cb3cac2272b785d0a2c5c5a7145d4bfdf79e76cd4db2f92b6728"
+  },
+  {
+    "path": "assets/images/hobbies/fashiondesigning.jpg",
+    "bytes": 86073,
+    "sha256": "ffc92fdf88342cfa5e103f43105287aa51b4a71fb01de5d8e7e439d493099875"
+  },
+  {
+    "path": "assets/images/hobbies/fashiondesigning.webp",
+    "bytes": 56718,
+    "sha256": "8cec5decc6825dce99e6dc5970301d0c5f665c2cf088a48b4f95f7be35b397b1"
+  },
+  {
+    "path": "assets/images/hobbies/outfit-check.webp",
+    "bytes": 120504,
+    "sha256": "b76fe970e0f4a6512e1c43474411327a76871f9e91f90873d0655ae977deb8b0"
+  },
+  {
+    "path": "assets/images/hobbies/poetry.jpg",
+    "bytes": 120377,
+    "sha256": "a6585f878e08d4a054fddb2030f6f182840059040ed961a8574c6c780d852ebf"
+  },
+  {
+    "path": "assets/images/hobbies/poetry.webp",
+    "bytes": 93808,
+    "sha256": "dd930f22270ba7993e165b29a54465834088f54af2996024a4268b8586a88872"
+  },
+  {
+    "path": "assets/images/hobbies/sketching.jpg",
+    "bytes": 139316,
+    "sha256": "383327577dba217ff60b46a39b4fa880a1669adc3e8629a4414bf23d3bcfa2b0"
+  },
+  {
+    "path": "assets/images/hobbies/sketching.webp",
+    "bytes": 120462,
+    "sha256": "77f660aeba34d132199cde860314731a88b8ea94009f3618bb040ccc8bed24dc"
+  },
+  {
+    "path": "assets/images/hobbies/trekking.webp",
+    "bytes": 81658,
+    "sha256": "35a5356ef0d35a19e7a6062b3d1f3da9a520da49eac87909649ab66108616711"
+  },
+  {
+    "path": "assets/images/hobbies/wildflower-song.jpg",
+    "bytes": 43917,
+    "sha256": "606765f7719d7bd4362924229f3e9a7f739425650e8b83ad036603e187c15435"
+  },
+  {
+    "path": "assets/images/hobbies/wildflower-song.webp",
+    "bytes": 20166,
+    "sha256": "1ca6c24fa46c0dd797cbd16b6470243954f3a83b2177de2cc0b9e6adecc4a166"
+  },
+  {
+    "path": "assets/images/logo/hetal-logo-all-black.svg",
+    "bytes": 1714,
+    "sha256": "962453aef70beb25a89b7c14c35018066f79bab85a3a44d04e19863448931991"
+  },
+  {
+    "path": "assets/images/logo/hetal-logo-all-white.svg",
+    "bytes": 1775,
+    "sha256": "8374de44ec4c3589c6d130e63f55afaa43a04528f8e49f25ed4f062a5f0df4f1"
+  },
+  {
+    "path": "assets/images/profile/looking-portrait.webp",
+    "bytes": 170740,
+    "sha256": "5659f2abcbe55f74297049cd00cb720395dd0850095bcf6ca2a50fc4c275ebce"
+  },
+  {
+    "path": "assets/images/profile/pfp-hetal-hero.jpeg",
+    "bytes": 108951,
+    "sha256": "0238395f2c30b69fb883d62bd17d737fcdc82f11e84277b4db0ed7c54b4c0f71"
+  },
+  {
+    "path": "assets/images/profile/pfp-hetal-hero.webp",
+    "bytes": 53620,
+    "sha256": "83844f6c77ef66ea22059cac80b0e0224338c639f82d65ebf18ea5ba4b466345"
+  },
+  {
+    "path": "assets/images/project-ui/savvy-shopper/Home_care.png",
+    "bytes": 1601387,
+    "sha256": "2b114b88cab96231a87ddf0361c00fa76da09a62914d4b6a8cd296efc2210a33"
+  },
+  {
+    "path": "assets/images/project-ui/savvy-shopper/Home_care.webp",
+    "bytes": 922746,
+    "sha256": "98dfbe41d361be41b276215867cfb3e1e4a665d16710280c2e39cb4120043201"
+  },
+  {
+    "path": "assets/images/project-ui/savvy-shopper/Home_page.png",
+    "bytes": 1369198,
+    "sha256": "99feb291a84024c339e7c02f43cfef4e4d8f79f9fffd947e5f732cca12d0b6e7"
+  },
+  {
+    "path": "assets/images/project-ui/savvy-shopper/Home_page.webp",
+    "bytes": 790246,
+    "sha256": "df67fcbfbffd96305f17714f2442bd0f6a1890aeb0333d86152ab854069248b2"
+  },
+  {
+    "path": "assets/images/project-ui/savvy-shopper/Login.png",
+    "bytes": 744779,
+    "sha256": "e3d35168cb8188db64656ed140c544a12ce26541960ce772d99024ebd0f57364"
+  },
+  {
+    "path": "assets/images/project-ui/savvy-shopper/Login.webp",
+    "bytes": 425516,
+    "sha256": "cbf689008bdb7a3b03c95b5393d3ca171fc61503fe1763fe963fa69ff9d69678"
+  },
+  {
+    "path": "assets/images/project-ui/savvy-shopper/register.png",
+    "bytes": 767604,
+    "sha256": "26b9ced00a43b2dbb9d7a992364c59705a1b724c02c16878bb901343cf94bbf7"
+  },
+  {
+    "path": "assets/images/project-ui/savvy-shopper/register.webp",
+    "bytes": 438250,
+    "sha256": "9111bbba4f3f5d6b083ba3d0cdf3d58e60294b11d78f492888d983e8941537f5"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/capture-issue-photo-uploaded.svg",
+    "bytes": 200133,
+    "sha256": "9ce2488621c89d86e0842b0b8f618ba9891758a5887042e9b154b255f759d810"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/capture-issue.svg",
+    "bytes": 107132,
+    "sha256": "4f49f7be3bfd5c040fd9853379cab196587c901fa0a6fae10e4eb43bb477070b"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/complaint-submission-loading.svg",
+    "bytes": 21841,
+    "sha256": "c06050638847ed5b4d97d2b85c67f7edbf5d071188853e8581f6d1e21faba202"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/complaint-submission-success.svg",
+    "bytes": 133532,
+    "sha256": "73fc4c8d5daca45305850f920813b88b111887539e9aeb4a3c926810c49f706d"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/complaint-track-status.svg",
+    "bytes": 237707,
+    "sha256": "eabaef084ea4e2966bb0985b901b35b8b51ef53dd98d6ea40b10e3fc32bbf2ff"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/confirm-location.svg",
+    "bytes": 1087478,
+    "sha256": "0b171757bf14726100283e4d13e2cc684f29e17362ff9b99c12e72af1ea374f2"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/explore.svg",
+    "bytes": 3903102,
+    "sha256": "23ac84b4b8e1f856335d2e51eaeb240947da42765d38e9fc097b6e215c7d8600"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/feedback.svg",
+    "bytes": 870895,
+    "sha256": "8f7a5341311cdfe86ddc270603a398194f3ec782e054ec4bd8fdaf5283de75f0"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/home-screen.svg",
+    "bytes": 770092,
+    "sha256": "02603c30b4ecaec54e13ed0060ed7db2bbb8a8b4582b774420b38e7a62c607d5"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/resolution.svg",
+    "bytes": 3609842,
+    "sha256": "7906b57542b7697dac0bc0314f3bdd9efc893063536dde040e2939fe14612c83"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/review-complaint.svg",
+    "bytes": 377278,
+    "sha256": "19572e667aec263ce7e127a8afbbb8da97495d833796f36a005047b3d2f41422"
+  },
+  {
+    "path": "assets/images/project-ui/swachhta/settings.svg",
+    "bytes": 401674,
+    "sha256": "1d9b27d57d76dc29f145838c69743d999a046fbedc9210da486e8a946f4a10ab"
+  },
+  {
+    "path": "assets/images/projects/calculator/kuromi-chaos-calculator-banner.png",
+    "bytes": 334913,
+    "sha256": "cae73bf34bc28d32ce75212fdaa859021d2c3f11d2ff43aba730da4a91648262"
+  },
+  {
+    "path": "assets/images/projects/calculator/kuromi_banner.svg",
+    "bytes": 3856768,
+    "sha256": "ead180b4d479bf3fab32e76b4c0d846a2157cf0d239c93efb9870fb3138a42ee"
+  },
+  {
+    "path": "assets/images/projects/calculator/kuromi_banner.webp",
+    "bytes": 185146,
+    "sha256": "291c63c94bf92fc67d1cabd47cd9311ec405df4ddacf067f1f31fa0eedce57b6"
+  },
+  {
+    "path": "assets/images/projects/calculator/retro-calculator-banner.png",
+    "bytes": 209320,
+    "sha256": "32bed7b4bee63af4917fdd553c3ed03569cf2fd4d5917f0e3eed66815d8924c7"
+  },
+  {
+    "path": "assets/images/projects/calculator/retro-calculator.png",
+    "bytes": 1341429,
+    "sha256": "c726dbfdf104fcb883f9536efce38d2a0b6c09792daf4ce1a5077594a3f28660"
+  },
+  {
+    "path": "assets/images/projects/calculator/retro-calculator.svg",
+    "bytes": 39013,
+    "sha256": "aa2f4cbcb5cfa20c8f612752d90f9278a91112c00f01b50bc2904753085960d9"
+  },
+  {
+    "path": "assets/images/projects/dhobighat-promo.webp",
+    "bytes": 98396,
+    "sha256": "82ce7cc08433d48d64589bdf9343e5e441ffd5dab02494b5cbe4b12312d89bfc"
+  },
+  {
+    "path": "assets/images/projects/future/hets-thread/hets-thread.png",
+    "bytes": 773721,
+    "sha256": "80bb74b21d44c50cc16886b7ed8d3470b92e159a00045a3ebdff4b22c3d1dd0e"
+  },
+  {
+    "path": "assets/images/projects/play-scape-banner.png",
+    "bytes": 1245314,
+    "sha256": "62d17dd92e8651e9ff9b9b13ac20de447b337695cc725afb7b7b9e2e8f88d359"
+  },
+  {
+    "path": "assets/images/projects/playground.html",
+    "bytes": 396,
+    "sha256": "dc898a5ad5406905d156c355532ffbd0355c54b7e25dbca62d465063c573bd9c"
+  },
+  {
+    "path": "assets/images/projects/playscape-desktop-showcase.png",
+    "bytes": 2880736,
+    "sha256": "230a2ca7b2fcb1d76f81db553ed93b148b6cec2b192ede748f5e3c2995fbe480"
+  },
+  {
+    "path": "assets/images/projects/playscape-logistics-workspace-1100.webp",
+    "bytes": 71358,
+    "sha256": "4bbbea8bd9fdd0ccaeb86e0ddbcc10f13bc2044df1fbc63e786d87713c235502"
+  },
+  {
+    "path": "assets/images/projects/playscape-logistics-workspace-1672.webp",
+    "bytes": 141228,
+    "sha256": "7bc18b123680781c748923b0f38d1dc4a99a3bd3564785d7b228200217333350"
+  },
+  {
+    "path": "assets/images/projects/playscape-logistics-workspace-640.webp",
+    "bytes": 29038,
+    "sha256": "2a08b2629a6e4b51d8d5250b881595bd914773ce180abe4bc9b5108e42702dab"
+  },
+  {
+    "path": "assets/images/projects/playscape-logistics-workspace.png",
+    "bytes": 2967844,
+    "sha256": "84eddca375fd0585f9a902f3da97b3a7b63b89ad0b947f5e25944509f81697e1"
+  },
+  {
+    "path": "assets/images/projects/savvy-shopper-banner.png",
+    "bytes": 1980065,
+    "sha256": "49250ed68f9bf9e3bd664618f2b77660e711bd5a6b99b86f6cab39e496095273"
+  },
+  {
+    "path": "assets/images/projects/savvyshopper-brand-identity-1100.webp",
+    "bytes": 89180,
+    "sha256": "3cc79119b3b410505170774dd12adff8964c49f35f4472f594cde0bcb8ae5669"
+  },
+  {
+    "path": "assets/images/projects/savvyshopper-brand-identity-1672.webp",
+    "bytes": 168534,
+    "sha256": "d2fc406b327a2ff9bb451da94ee25bcf6d08107264c5fc671aacff3f863fd814"
+  },
+  {
+    "path": "assets/images/projects/savvyshopper-brand-identity-640.webp",
+    "bytes": 39142,
+    "sha256": "5f7136ddd2d86f594b1b613c76bfae78345ff592df83510aab388d1b947de727"
+  },
+  {
+    "path": "assets/images/projects/savvyshopper-brand-identity.png",
+    "bytes": 3080929,
+    "sha256": "9c807712068da120f8988e572f2cb1a17eea5717308f4d9cdba4c7e8c7d7f71e"
+  },
+  {
+    "path": "assets/images/projects/savvyshopper-herbal-showcase.png",
+    "bytes": 2970192,
+    "sha256": "f26f627875db47715a83746eaa35492be8975f11bc5db5311e615c8e854bfc4a"
+  },
+  {
+    "path": "assets/images/projects/swachhta-banner.png",
+    "bytes": 3143606,
+    "sha256": "860c84a3895db90fdf9240a7abb524425c1cac37ccbbe61cab3abbbd513a06fc"
+  },
+  {
+    "path": "assets/images/projects/swachhta-civic-branding-1100.webp",
+    "bytes": 54560,
+    "sha256": "943395a1e3cdecbc6ec5462174563d33aeb520b895fb5393aaeb5261655fc49b"
+  },
+  {
+    "path": "assets/images/projects/swachhta-civic-branding-1672.webp",
+    "bytes": 105776,
+    "sha256": "b405ce824f3ae3a22f05c0f46b76feee1246769a12e3b6d2760bd7c006eb0c4c"
+  },
+  {
+    "path": "assets/images/projects/swachhta-civic-branding-640.webp",
+    "bytes": 22206,
+    "sha256": "1ff6f82b1a2d8fb9af4bfdca6708327514e04e532a80c3098c29a0cd37ba48aa"
+  },
+  {
+    "path": "assets/images/projects/swachhta-civic-branding.png",
+    "bytes": 2938677,
+    "sha256": "d71ddac1d44f31e67ab8ea1d7573ed965176e9d7bf13ed18b5a9b73c20572fcb"
+  },
+  {
+    "path": "assets/images/projects/table-generator-banner.svg",
+    "bytes": 1623447,
+    "sha256": "f5e1ad06719a4bf94a337309a333e2c782b387ec6a443bd19b67dd2f7c5ef3aa"
+  },
+  {
+    "path": "assets/images/projects/table-generator-playground-banner.png",
+    "bytes": 383436,
+    "sha256": "4ee8754253054c662f00ea7338ce3b52d813390a4c8e6d01095ec148287ff4a3"
+  },
+  {
+    "path": "assets/images/projects/twirl-around-world-banner.png",
+    "bytes": 1291350,
+    "sha256": "486da70b3cfa05d5f8d9e38d4c1fd2b2eaef12cfe1c3c6f6e26fae2cdfd346ba"
+  },
+  {
+    "path": "assets/images/social/playground.jpg",
+    "bytes": 48186,
+    "sha256": "7c114e24799c0b76d60fe2e88dcae4b38a89b22603ec8928cb5ff5caa6b64425"
+  },
+  {
+    "path": "assets/images/social/playscape.jpg",
+    "bytes": 131560,
+    "sha256": "b99cc67dd7963c58ad3b73db2ceb8aa917ce926c8a8abb9d64f1d923882e1646"
+  },
+  {
+    "path": "assets/images/social/savvyshopper.jpg",
+    "bytes": 169175,
+    "sha256": "6a45420d1dc167864b4b16858009ac4c461e923e0afc196ddb48a5dd2e46f6b1"
+  },
+  {
+    "path": "assets/images/social/visuals.jpg",
+    "bytes": 38598,
+    "sha256": "4ef32af545344c24555f732408794affcb2cb84107592c9ffbf8ff1aaa3ac98b"
+  }
+]
